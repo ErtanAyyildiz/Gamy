@@ -18,7 +18,7 @@ namespace Gamy.DataAccess.Repositories
 
         public void Add(T entity)
         {
-            dbSet.Add(entity);
+             dbSet.AddAsync(entity);
         }
 
         public T GetByID(int id)
@@ -26,7 +26,7 @@ namespace Gamy.DataAccess.Repositories
             return dbSet.Find(id);
         }
 
-        public IEnumerable<T> GetList()
+        public List<T> GetList()
         {
             return dbSet.ToList();
         }
@@ -43,7 +43,7 @@ namespace Gamy.DataAccess.Repositories
 
         public void Update(T entity)
         {
-            dbSet.Update(entity);
+             dbSet.Update(entity);
         }
     }
 }

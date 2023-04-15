@@ -1,11 +1,9 @@
-﻿using Gamy.Entity.Modals;
+﻿using FluentValidation;
+using Gamy.Business.Abstracts;
+using Gamy.Business.Concretes;
+using Gamy.Business.Validators;
+using Gamy.Entity.Modals;
 using Microsoft.Extensions.DependencyInjection;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading;
-using System.Threading.Tasks;
 
 namespace Gamy.Business.IoC
 {
@@ -15,13 +13,19 @@ namespace Gamy.Business.IoC
         {
             //services.AddTransient<IValidator<Project>, ProjectValidator>();
 
-            //services.AddScoped<ICarrierService, CarrierManager>();
-            //services.AddScoped<IOrderService, OrderManager>();
-            //services.AddScoped<ICarrierConfigurationService, CarrierConfigurationManager>();
+            services.AddScoped<IOrderService, OrderService>();
+            services.AddScoped<IProductService, ProductService>();
+            services.AddScoped<IAppUserService, AppUserService>();
 
-            //services.AddScoped<IValidator<Order>, OrderValidator>();
-            //services.AddScoped<IValidator<Carrier>, CarriersValidator>();
-            //services.AddScoped<IValidator<CarrierConfiguration>, CarrierConfigurationValidator>();
+            services.AddScoped<IValidator<Order>, OrderValidator>();
+            services.AddScoped<IValidator<Cart>, CartValidator>();
+            services.AddScoped<IValidator<CartItem>, CartItemValidator>();
+            services.AddScoped<IValidator<Category>, CategoryValidator>();
+            services.AddScoped<IValidator<OrderItem>, OrderItemValidator>();
+            services.AddScoped<IValidator<Product>, ProductValidator>();
+            services.AddScoped<IValidator<Seller>, SellerValidator>();
+            //services.AddScoped<IValidator<AppUser>, UserValidator>();
+            //services.AddScoped<IValidator<UserRole>, UserRoleValidator>();
 
             return services;
         }

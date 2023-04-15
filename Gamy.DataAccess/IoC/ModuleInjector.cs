@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Gamy.DataAccess.Database;
+using Microsoft.EntityFrameworkCore;
+using Gamy.Entity.Modals;
 
 namespace Gamy.DataAccess.IoC
 {
@@ -14,7 +16,7 @@ namespace Gamy.DataAccess.IoC
     {
         public static IServiceCollection AddDataAccessServices(this IServiceCollection services)
         {
-            services.AddDbContext<GamyContext>();
+            //services.AddDbContext<GamyContext>();
 
             //services.AddValidatorsFromAssembly(Assembly.GetExecutingAssembly());
             //services.AddTransient(typeof(IPipelineBehavior<,>), typeof(AuthorizationBehavior<,>));

@@ -1,4 +1,18 @@
-﻿// Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
-// for details on configuring this project to bundle and minify static web assets.
+﻿const searchForm = document.querySelector('.search-form');
+const searchInput = document.querySelector('.search input[type=text]');
 
-// Write your JavaScript code.
+searchForm.addEventListener('submit', (event) => {
+	event.preventDefault();
+	alert(`You searched for "${searchInput.value}"`);
+	searchInput.value = '';
+});
+
+<script>
+  // Sepete ekle butonuna tıklandığında bir alert kutusu görüntüleyin
+    var buttons = document.querySelectorAll('button');
+    for (var i = 0; i < buttons.length; i++) {
+        buttons[i].addEventListener('click', function () {
+            alert('Ürün sepetinize eklendi!');
+        });
+  }
+</script>

@@ -1,7 +1,17 @@
+using Gamy.Business.IoC;
+using Gamy.DataAccess.Database;
+using Gamy.DataAccess.IoC;
+using Microsoft.EntityFrameworkCore;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+builder.Services.AddDbContext<GamyContext>(options => options.UseSqlServer(
+    builder.Configuration.GetConnectionString("GamyConnection")
+    ));
+builder.Services.AddDataAccessServices();
+builder.Services.AddBusinessServices();
 
 var app = builder.Build();
 

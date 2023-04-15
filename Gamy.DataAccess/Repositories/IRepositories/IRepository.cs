@@ -14,7 +14,7 @@ namespace Gamy.DataAccess.Repositories.IRepositories
         void Remove(T entity);
         void Update(T entity);
 
-        IEnumerable<T> GetList();
+        List<T> GetList();
         List<T> GetListByFilter(Expression<Func<T, bool>> filter);
         T GetByID(int id);
     }

@@ -23,10 +23,10 @@ namespace Gamy.DataAccess.Repositories
             Order= new OrderDal(_db);
             OrderItem= new OrderItemDal(_db);
             Product= new ProductDal(_db);
-            Role= new RoleDal(_db);
             Seller= new SellerDal(_db);
-            User= new UserDal(_db);
             UserRole= new UserRoleDal(_db);
+            Comment = new CommentDal(_db);
+            AppUser = new AppUserDal(_db);
         }
 
         public ICartDal Cart { get; private set; }
@@ -35,10 +35,10 @@ namespace Gamy.DataAccess.Repositories
         public IOrderDal Order { get; private set; }
         public IOrderItemDal OrderItem { get; private set; }
         public IProductDal Product { get; private set; }
-        public IRoleDal Role { get; private set; }
         public ISellerDal Seller { get; private set; }
-        public IUserDal User { get; private set; }
         public IUserRoleDal UserRole { get; private set; }
+        public ICommentDal Comment { get; private set; }
+        public IAppUserDal AppUser { get; private set; }
 
         public void Save()
         {

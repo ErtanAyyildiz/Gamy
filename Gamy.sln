@@ -3,15 +3,17 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.4.33403.182
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gamy.Business", "Gamy.Business\Gamy.Business.csproj", "{B77692A3-A15C-420E-9048-2B6247CEF361}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Gamy.Business", "Gamy.Business\Gamy.Business.csproj", "{B77692A3-A15C-420E-9048-2B6247CEF361}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gamy.DataAccess", "Gamy.DataAccess\Gamy.DataAccess.csproj", "{1C360C93-0D85-4532-91DC-5BFDDCFB65A3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Gamy.DataAccess", "Gamy.DataAccess\Gamy.DataAccess.csproj", "{1C360C93-0D85-4532-91DC-5BFDDCFB65A3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gamy.Entity", "Gamy.Entity\Gamy.Entity.csproj", "{EDDDAD48-285B-4E2E-BB84-C3486751AE23}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Gamy.Entity", "Gamy.Entity\Gamy.Entity.csproj", "{EDDDAD48-285B-4E2E-BB84-C3486751AE23}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gamy.API", "Gamy.API\Gamy.API.csproj", "{5B75222D-6337-4D35-A944-E7803D3D1CA1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Gamy.API", "Gamy.API\Gamy.API.csproj", "{5B75222D-6337-4D35-A944-E7803D3D1CA1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gamy.UI", "Gamy.UI\Gamy.UI.csproj", "{42CC6EB1-AE35-4204-84BF-63F88959A95D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Gamy.UI", "Gamy.UI\Gamy.UI.csproj", "{42CC6EB1-AE35-4204-84BF-63F88959A95D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gamy.DTO", "Gamy.DTO\Gamy.DTO.csproj", "{D13C256B-7D66-4947-8CE0-91885BDA9C8D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{42CC6EB1-AE35-4204-84BF-63F88959A95D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{42CC6EB1-AE35-4204-84BF-63F88959A95D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{42CC6EB1-AE35-4204-84BF-63F88959A95D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D13C256B-7D66-4947-8CE0-91885BDA9C8D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D13C256B-7D66-4947-8CE0-91885BDA9C8D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D13C256B-7D66-4947-8CE0-91885BDA9C8D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D13C256B-7D66-4947-8CE0-91885BDA9C8D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

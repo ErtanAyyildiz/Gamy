@@ -9,10 +9,9 @@ namespace Gamy.Entity.Modals
     public class Order:BaseEntity
     {
         public string CustomerId { get; set; }
-        public string SellerId { get; set; }
         public decimal TotalPrice { get; set; }
-        public DateTime OrderDate { get; set; }
-        public User Customer { get; set; }
-        public Seller Seller { get; set; }
+        public DateTime OrderDate { get; set; } = DateTime.Now;
+        public int UserId { get; set; }
+        public AppUser User { get; set; }
     }
 }

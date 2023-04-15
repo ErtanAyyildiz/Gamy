@@ -1,8 +1,2451 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
+﻿
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<div class="section-slider">
+
+    @await Component.InvokeAsync("IndexMainSlider")
+
+    <div class="container-fluid index-mobile-slider">
+        <div class="row">
+            <div class="slider-container">
+                <div id="main-mobile-slider" class="main-slider">
+                    <div class="item lazyload" style="border-radius: 12px;" data-bg="/GamySell/uploads/slider/slider_641377c904f106-89138724-61603711.webp">
+                        <div class="container">
+                            <div class="row row-slider-caption align-items-center">
+                                <div class="col-12">
+                                    <div class="caption">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item lazyload" style="border-radius: 12px;" data-bg="/GamySell/uploads/slider/slider_63ebb9d67c65b0-09108779-56287992.webp">
+                        <a href="blog/duyuru/alisveris-puani-nedir.html">
+                            <div class="container">
+                                <div class="row row-slider-caption align-items-center">
+                                    <div class="col-12">
+                                        <div class="caption">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="item lazyload" style="border-radius: 12px;" data-bg="/GamySell/uploads/slider/slider_62fc2cca27f357-58205411-29254772.webp">
+                        <a href="index.html">
+                            <div class="container">
+                                <div class="row row-slider-caption align-items-center">
+                                    <div class="col-12">
+                                        <div class="caption">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="item lazyload" style="border-radius: 12px;" data-bg="/GamySell/uploads/slider/slider_63909f018d0de4-82906159-77488876.webp">
+                        <div class="container">
+                            <div class="row row-slider-caption align-items-center">
+                                <div class="col-12">
+                                    <div class="caption">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="main-mobile-slider-nav" class="main-slider-nav">
+                    <button class="prev"><i class="icon-arrow-left"></i></button>
+                    <button class="next"><i class="icon-arrow-right"></i></button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="wrapper" class="index-wrapper">
+    <div class="container">
+        <div class="row">
+            <h1 class="index-title">İtem, Hesap, Oyun ve Epin Satış Sitesi</h1>
+            <div class style="width: 100%;height: 140px;overflow: hidden;">
+                @await Component.InvokeAsync("IndexCategorySlider")
+            </div>
+
+            <div class="col-12">
+                <div class="row-custom row-bn">
+                </div>
+            </div>
+
+            <div class="card" style="margin-bottom:50px;">
+                <div id="promoted_posts">
+
+                    <div class="section section-category-products m-b-5">
+                        <div class="card-header bg-light section-header">
+                            <h3 class="title"><i class="fab fa-hotjar" style="font-size: 1.25rem;"></i>&nbsp;Fırsat Ürünleri</h3>
+                        </div>
+                        <div class="card-body">
+                            <div id="row_special_offers_products" class="row row-product">
+                                <div class="col-6 col-sm-4 col-md-3 col-mds-5 col-product">
+
+                                    <div class="product-item product-item-altin">
+
+                                        <div class="row-custom">
+                                            <a class="item-wishlist-button item-wishlist-enable " data-product-id="17409"></a>
+                                            <div class="img-product-container" style="border-top-left-radius: 14px;border-top-right-radius: 14px">
+                                                <a href="osm-500-boss-coins-17409.html">
+                                                    <img src="https://cdn.itemhesap.com/uploads/images/202303/img_x300_6421c588b81474-54880008-20477714.webp" data-src="https://cdn.itemhesap.com/uploads/images/202303/img_x300_6421c588b81474-54880008-20477714.webp" alt="OSM 500 BOSS COİNS" class="img-fluid img-product" loading="lazy" width="200" height="260">
+                                                </a>
+                                                <div class="product-item-options" style="top: 40px">
+                                                    <a href="javascript:void(0)" class="item-option btn-add-remove-wishlist" data-toggle="tooltip" data-placement="left" data-product-id="17409" data-reload="0" title="Favoriler">
+                                                        <i class="icon-heart-o"></i>
+                                                    </a>
+                                                    <a href="javascript:void(0)" class="item-option btn-item-add-to-cart" data-toggle="tooltip" data-placement="left" data-product-id="17409" data-reload="0" title="Sepete Ekle">
+                                                        <i class="icon-cart"></i>
+                                                    </a>
+                                                </div>
+
+
+                                            </div>
+
+
+                                        </div>
+
+                                        <div class="row-custom item-details item-details-altin">
+
+                                            <h2 class="product-title">
+                                                <a href="osm-500-boss-coins-17409.html" data-toggle="tooltip" data-placement="bottom" title="OSM 500 BOSS COİNS">OSM 500 BOSS COİNS</a>
+                                            </h2>
+
+                                            <p class="product-user text-truncate">
+                                                <b>Mağaza:</b> <a href="magaza/ucuzoyun.html">
+                                                    <font color="#dc143c" style="text-shadow: 1px 1px 3px #dc143c;">
+
+                                                        UcuzOyunMerkezi
+                                                    </font>
+                                                </a><i data-toggle="tooltip" class="icon-verified icon-verified-member-product" title="Doğrulanmış Satıcı"></i>
+
+                                            </p>
+
+                                            <div class="product-item-rating">
+                                                <div class="rating">
+                                                    <i class="icon-star-o"></i>
+                                                    <i class="icon-star-o"></i>
+                                                    <i class="icon-star-o"></i>
+                                                    <i class="icon-star-o"></i>
+                                                    <i class="icon-star-o"></i>
+                                                </div><span class="item-wishlist"><i class="icon-heart-o"></i>0</span>
+                                            </div>
+
+                                            <div class="item-meta" style="color: #fff;">
+
+                                                <span class="price">20 ₺</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-6 col-sm-4 col-md-3 col-mds-5 col-product">
+
+                                    <div class="product-item product-item-altin">
+
+                                        <div class="row-custom">
+                                            <a class="item-wishlist-button item-wishlist-enable " data-product-id="17683"></a>
+                                            <div class="img-product-container" style="border-top-left-radius: 14px;border-top-right-radius: 14px">
+                                                <a href="en-az-850-tl-steam-oyun-key-17683.html">
+                                                    <img src="https://cdn.itemhesap.com/uploads/images/202303/img_x300_642040555c5127-32071148-40209794.webp" data-src="https://cdn.itemhesap.com/uploads/images/202303/img_x300_642040555c5127-32071148-40209794.webp" alt="En Az 850 TL Steam Oyun Key" class="img-fluid img-product" loading="lazy" width="200" height="260">
+                                                </a>
+                                                <div class="product-item-options" style="top: 40px">
+                                                    <a href="javascript:void(0)" class="item-option btn-add-remove-wishlist" data-toggle="tooltip" data-placement="left" data-product-id="17683" data-reload="0" title="Favoriler">
+                                                        <i class="icon-heart-o"></i>
+                                                    </a>
+                                                </div>
+
+
+                                            </div>
+
+
+                                            <span class="ui small blue ribbon label" style="bottom: -10px !important; position: absolute; z-index: 2; left: -13px !important; right: unset;"><i class="icon-download-solid"></i>&nbsp;&nbsp;Otomatik Teslim</span>
+
+                                        </div>
+
+                                        <div class="row-custom item-details item-details-altin">
+
+                                            <h2 class="product-title">
+                                                <a href="en-az-850-tl-steam-oyun-key-17683.html" data-toggle="tooltip" data-placement="bottom" title="En Az 850 TL Steam Oyun Key">En Az 850 TL Steam Oyun Key</a>
+                                            </h2>
+
+                                            <p class="product-user text-truncate">
+                                                <b>Mağaza:</b> <a href="magaza/opssgamershop.html">
+                                                    <font color="#dc143c" style="text-shadow: 1px 1px 3px #dc143c;">
+
+                                                        OpssGamerShop
+                                                    </font>
+                                                </a><i data-toggle="tooltip" class="icon-verified icon-verified-member-product" title="Doğrulanmış Satıcı"></i>
+
+                                            </p>
+
+                                            <div class="product-item-rating">
+                                                <div class="rating">
+                                                    <i class="icon-star"></i>
+                                                    <i class="icon-star"></i>
+                                                    <i class="icon-star"></i>
+                                                    <i class="icon-star"></i>
+                                                    <i class="icon-star-o"></i>
+                                                </div><span class="item-wishlist"><i class="icon-heart-o"></i>3</span>
+                                            </div>
+
+                                            <div class="item-meta" style="color: #fff;">
+
+                                                <span class="price">14,90 ₺</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-6 col-sm-4 col-md-3 col-mds-5 col-product">
+
+                                    <div class="product-item product-item-altin">
+
+                                        <div class="row-custom">
+                                            <a class="item-wishlist-button item-wishlist-enable " data-product-id="17146"></a>
+                                            <div class="img-product-container" style="border-top-left-radius: 14px;border-top-right-radius: 14px">
+                                                <a href="oto-teslim-2x-boost-3-aylik-discord-nitro-17146.html">
+                                                    <img src="https://cdn.itemhesap.com/uploads/images/202303/img_x300_6420b036469402-61212070-60696611.webp" data-src="https://cdn.itemhesap.com/uploads/images/202303/img_x300_6420b036469402-61212070-60696611.webp" alt="[Oto Teslim] 2x Boost 3 Aylık Discord Nitro" class="img-fluid img-product" loading="lazy" width="200" height="260">
+                                                </a>
+                                                <div class="product-item-options" style="top: 40px">
+                                                    <a href="javascript:void(0)" class="item-option btn-add-remove-wishlist" data-toggle="tooltip" data-placement="left" data-product-id="17146" data-reload="0" title="Favoriler">
+                                                        <i class="icon-heart-o"></i>
+                                                    </a>
+                                                </div>
+
+
+                                            </div>
+
+
+                                            <span class="ui small blue ribbon label" style="bottom: -10px !important; position: absolute; z-index: 2; left: -13px !important; right: unset;"><i class="icon-download-solid"></i>&nbsp;&nbsp;Otomatik Teslim</span>
+
+                                        </div>
+
+                                        <div class="row-custom item-details item-details-altin">
+
+                                            <h2 class="product-title">
+                                                <a href="oto-teslim-2x-boost-3-aylik-discord-nitro-17146.html" data-toggle="tooltip" data-placement="bottom" title="[Oto Teslim] 2x Boost 3 Aylık Discord Nitro">[Oto Teslim] 2x Boost 3 Aylık Discord Nitro</a>
+                                            </h2>
+
+                                            <p class="product-user text-truncate">
+                                                <b>Mağaza:</b> <a href="magaza/regularshop.html">
+                                                    <font color="#dc143c" style="text-shadow: 1px 1px 3px #dc143c;">
+
+                                                        Regular Shop
+                                                    </font>
+                                                </a><i data-toggle="tooltip" class="icon-verified icon-verified-member-product" title="Doğrulanmış Satıcı"></i>
+
+                                            </p>
+
+                                            <div class="product-item-rating">
+                                                <div class="rating">
+                                                    <i class="icon-star"></i>
+                                                    <i class="icon-star"></i>
+                                                    <i class="icon-star"></i>
+                                                    <i class="icon-star"></i>
+                                                    <i class="icon-star"></i>
+                                                </div><span class="item-wishlist"><i class="icon-heart-o"></i>1</span>
+                                            </div>
+
+                                            <div class="item-meta" style="color: #fff;">
+
+                                                <span class="price">19,90 ₺</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-6 col-sm-4 col-md-3 col-mds-5 col-product">
+
+                                    <div class="product-item product-item-altin">
+
+                                        <div class="row-custom">
+                                            <a class="item-wishlist-button item-wishlist-enable " data-product-id="17753"></a>
+                                            <div class="img-product-container" style="border-top-left-radius: 14px;border-top-right-radius: 14px">
+                                                <a href="850tl-steam-random-key-aninda-teslimat-17753.html">
+                                                    <img src="https://cdn.itemhesap.com/uploads/images/202304/img_x300_6435edeb000857-47664907-93244000.webp" data-src="https://cdn.itemhesap.com/uploads/images/202304/img_x300_6435edeb000857-47664907-93244000.webp" alt="[+850TL] Steam Random Key / Anında Teslimat" class="img-fluid img-product" loading="lazy" width="200" height="260">
+                                                </a>
+                                                <div class="product-item-options" style="top: 40px">
+                                                    <a href="javascript:void(0)" class="item-option btn-add-remove-wishlist" data-toggle="tooltip" data-placement="left" data-product-id="17753" data-reload="0" title="Favoriler">
+                                                        <i class="icon-heart-o"></i>
+                                                    </a>
+                                                </div>
+
+
+                                            </div>
+
+
+                                            <span class="ui small blue ribbon label" style="bottom: -10px !important; position: absolute; z-index: 2; left: -13px !important; right: unset;"><i class="icon-download-solid"></i>&nbsp;&nbsp;Otomatik Teslim</span>
+
+                                        </div>
+
+                                        <div class="row-custom item-details item-details-altin">
+
+                                            <h2 class="product-title">
+                                                <a href="850tl-steam-random-key-aninda-teslimat-17753.html" data-toggle="tooltip" data-placement="bottom" title="[+850TL] Steam Random Key / Anında Teslimat">[+850TL] Steam Random Key / Anında Teslimat</a>
+                                            </h2>
+
+                                            <p class="product-user text-truncate">
+                                                <b>Mağaza:</b> <a href="magaza/gamesbazaar.html">
+                                                    <font color="#dc143c" style="text-shadow: 1px 1px 3px #dc143c;">
+
+                                                        GamesBazaar
+                                                    </font>
+                                                </a><i data-toggle="tooltip" class="icon-verified icon-verified-member-product" title="Doğrulanmış Satıcı"></i>
+
+                                            </p>
+
+                                            <div class="product-item-rating">
+                                                <div class="rating">
+                                                    <i class="icon-star-o"></i>
+                                                    <i class="icon-star-o"></i>
+                                                    <i class="icon-star-o"></i>
+                                                    <i class="icon-star-o"></i>
+                                                    <i class="icon-star-o"></i>
+                                                </div><span class="item-wishlist"><i class="icon-heart-o"></i>0</span>
+                                            </div>
+
+                                            <div class="item-meta" style="color: #fff;">
+
+                                                <span class="price">14,90 ₺</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-6 col-sm-4 col-md-3 col-mds-5 col-product">
+
+                                    <div class="product-item product-item-altin">
+
+                                        <div class="row-custom">
+                                            <a class="item-wishlist-button item-wishlist-enable " data-product-id="15879"></a>
+                                            <div class="img-product-container" style="border-top-left-radius: 14px;border-top-right-radius: 14px">
+                                                <a href="the-last-of-us-part-i-garanti-15879.html">
+                                                    <img src="https://cdn.itemhesap.com/uploads/images/202303/img_x300_6420a577e56247-74989144-81385857.webp" data-src="https://cdn.itemhesap.com/uploads/images/202303/img_x300_6420a577e56247-74989144-81385857.webp" alt="The Last Of Us Part I Deluxe Edition + Garanti" class="img-fluid img-product" loading="lazy" width="200" height="260">
+                                                </a>
+                                                <div class="product-item-options" style="top: 40px">
+                                                    <a href="javascript:void(0)" class="item-option btn-add-remove-wishlist" data-toggle="tooltip" data-placement="left" data-product-id="15879" data-reload="0" title="Favoriler">
+                                                        <i class="icon-heart-o"></i>
+                                                    </a>
+                                                    <a href="javascript:void(0)" class="item-option btn-item-add-to-cart" data-toggle="tooltip" data-placement="left" data-product-id="15879" data-reload="0" title="Sepete Ekle">
+                                                        <i class="icon-cart"></i>
+                                                    </a>
+                                                </div>
+
+
+                                            </div>
+
+
+                                        </div>
+
+                                        <div class="row-custom item-details item-details-altin">
+
+                                            <h2 class="product-title">
+                                                <a href="the-last-of-us-part-i-garanti-15879.html" data-toggle="tooltip" data-placement="bottom" title="The Last Of Us Part I Deluxe Edition + Garanti">The Last Of Us Part I Deluxe Edition + Garanti</a>
+                                            </h2>
+
+                                            <p class="product-user text-truncate">
+                                                <b>Mağaza:</b> <a href="magaza/regularshop.html">
+                                                    <font color="#dc143c" style="text-shadow: 1px 1px 3px #dc143c;">
+
+                                                        Regular Shop
+                                                    </font>
+                                                </a><i data-toggle="tooltip" class="icon-verified icon-verified-member-product" title="Doğrulanmış Satıcı"></i>
+
+                                            </p>
+
+                                            <div class="product-item-rating">
+                                                <div class="rating">
+                                                    <i class="icon-star"></i>
+                                                    <i class="icon-star"></i>
+                                                    <i class="icon-star"></i>
+                                                    <i class="icon-star"></i>
+                                                    <i class="icon-star"></i>
+                                                </div><span class="item-wishlist"><i class="icon-heart-o"></i>3</span>
+                                            </div>
+
+                                            <div class="item-meta" style="color: #fff;">
+
+                                                <span class="price">14,99 ₺</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <input type="hidden" id="special_products_offset" value="5">
+                            <div id="load_special_spinner" class="col-12 load-more-spinner">
+                                <div class="row">
+                                    <div class="spinner">
+                                        <div class="bounce1"></div>
+                                        <div class="bounce2"></div>
+                                        <div class="bounce3"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="card" style="margin-bottom:50px;">
+
+                <div id="promoted_posts">
+                    <div class="section section-category-products m-b-5">
+                        <div class="card-header bg-light section-header">
+                            <h3 class="title"><i class="fab fa-ethereum"></i>&nbsp;Vitrin İlanları</h3>
+                        </div>
+                        <div class="card-body">
+                            <div id="row_vitrined_products" class="row row-product">
+                                <div class="col-6 col-sm-4 col-md-3 col-mds-5 col-product">
+
+                                    <div class="product-item product-item-gumus">
+
+                                        <div class="row-custom">
+                                            <a class="item-wishlist-button item-wishlist-enable " data-product-id="10175"></a>
+                                            <div class="img-product-container" style="border-top-left-radius: 14px;border-top-right-radius: 14px">
+                                                <a href="1-adet-ultra-vip-disney-plus-ve-garanti-hizli-teslimat-10175.html">
+                                                    <img src="https://cdn.itemhesap.com/uploads/images/202206/img_x300_62a99a464dab18-03730449-14529163.webp" data-src="https://cdn.itemhesap.com/uploads/images/202206/img_x300_62a99a464dab18-03730449-14529163.webp" alt="[1 Adet Ultra Vip] Disney Plus+ Ve Garanti HIZLI TESLİMAT" class="img-fluid img-product" loading="lazy" width="200" height="260">
+                                                </a>
+                                                <div class="product-item-options" style="top: 40px">
+                                                    <a href="javascript:void(0)" class="item-option btn-add-remove-wishlist" data-toggle="tooltip" data-placement="left" data-product-id="10175" data-reload="0" title="Favoriler">
+                                                        <i class="icon-heart-o"></i>
+                                                    </a>
+                                                    <a href="javascript:void(0)" class="item-option btn-item-add-to-cart" data-toggle="tooltip" data-placement="left" data-product-id="10175" data-reload="0" title="Sepete Ekle">
+                                                        <i class="icon-cart"></i>
+                                                    </a>
+                                                </div>
+
+
+                                            </div>
+
+
+                                        </div>
+
+                                        <div class="row-custom item-details item-details-gumus">
+
+                                            <h2 class="product-title">
+                                                <a href="1-adet-ultra-vip-disney-plus-ve-garanti-hizli-teslimat-10175.html" data-toggle="tooltip" data-placement="bottom" title="[1 Adet Ultra Vip] Disney Plus+ Ve Garanti HIZLI TESLİMAT">[1 Adet Ultra Vip] Disney Plus+ Ve Garanti HIZLI TESLİMAT</a>
+                                            </h2>
+
+                                            <p class="product-user text-truncate">
+                                                <b>Mağaza:</b> <a href="magaza/geforcenowmarket.html">
+                                                    <font color="#2185d0" style="text-shadow: 1px 1px 3px #2185d0;">
+
+                                                        GeforceNowMarket
+                                                    </font>
+                                                </a><i data-toggle="tooltip" class="icon-verified icon-verified-member-product" title="Doğrulanmış Satıcı"></i>
+
+                                            </p>
+
+                                            <div class="product-item-rating">
+                                                <div class="rating">
+                                                    <i class="icon-star"></i>
+                                                    <i class="icon-star"></i>
+                                                    <i class="icon-star"></i>
+                                                    <i class="icon-star"></i>
+                                                    <i class="icon-star"></i>
+                                                </div><span class="item-wishlist"><i class="icon-heart-o"></i>102</span>
+                                            </div>
+
+                                            <div class="item-meta" style="color: #fff;">
+
+                                                <span class="price">11,99 ₺</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-6 col-sm-4 col-md-3 col-mds-5 col-product">
+
+                                    <div class="product-item product-item-gumus">
+
+                                        <div class="row-custom">
+                                            <a class="item-wishlist-button item-wishlist-enable " data-product-id="10171"></a>
+                                            <div class="img-product-container" style="border-top-left-radius: 14px;border-top-right-radius: 14px">
+                                                <a href="0-1-yillik-nord-vpn-hesaplari-10171.html">
+                                                    <img src="https://cdn.itemhesap.com/uploads/images/202206/img_x300_62a97ea3817a49-96384494-16889456.webp" data-src="https://cdn.itemhesap.com/uploads/images/202206/img_x300_62a97ea3817a49-96384494-16889456.webp" alt="1 Yıllık Nord VPN Hesabı + Garanti + Hediye!" class="img-fluid img-product" loading="lazy" width="200" height="260">
+                                                </a>
+                                                <div class="product-item-options" style="top: 40px">
+                                                    <a href="javascript:void(0)" class="item-option btn-add-remove-wishlist" data-toggle="tooltip" data-placement="left" data-product-id="10171" data-reload="0" title="Favoriler">
+                                                        <i class="icon-heart-o"></i>
+                                                    </a>
+                                                    <a href="javascript:void(0)" class="item-option btn-item-add-to-cart" data-toggle="tooltip" data-placement="left" data-product-id="10171" data-reload="0" title="Sepete Ekle">
+                                                        <i class="icon-cart"></i>
+                                                    </a>
+                                                </div>
+
+
+                                            </div>
+
+
+                                        </div>
+
+                                        <div class="row-custom item-details item-details-gumus">
+
+                                            <h2 class="product-title">
+                                                <a href="0-1-yillik-nord-vpn-hesaplari-10171.html" data-toggle="tooltip" data-placement="bottom" title="1 Yıllık Nord VPN Hesabı + Garanti + Hediye!">1 Yıllık Nord VPN Hesabı + Garanti + Hediye!</a>
+                                            </h2>
+
+                                            <p class="product-user text-truncate">
+                                                <b>Mağaza:</b> <a href="magaza/geforcenowmarket.html">
+                                                    <font color="#2185d0" style="text-shadow: 1px 1px 3px #2185d0;">
+
+                                                        GeforceNowMarket
+                                                    </font>
+                                                </a><i data-toggle="tooltip" class="icon-verified icon-verified-member-product" title="Doğrulanmış Satıcı"></i>
+
+                                            </p>
+
+                                            <div class="product-item-rating">
+                                                <div class="rating">
+                                                    <i class="icon-star"></i>
+                                                    <i class="icon-star"></i>
+                                                    <i class="icon-star"></i>
+                                                    <i class="icon-star"></i>
+                                                    <i class="icon-star"></i>
+                                                </div><span class="item-wishlist"><i class="icon-heart-o"></i>69</span>
+                                            </div>
+
+                                            <div class="item-meta" style="color: #fff;">
+
+                                                <span class="price">13,99 ₺</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-6 col-sm-4 col-md-3 col-mds-5 col-product">
+
+                                    <div class="product-item product-item-gumus">
+
+                                        <div class="row-custom">
+                                            <a class="item-wishlist-button item-wishlist-enable " data-product-id="16249"></a>
+                                            <div class="img-product-container" style="border-top-left-radius: 14px;border-top-right-radius: 14px">
+                                                <a href="fifa-23-hatasiz-garanti-destek-16249.html">
+                                                    <img src="https://cdn.itemhesap.com/uploads/images/202302/img_x300_63e8b475574740-47881444-73148042.webp" data-src="https://cdn.itemhesap.com/uploads/images/202302/img_x300_63e8b475574740-47881444-73148042.webp" alt="Fifa 23 Hatasız + Garanti + Destek" class="img-fluid img-product" loading="lazy" width="200" height="260">
+                                                </a>
+                                                <div class="product-item-options" style="top: 40px">
+                                                    <a href="javascript:void(0)" class="item-option btn-add-remove-wishlist" data-toggle="tooltip" data-placement="left" data-product-id="16249" data-reload="0" title="Favoriler">
+                                                        <i class="icon-heart-o"></i>
+                                                    </a>
+                                                    <a href="javascript:void(0)" class="item-option btn-item-add-to-cart" data-toggle="tooltip" data-placement="left" data-product-id="16249" data-reload="0" title="Sepete Ekle">
+                                                        <i class="icon-cart"></i>
+                                                    </a>
+                                                </div>
+
+
+                                            </div>
+
+
+                                        </div>
+
+                                        <div class="row-custom item-details item-details-gumus">
+
+                                            <h2 class="product-title">
+                                                <a href="fifa-23-hatasiz-garanti-destek-16249.html" data-toggle="tooltip" data-placement="bottom" title="Fifa 23 Hatasız + Garanti + Destek">Fifa 23 Hatasız + Garanti + Destek</a>
+                                            </h2>
+
+                                            <p class="product-user text-truncate">
+                                                <b>Mağaza:</b> <a href="magaza/geforcenowmarket.html">
+                                                    <font color="#2185d0" style="text-shadow: 1px 1px 3px #2185d0;">
+
+                                                        GeforceNowMarket
+                                                    </font>
+                                                </a><i data-toggle="tooltip" class="icon-verified icon-verified-member-product" title="Doğrulanmış Satıcı"></i>
+
+                                            </p>
+
+                                            <div class="product-item-rating">
+                                                <div class="rating">
+                                                    <i class="icon-star"></i>
+                                                    <i class="icon-star"></i>
+                                                    <i class="icon-star"></i>
+                                                    <i class="icon-star"></i>
+                                                    <i class="icon-star-o"></i>
+                                                </div><span class="item-wishlist"><i class="icon-heart-o"></i>6</span>
+                                            </div>
+
+                                            <div class="item-meta" style="color: #fff;">
+
+                                                <span class="price">24,99 ₺</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-6 col-sm-4 col-md-3 col-mds-5 col-product">
+
+                                    <div class="product-item product-item-gumus">
+
+                                        <div class="row-custom">
+                                            <a class="item-wishlist-button item-wishlist-enable " data-product-id="10280"></a>
+                                            <div class="img-product-container" style="border-top-left-radius: 14px;border-top-right-radius: 14px">
+                                                <a href="xbox-game-pass-ultimate-3-aylik-kod-garanti-10280.html">
+                                                    <img src="https://cdn.itemhesap.com/uploads/images/202304/img_x300_64301e383d0388-58266528-57887359.webp" data-src="https://cdn.itemhesap.com/uploads/images/202304/img_x300_64301e383d0388-58266528-57887359.webp" alt="Xbox Game Pass For Pc 3 Aylık Kod + Garanti + Hediye" class="img-fluid img-product" loading="lazy" width="200" height="260">
+                                                </a>
+                                                <div class="product-item-options" style="top: 40px">
+                                                    <a href="javascript:void(0)" class="item-option btn-add-remove-wishlist" data-toggle="tooltip" data-placement="left" data-product-id="10280" data-reload="0" title="Favoriler">
+                                                        <i class="icon-heart-o"></i>
+                                                    </a>
+                                                </div>
+
+
+                                            </div>
+
+
+                                            <span class="ui small blue ribbon label" style="bottom: -10px !important; position: absolute; z-index: 2; left: -13px !important; right: unset;"><i class="icon-download-solid"></i>&nbsp;&nbsp;Otomatik Teslim</span>
+
+                                        </div>
+
+                                        <div class="row-custom item-details item-details-gumus">
+
+                                            <h2 class="product-title">
+                                                <a href="xbox-game-pass-ultimate-3-aylik-kod-garanti-10280.html" data-toggle="tooltip" data-placement="bottom" title="Xbox Game Pass For Pc 3 Aylık Kod + Garanti + Hediye">Xbox Game Pass For Pc 3 Aylık Kod + Garanti + Hediye</a>
+                                            </h2>
+
+                                            <p class="product-user text-truncate">
+                                                <b>Mağaza:</b> <a href="magaza/geforcenowmarket.html">
+                                                    <font color="#2185d0" style="text-shadow: 1px 1px 3px #2185d0;">
+
+                                                        GeforceNowMarket
+                                                    </font>
+                                                </a><i data-toggle="tooltip" class="icon-verified icon-verified-member-product" title="Doğrulanmış Satıcı"></i>
+
+                                            </p>
+
+                                            <div class="product-item-rating">
+                                                <div class="rating">
+                                                    <i class="icon-star"></i>
+                                                    <i class="icon-star"></i>
+                                                    <i class="icon-star"></i>
+                                                    <i class="icon-star"></i>
+                                                    <i class="icon-star"></i>
+                                                </div><span class="item-wishlist"><i class="icon-heart-o"></i>3</span>
+                                            </div>
+
+                                            <div class="item-meta" style="color: #fff;">
+
+                                                <span class="price">49,99 ₺</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-6 col-sm-4 col-md-3 col-mds-5 col-product">
+
+                                    <div class="product-item product-item-gumus">
+
+                                        <div class="row-custom">
+                                            <a class="item-wishlist-button item-wishlist-enable " data-product-id="14547"></a>
+                                            <div class="img-product-container" style="border-top-left-radius: 14px;border-top-right-radius: 14px">
+                                                <a href="exxen-reklamsiz-1-aylik-hd-hesap-garanti-hediye-14547.html">
+                                                    <img src="https://cdn.itemhesap.com/uploads/images/202211/img_x300_6381f7996f3856-07658222-67437186.webp" data-src="https://cdn.itemhesap.com/uploads/images/202211/img_x300_6381f7996f3856-07658222-67437186.webp" alt="EXXEN REKLAMSIZ 1 AYLIK HD HESAP + Garanti + Hediye" class="img-fluid img-product" loading="lazy" width="200" height="260">
+                                                </a>
+                                                <div class="product-item-options" style="top: 40px">
+                                                    <a href="javascript:void(0)" class="item-option btn-add-remove-wishlist" data-toggle="tooltip" data-placement="left" data-product-id="14547" data-reload="0" title="Favoriler">
+                                                        <i class="icon-heart-o"></i>
+                                                    </a>
+                                                    <a href="javascript:void(0)" class="item-option btn-item-add-to-cart" data-toggle="tooltip" data-placement="left" data-product-id="14547" data-reload="0" title="Sepete Ekle">
+                                                        <i class="icon-cart"></i>
+                                                    </a>
+                                                </div>
+
+
+                                            </div>
+
+
+                                        </div>
+
+                                        <div class="row-custom item-details item-details-gumus">
+
+                                            <h2 class="product-title">
+                                                <a href="exxen-reklamsiz-1-aylik-hd-hesap-garanti-hediye-14547.html" data-toggle="tooltip" data-placement="bottom" title="EXXEN REKLAMSIZ 1 AYLIK HD HESAP + Garanti + Hediye">EXXEN REKLAMSIZ 1 AYLIK HD HESAP + Garanti + Hediye</a>
+                                            </h2>
+
+                                            <p class="product-user text-truncate">
+                                                <b>Mağaza:</b> <a href="magaza/geforcenowmarket.html">
+                                                    <font color="#2185d0" style="text-shadow: 1px 1px 3px #2185d0;">
+
+                                                        GeforceNowMarket
+                                                    </font>
+                                                </a><i data-toggle="tooltip" class="icon-verified icon-verified-member-product" title="Doğrulanmış Satıcı"></i>
+
+                                            </p>
+
+                                            <div class="product-item-rating">
+                                                <div class="rating">
+                                                    <i class="icon-star"></i>
+                                                    <i class="icon-star"></i>
+                                                    <i class="icon-star"></i>
+                                                    <i class="icon-star"></i>
+                                                    <i class="icon-star"></i>
+                                                </div><span class="item-wishlist"><i class="icon-heart-o"></i>22</span>
+                                            </div>
+
+                                            <div class="item-meta" style="color: #fff;">
+
+                                                <span class="price">17,90 ₺</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-6 col-sm-4 col-md-3 col-mds-5 col-product">
+
+                                    <div class="product-item product-item-gumus">
+
+                                        <div class="row-custom">
+                                            <a class="item-wishlist-button item-wishlist-enable " data-product-id="16250"></a>
+                                            <div class="img-product-container" style="border-top-left-radius: 14px;border-top-right-radius: 14px">
+                                                <a href="football-manager-2023-steam-garanti-16250.html">
+                                                    <img src="https://cdn.itemhesap.com/uploads/images/202302/img_x300_63e8b652162b91-44656932-88114403.webp" data-src="https://cdn.itemhesap.com/uploads/images/202302/img_x300_63e8b652162b91-44656932-88114403.webp" alt="Football Manager 2023 (STEAM) + Garanti" class="img-fluid img-product" loading="lazy" width="200" height="260">
+                                                </a>
+                                                <div class="product-item-options" style="top: 40px">
+                                                    <a href="javascript:void(0)" class="item-option btn-add-remove-wishlist" data-toggle="tooltip" data-placement="left" data-product-id="16250" data-reload="0" title="Favoriler">
+                                                        <i class="icon-heart-o"></i>
+                                                    </a>
+                                                    <a href="javascript:void(0)" class="item-option btn-item-add-to-cart" data-toggle="tooltip" data-placement="left" data-product-id="16250" data-reload="0" title="Sepete Ekle">
+                                                        <i class="icon-cart"></i>
+                                                    </a>
+                                                </div>
+
+
+                                            </div>
+
+
+                                        </div>
+
+                                        <div class="row-custom item-details item-details-gumus">
+
+                                            <h2 class="product-title">
+                                                <a href="football-manager-2023-steam-garanti-16250.html" data-toggle="tooltip" data-placement="bottom" title="Football Manager 2023 (STEAM) + Garanti">Football Manager 2023 (STEAM) + Garanti</a>
+                                            </h2>
+
+                                            <p class="product-user text-truncate">
+                                                <b>Mağaza:</b> <a href="magaza/geforcenowmarket.html">
+                                                    <font color="#2185d0" style="text-shadow: 1px 1px 3px #2185d0;">
+
+                                                        GeforceNowMarket
+                                                    </font>
+                                                </a><i data-toggle="tooltip" class="icon-verified icon-verified-member-product" title="Doğrulanmış Satıcı"></i>
+
+                                            </p>
+
+                                            <div class="product-item-rating">
+                                                <div class="rating">
+                                                    <i class="icon-star-o"></i>
+                                                    <i class="icon-star-o"></i>
+                                                    <i class="icon-star-o"></i>
+                                                    <i class="icon-star-o"></i>
+                                                    <i class="icon-star-o"></i>
+                                                </div><span class="item-wishlist"><i class="icon-heart-o"></i>0</span>
+                                            </div>
+
+                                            <div class="item-meta" style="color: #fff;">
+
+                                                <span class="price">14,89 ₺</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-6 col-sm-4 col-md-3 col-mds-5 col-product">
+
+                                    <div class="product-item product-item-default">
+
+                                        <div class="row-custom">
+                                            <a class="item-wishlist-button item-wishlist-enable " data-product-id="4380"></a>
+                                            <div class="img-product-container" style="border-top-left-radius: 14px;border-top-right-radius: 14px">
+                                                <a href="1-alana-1-bedava-10-120-skin-garantili-4380.html">
+                                                    <img src="https://cdn.itemhesap.com/uploads/images/202110/img_x300_6173a16c6fdf60-20736622-86870960.webp" data-src="https://cdn.itemhesap.com/uploads/images/202110/img_x300_6173a16c6fdf60-20736622-86870960.webp" alt="1 ALANA 1 BEDAVA / 10-120 SKİN GARANTİLİ" class="img-fluid img-product" loading="lazy" width="200" height="260">
+                                                </a>
+                                                <div class="product-item-options" style="top: 40px">
+                                                    <a href="javascript:void(0)" class="item-option btn-add-remove-wishlist" data-toggle="tooltip" data-placement="left" data-product-id="4380" data-reload="0" title="Favoriler">
+                                                        <i class="icon-heart-o"></i>
+                                                    </a>
+                                                    <a href="1-alana-1-bedava-10-120-skin-garantili-4380.html" class="item-option" data-toggle="tooltip" data-placement="left" data-product-id="4380" data-reload="0" title="Onay Gerekli">
+                                                        <i class="icon-cart"></i>
+                                                    </a>
+                                                </div>
+
+
+                                            </div>
+
+
+                                        </div>
+
+                                        <div class="row-custom item-details item-details-default">
+
+                                            <h2 class="product-title">
+                                                <a href="1-alana-1-bedava-10-120-skin-garantili-4380.html" data-toggle="tooltip" data-placement="bottom" title="1 ALANA 1 BEDAVA / 10-120 SKİN GARANTİLİ">1 ALANA 1 BEDAVA / 10-120 SKİN GARANTİLİ</a>
+                                            </h2>
+
+                                            <p class="product-user text-truncate">
+                                                <b>Mağaza:</b> <a href="magaza/gamemarket.html">
+                                                    <font color="#888">
+
+                                                        GAME MARKET
+                                                    </font>
+                                                </a><i data-toggle="tooltip" class="icon-verified icon-verified-member-product" title="Doğrulanmış Satıcı"></i>
+
+                                            </p>
+
+                                            <div class="product-item-rating">
+                                                <div class="rating">
+                                                    <i class="icon-star"></i>
+                                                    <i class="icon-star"></i>
+                                                    <i class="icon-star"></i>
+                                                    <i class="icon-star"></i>
+                                                    <i class="icon-star"></i>
+                                                </div><span class="item-wishlist"><i class="icon-heart-o"></i>17</span>
+                                            </div>
+
+                                            <div class="item-meta">
+
+                                                <span class="price">9 ₺</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-6 col-sm-4 col-md-3 col-mds-5 col-product">
+
+                                    <div class="product-item product-item-default">
+
+                                        <div class="row-custom">
+                                            <a class="item-wishlist-button item-wishlist-enable " data-product-id="4375"></a>
+                                            <div class="img-product-container" style="border-top-left-radius: 14px;border-top-right-radius: 14px">
+                                                <a href="1-alana-1-bedava-1-120-skin-garantili-4375.html">
+                                                    <img src="https://cdn.itemhesap.com/uploads/images/202110/img_x300_61739fa54252d4-76172951-64642450.webp" data-src="https://cdn.itemhesap.com/uploads/images/202110/img_x300_61739fa54252d4-76172951-64642450.webp" alt="TR SUNUCU 1 ALANA 1 BEDAVA / 1-120 SKİN GARANTİLİ" class="img-fluid img-product" loading="lazy" width="200" height="260">
+                                                </a>
+                                                <div class="product-item-options" style="top: 40px">
+                                                    <a href="javascript:void(0)" class="item-option btn-add-remove-wishlist" data-toggle="tooltip" data-placement="left" data-product-id="4375" data-reload="0" title="Favoriler">
+                                                        <i class="icon-heart-o"></i>
+                                                    </a>
+                                                    <a href="1-alana-1-bedava-1-120-skin-garantili-4375.html" class="item-option" data-toggle="tooltip" data-placement="left" data-product-id="4375" data-reload="0" title="Onay Gerekli">
+                                                        <i class="icon-cart"></i>
+                                                    </a>
+                                                </div>
+
+
+                                            </div>
+
+
+                                        </div>
+
+                                        <div class="row-custom item-details item-details-default">
+
+                                            <h2 class="product-title">
+                                                <a href="1-alana-1-bedava-1-120-skin-garantili-4375.html" data-toggle="tooltip" data-placement="bottom" title="TR SUNUCU 1 ALANA 1 BEDAVA / 1-120 SKİN GARANTİLİ">TR SUNUCU 1 ALANA 1 BEDAVA / 1-120 SKİN GARANTİLİ</a>
+                                            </h2>
+
+                                            <p class="product-user text-truncate">
+                                                <b>Mağaza:</b> <a href="magaza/gamemarket.html">
+                                                    <font color="#888">
+
+                                                        GAME MARKET
+                                                    </font>
+                                                </a><i data-toggle="tooltip" class="icon-verified icon-verified-member-product" title="Doğrulanmış Satıcı"></i>
+
+                                            </p>
+
+                                            <div class="product-item-rating">
+                                                <div class="rating">
+                                                    <i class="icon-star"></i>
+                                                    <i class="icon-star"></i>
+                                                    <i class="icon-star"></i>
+                                                    <i class="icon-star"></i>
+                                                    <i class="icon-star"></i>
+                                                </div><span class="item-wishlist"><i class="icon-heart-o"></i>10</span>
+                                            </div>
+
+                                            <div class="item-meta">
+
+                                                <span class="price">7 ₺</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-6 col-sm-4 col-md-3 col-mds-5 col-product">
+
+                                    <div class="product-item product-item-gumus">
+
+                                        <div class="row-custom">
+                                            <a class="item-wishlist-button item-wishlist-enable " data-product-id="2136"></a>
+                                            <div class="img-product-container" style="border-top-left-radius: 14px;border-top-right-radius: 14px">
+                                                <a href="xbox-gamepass-ultimate-edition-garanti-2136.html">
+                                                    <img src="https://cdn.itemhesap.com/uploads/images/202107/img_x300_60e5ca9fa34d82-51759100-41611353.webp" data-src="https://cdn.itemhesap.com/uploads/images/202107/img_x300_60e5ca9fa34d82-51759100-41611353.webp" alt="Xbox Gamepass Ultimate Hesabı + Garanti!" class="img-fluid img-product" loading="lazy" width="200" height="260">
+                                                </a>
+                                                <div class="product-item-options" style="top: 40px">
+                                                    <a href="javascript:void(0)" class="item-option btn-add-remove-wishlist" data-toggle="tooltip" data-placement="left" data-product-id="2136" data-reload="0" title="Favoriler">
+                                                        <i class="icon-heart-o"></i>
+                                                    </a>
+                                                    <a href="javascript:void(0)" class="item-option btn-item-add-to-cart" data-toggle="tooltip" data-placement="left" data-product-id="2136" data-reload="0" title="Sepete Ekle">
+                                                        <i class="icon-cart"></i>
+                                                    </a>
+                                                </div>
+
+
+                                            </div>
+
+
+                                        </div>
+
+                                        <div class="row-custom item-details item-details-gumus">
+
+                                            <h2 class="product-title">
+                                                <a href="xbox-gamepass-ultimate-edition-garanti-2136.html" data-toggle="tooltip" data-placement="bottom" title="Xbox Gamepass Ultimate Hesabı + Garanti!">Xbox Gamepass Ultimate Hesabı + Garanti!</a>
+                                            </h2>
+
+                                            <p class="product-user text-truncate">
+                                                <b>Mağaza:</b> <a href="magaza/geforcenowmarket.html">
+                                                    <font color="#2185d0" style="text-shadow: 1px 1px 3px #2185d0;">
+
+                                                        GeforceNowMarket
+                                                    </font>
+                                                </a><i data-toggle="tooltip" class="icon-verified icon-verified-member-product" title="Doğrulanmış Satıcı"></i>
+
+                                            </p>
+
+                                            <div class="product-item-rating">
+                                                <div class="rating">
+                                                    <i class="icon-star"></i>
+                                                    <i class="icon-star"></i>
+                                                    <i class="icon-star"></i>
+                                                    <i class="icon-star"></i>
+                                                    <i class="icon-star"></i>
+                                                </div><span class="item-wishlist"><i class="icon-heart-o"></i>28</span>
+                                            </div>
+
+                                            <div class="item-meta" style="color: #fff;">
+
+                                                <span class="price">14,90 ₺</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-6 col-sm-4 col-md-3 col-mds-5 col-product">
+
+                                    <div class="product-item product-item-gumus">
+
+                                        <div class="row-custom">
+                                            <a class="item-wishlist-button item-wishlist-enable " data-product-id="10947"></a>
+                                            <div class="img-product-container" style="border-top-left-radius: 14px;border-top-right-radius: 14px">
+                                                <a href="blutv-premium-hesap-1-aylik-garantili-full-hd-garanti-hediye-10947.html">
+                                                    <img src="https://cdn.itemhesap.com/uploads/images/202206/img_x300_62bb40a4af2a13-52937424-98583225.webp" data-src="https://cdn.itemhesap.com/uploads/images/202206/img_x300_62bb40a4af2a13-52937424-98583225.webp" alt="BLUTV PREMİUM HESAP 1 AYLIK GARANTİLİ FULL HD + Garanti + Hediye" class="img-fluid img-product" loading="lazy" width="200" height="260">
+                                                </a>
+                                                <div class="product-item-options" style="top: 40px">
+                                                    <a href="javascript:void(0)" class="item-option btn-add-remove-wishlist" data-toggle="tooltip" data-placement="left" data-product-id="10947" data-reload="0" title="Favoriler">
+                                                        <i class="icon-heart-o"></i>
+                                                    </a>
+                                                    <a href="javascript:void(0)" class="item-option btn-item-add-to-cart" data-toggle="tooltip" data-placement="left" data-product-id="10947" data-reload="0" title="Sepete Ekle">
+                                                        <i class="icon-cart"></i>
+                                                    </a>
+                                                </div>
+
+                                                <span class="ui small red corner label"><span style="cursor: default;position: relative;top: 0.64285714em;left: 0.78571429em;font-size: 1.14285714em;margin: 0;"><i class="fa fa-percent" aria-hidden="true"></i>80</span></span>
+
+                                            </div>
+
+
+                                        </div>
+
+                                        <div class="row-custom item-details item-details-gumus">
+
+                                            <h2 class="product-title">
+                                                <a href="blutv-premium-hesap-1-aylik-garantili-full-hd-garanti-hediye-10947.html" data-toggle="tooltip" data-placement="bottom" title="BLUTV PREMİUM HESAP 1 AYLIK GARANTİLİ FULL HD + Garanti + Hediye">BLUTV PREMİUM HESAP 1 AYLIK GARANTİLİ FULL HD + Garanti + Hediye</a>
+                                            </h2>
+
+                                            <p class="product-user text-truncate">
+                                                <b>Mağaza:</b> <a href="magaza/geforcenowmarket.html">
+                                                    <font color="#2185d0" style="text-shadow: 1px 1px 3px #2185d0;">
+
+                                                        GeforceNowMarket
+                                                    </font>
+                                                </a><i data-toggle="tooltip" class="icon-verified icon-verified-member-product" title="Doğrulanmış Satıcı"></i>
+
+                                            </p>
+
+                                            <div class="product-item-rating">
+                                                <div class="rating">
+                                                    <i class="icon-star"></i>
+                                                    <i class="icon-star"></i>
+                                                    <i class="icon-star"></i>
+                                                    <i class="icon-star"></i>
+                                                    <i class="icon-star"></i>
+                                                </div><span class="item-wishlist"><i class="icon-heart-o"></i>69</span>
+                                            </div>
+
+                                            <div class="item-meta" style="color: #fff;">
+
+                                                <del class="discount-original-price">
+                                                    50 ₺
+                                                </del>
+                                                <span class="price">10 ₺</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-6 col-sm-4 col-md-3 col-mds-5 col-product">
+
+                                    <div class="product-item product-item-gumus">
+
+                                        <div class="row-custom">
+                                            <a class="item-wishlist-button item-wishlist-enable " data-product-id="10373"></a>
+                                            <div class="img-product-container" style="border-top-left-radius: 14px;border-top-right-radius: 14px">
+                                                <a href="exxen-1-aylik-hd-hesap-garanti-hediye-10373.html">
+                                                    <img src="https://cdn.itemhesap.com/uploads/images/202206/img_x300_62af4d226ef857-02349469-94432946.webp" data-src="https://cdn.itemhesap.com/uploads/images/202206/img_x300_62af4d226ef857-02349469-94432946.webp" alt="EXXEN 1 AYLIK Reklamlı HD HESAP + Garanti + Hediye" class="img-fluid img-product" loading="lazy" width="200" height="260">
+                                                </a>
+                                                <div class="product-item-options" style="top: 40px">
+                                                    <a href="javascript:void(0)" class="item-option btn-add-remove-wishlist" data-toggle="tooltip" data-placement="left" data-product-id="10373" data-reload="0" title="Favoriler">
+                                                        <i class="icon-heart-o"></i>
+                                                    </a>
+                                                    <a href="javascript:void(0)" class="item-option btn-item-add-to-cart" data-toggle="tooltip" data-placement="left" data-product-id="10373" data-reload="0" title="Sepete Ekle">
+                                                        <i class="icon-cart"></i>
+                                                    </a>
+                                                </div>
+
+
+                                            </div>
+
+
+                                        </div>
+
+                                        <div class="row-custom item-details item-details-gumus">
+
+                                            <h2 class="product-title">
+                                                <a href="exxen-1-aylik-hd-hesap-garanti-hediye-10373.html" data-toggle="tooltip" data-placement="bottom" title="EXXEN 1 AYLIK Reklamlı HD HESAP + Garanti + Hediye">EXXEN 1 AYLIK Reklamlı HD HESAP + Garanti + Hediye</a>
+                                            </h2>
+
+                                            <p class="product-user text-truncate">
+                                                <b>Mağaza:</b> <a href="magaza/geforcenowmarket.html">
+                                                    <font color="#2185d0" style="text-shadow: 1px 1px 3px #2185d0;">
+
+                                                        GeforceNowMarket
+                                                    </font>
+                                                </a><i data-toggle="tooltip" class="icon-verified icon-verified-member-product" title="Doğrulanmış Satıcı"></i>
+
+                                            </p>
+
+                                            <div class="product-item-rating">
+                                                <div class="rating">
+                                                    <i class="icon-star"></i>
+                                                    <i class="icon-star"></i>
+                                                    <i class="icon-star"></i>
+                                                    <i class="icon-star"></i>
+                                                    <i class="icon-star"></i>
+                                                </div><span class="item-wishlist"><i class="icon-heart-o"></i>20</span>
+                                            </div>
+
+                                            <div class="item-meta" style="color: #fff;">
+
+                                                <span class="price">13,99 ₺</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-6 col-sm-4 col-md-3 col-mds-5 col-product">
+
+                                    <div class="product-item product-item-altin">
+
+                                        <div class="row-custom">
+                                            <a class="item-wishlist-button item-wishlist-enable " data-product-id="17939"></a>
+                                            <div class="img-product-container" style="border-top-left-radius: 14px;border-top-right-radius: 14px">
+                                                <a href="tlou-resident-evil-4-remake-deluxe-edition-17939.html">
+                                                    <img src="https://cdn.itemhesap.com/uploads/images/202304/img_x300_642b1a21194dc0-92037017-79457699.webp" data-src="https://cdn.itemhesap.com/uploads/images/202304/img_x300_642b1a21194dc0-92037017-79457699.webp" alt="Resident evil 4 Remake Deluxe + The Last Of Us 1 Deluxe" class="img-fluid img-product" loading="lazy" width="200" height="260">
+                                                </a>
+                                                <div class="product-item-options" style="top: 40px">
+                                                    <a href="javascript:void(0)" class="item-option btn-add-remove-wishlist" data-toggle="tooltip" data-placement="left" data-product-id="17939" data-reload="0" title="Favoriler">
+                                                        <i class="icon-heart-o"></i>
+                                                    </a>
+                                                    <a href="javascript:void(0)" class="item-option btn-item-add-to-cart" data-toggle="tooltip" data-placement="left" data-product-id="17939" data-reload="0" title="Sepete Ekle">
+                                                        <i class="icon-cart"></i>
+                                                    </a>
+                                                </div>
+
+
+                                            </div>
+
+
+                                        </div>
+
+                                        <div class="row-custom item-details item-details-altin">
+
+                                            <h2 class="product-title">
+                                                <a href="tlou-resident-evil-4-remake-deluxe-edition-17939.html" data-toggle="tooltip" data-placement="bottom" title="Resident evil 4 Remake Deluxe + The Last Of Us 1 Deluxe">Resident evil 4 Remake Deluxe + The Last Of Us 1 Deluxe</a>
+                                            </h2>
+
+                                            <p class="product-user text-truncate">
+                                                <b>Mağaza:</b> <a href="magaza/gamesbazaar.html">
+                                                    <font color="#dc143c" style="text-shadow: 1px 1px 3px #dc143c;">
+
+                                                        GamesBazaar
+                                                    </font>
+                                                </a><i data-toggle="tooltip" class="icon-verified icon-verified-member-product" title="Doğrulanmış Satıcı"></i>
+
+                                            </p>
+
+                                            <div class="product-item-rating">
+                                                <div class="rating">
+                                                    <i class="icon-star"></i>
+                                                    <i class="icon-star"></i>
+                                                    <i class="icon-star"></i>
+                                                    <i class="icon-star"></i>
+                                                    <i class="icon-star"></i>
+                                                </div><span class="item-wishlist"><i class="icon-heart-o"></i>0</span>
+                                            </div>
+
+                                            <div class="item-meta" style="color: #fff;">
+
+                                                <span class="price">39,90 ₺</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-6 col-sm-4 col-md-3 col-mds-5 col-product">
+
+                                    <div class="product-item product-item-altin">
+
+                                        <div class="row-custom">
+                                            <a class="item-wishlist-button item-wishlist-enable " data-product-id="15240"></a>
+                                            <div class="img-product-container" style="border-top-left-radius: 14px;border-top-right-radius: 14px">
+                                                <a href="fifa-23-hatasiz-istediginiz-2-oyun-garanti-15240.html">
+                                                    <img src="https://cdn.itemhesap.com/uploads/images/202301/img_x300_63b5b88b16eca3-07139834-86196501.webp" data-src="https://cdn.itemhesap.com/uploads/images/202301/img_x300_63b5b88b16eca3-07139834-86196501.webp" alt="Fifa 23 Hatasız + İstediğiniz 1 Oyun + Garanti" class="img-fluid img-product" loading="lazy" width="200" height="260">
+                                                </a>
+                                                <div class="product-item-options" style="top: 40px">
+                                                    <a href="javascript:void(0)" class="item-option btn-add-remove-wishlist" data-toggle="tooltip" data-placement="left" data-product-id="15240" data-reload="0" title="Favoriler">
+                                                        <i class="icon-heart-o"></i>
+                                                    </a>
+                                                    <a href="javascript:void(0)" class="item-option btn-item-add-to-cart" data-toggle="tooltip" data-placement="left" data-product-id="15240" data-reload="0" title="Sepete Ekle">
+                                                        <i class="icon-cart"></i>
+                                                    </a>
+                                                </div>
+
+
+                                            </div>
+
+
+                                        </div>
+
+                                        <div class="row-custom item-details item-details-altin">
+
+                                            <h2 class="product-title">
+                                                <a href="fifa-23-hatasiz-istediginiz-2-oyun-garanti-15240.html" data-toggle="tooltip" data-placement="bottom" title="Fifa 23 Hatasız + İstediğiniz 1 Oyun + Garanti">Fifa 23 Hatasız + İstediğiniz 1 Oyun + Garanti</a>
+                                            </h2>
+
+                                            <p class="product-user text-truncate">
+                                                <b>Mağaza:</b> <a href="magaza/gamesbazaar.html">
+                                                    <font color="#dc143c" style="text-shadow: 1px 1px 3px #dc143c;">
+
+                                                        GamesBazaar
+                                                    </font>
+                                                </a><i data-toggle="tooltip" class="icon-verified icon-verified-member-product" title="Doğrulanmış Satıcı"></i>
+
+                                            </p>
+
+                                            <div class="product-item-rating">
+                                                <div class="rating">
+                                                    <i class="icon-star"></i>
+                                                    <i class="icon-star"></i>
+                                                    <i class="icon-star"></i>
+                                                    <i class="icon-star"></i>
+                                                    <i class="icon-star"></i>
+                                                </div><span class="item-wishlist"><i class="icon-heart-o"></i>3</span>
+                                            </div>
+
+                                            <div class="item-meta" style="color: #fff;">
+
+                                                <span class="price">29,90 ₺</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-6 col-sm-4 col-md-3 col-mds-5 col-product">
+
+                                    <div class="product-item product-item-altin">
+
+                                        <div class="row-custom">
+                                            <a class="item-wishlist-button item-wishlist-enable " data-product-id="12917"></a>
+                                            <div class="img-product-container" style="border-top-left-radius: 14px;border-top-right-radius: 14px">
+                                                <a href="istediginiz-3-oyun-garanti-12917.html">
+                                                    <img src="https://cdn.itemhesap.com/uploads/images/202304/img_x300_64302784d793a8-88963433-22065658.webp" data-src="https://cdn.itemhesap.com/uploads/images/202304/img_x300_64302784d793a8-88963433-22065658.webp" alt="İstediğiniz 3 Oyun + Garanti" class="img-fluid img-product" loading="lazy" width="200" height="260">
+                                                </a>
+                                                <div class="product-item-options" style="top: 40px">
+                                                    <a href="javascript:void(0)" class="item-option btn-add-remove-wishlist" data-toggle="tooltip" data-placement="left" data-product-id="12917" data-reload="0" title="Favoriler">
+                                                        <i class="icon-heart-o"></i>
+                                                    </a>
+                                                    <a href="javascript:void(0)" class="item-option btn-item-add-to-cart" data-toggle="tooltip" data-placement="left" data-product-id="12917" data-reload="0" title="Sepete Ekle">
+                                                        <i class="icon-cart"></i>
+                                                    </a>
+                                                </div>
+
+
+                                            </div>
+
+
+                                        </div>
+
+                                        <div class="row-custom item-details item-details-altin">
+
+                                            <h2 class="product-title">
+                                                <a href="istediginiz-3-oyun-garanti-12917.html" data-toggle="tooltip" data-placement="bottom" title="İstediğiniz 3 Oyun + Garanti">İstediğiniz 3 Oyun + Garanti</a>
+                                            </h2>
+
+                                            <p class="product-user text-truncate">
+                                                <b>Mağaza:</b> <a href="magaza/gamesbazaar.html">
+                                                    <font color="#dc143c" style="text-shadow: 1px 1px 3px #dc143c;">
+
+                                                        GamesBazaar
+                                                    </font>
+                                                </a><i data-toggle="tooltip" class="icon-verified icon-verified-member-product" title="Doğrulanmış Satıcı"></i>
+
+                                            </p>
+
+                                            <div class="product-item-rating">
+                                                <div class="rating">
+                                                    <i class="icon-star"></i>
+                                                    <i class="icon-star"></i>
+                                                    <i class="icon-star"></i>
+                                                    <i class="icon-star"></i>
+                                                    <i class="icon-star-o"></i>
+                                                </div><span class="item-wishlist"><i class="icon-heart-o"></i>7</span>
+                                            </div>
+
+                                            <div class="item-meta" style="color: #fff;">
+
+                                                <span class="price">34,90 ₺</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-6 col-sm-4 col-md-3 col-mds-5 col-product">
+
+                                    <div class="product-item product-item-gumus">
+
+                                        <div class="row-custom">
+                                            <a class="item-wishlist-button item-wishlist-enable " data-product-id="14548"></a>
+                                            <div class="img-product-container" style="border-top-left-radius: 14px;border-top-right-radius: 14px">
+                                                <a href="1-aylik-storytel-uyeligi-30-gun-14548.html">
+                                                    <img src="https://cdn.itemhesap.com/uploads/images/202211/img_x300_6381fccbc2efc8-12147024-36903830.webp" data-src="https://cdn.itemhesap.com/uploads/images/202211/img_x300_6381fccbc2efc8-12147024-36903830.webp" alt="1 Aylık Storytel Üyeliği - 30 Gün + Garanti + Hediye" class="img-fluid img-product" loading="lazy" width="200" height="260">
+                                                </a>
+                                                <div class="product-item-options" style="top: 40px">
+                                                    <a href="javascript:void(0)" class="item-option btn-add-remove-wishlist" data-toggle="tooltip" data-placement="left" data-product-id="14548" data-reload="0" title="Favoriler">
+                                                        <i class="icon-heart-o"></i>
+                                                    </a>
+                                                    <a href="javascript:void(0)" class="item-option btn-item-add-to-cart" data-toggle="tooltip" data-placement="left" data-product-id="14548" data-reload="0" title="Sepete Ekle">
+                                                        <i class="icon-cart"></i>
+                                                    </a>
+                                                </div>
+
+
+                                            </div>
+
+
+                                        </div>
+
+                                        <div class="row-custom item-details item-details-gumus">
+
+                                            <h2 class="product-title">
+                                                <a href="1-aylik-storytel-uyeligi-30-gun-14548.html" data-toggle="tooltip" data-placement="bottom" title="1 Aylık Storytel Üyeliği - 30 Gün + Garanti + Hediye">1 Aylık Storytel Üyeliği - 30 Gün + Garanti + Hediye</a>
+                                            </h2>
+
+                                            <p class="product-user text-truncate">
+                                                <b>Mağaza:</b> <a href="magaza/geforcenowmarket.html">
+                                                    <font color="#2185d0" style="text-shadow: 1px 1px 3px #2185d0;">
+
+                                                        GeforceNowMarket
+                                                    </font>
+                                                </a><i data-toggle="tooltip" class="icon-verified icon-verified-member-product" title="Doğrulanmış Satıcı"></i>
+
+                                            </p>
+
+                                            <div class="product-item-rating">
+                                                <div class="rating">
+                                                    <i class="icon-star"></i>
+                                                    <i class="icon-star"></i>
+                                                    <i class="icon-star"></i>
+                                                    <i class="icon-star"></i>
+                                                    <i class="icon-star"></i>
+                                                </div><span class="item-wishlist"><i class="icon-heart-o"></i>6</span>
+                                            </div>
+
+                                            <div class="item-meta" style="color: #fff;">
+
+                                                <span class="price">15,99 ₺</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <input type="hidden" id="vitrined_products_offset" value="15">
+                            <div id="load_vitrined_spinner" class="col-12 load-more-spinner">
+                                <div class="row">
+                                    <div class="spinner">
+                                        <div class="bounce1"></div>
+                                        <div class="bounce2"></div>
+                                        <div class="bounce3"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-footer row-custom text-center vitrined-load-more-container">
+                        <a href="javascript:void(0)" class="link-see-more" onclick="load_more_vitrined_products();"><span>Daha Fazla Yükle&nbsp;<i class="icon-arrow-down"></i></span></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section section-latest-products">
+                <div class="card-header section-header">
+                    <h3 class="title"><a href="urunler.html">Yeni Ürünler</a></h3>
+                </div>
+                <div class="card-body">
+                    <div class="row row-product">
+
+                        <div class="col-6 col-sm-4 col-md-3 col-mds-5 col-product">
+
+                            <div class="product-item product-item-gumus">
+
+                                <div class="row-custom">
+                                    <a class="item-wishlist-button item-wishlist-enable " data-product-id="18575"></a>
+                                    <div class="img-product-container" style="border-top-left-radius: 14px;border-top-right-radius: 14px">
+                                        <a href="1-aylik-s-sport-plus-abonelik-kodu-18575.html">
+                                            <img src="https://cdn.itemhesap.com/uploads/images/202304/img_x300_643715c3c8da93-61559695-79563364.webp" data-src="https://cdn.itemhesap.com/uploads/images/202304/img_x300_643715c3c8da93-61559695-79563364.webp" alt="1 Aylık S Sport Plus Abonelik Kodu" class="img-fluid img-product" loading="lazy" width="200" height="260">
+                                        </a>
+                                        <div class="product-item-options" style="top: 40px">
+                                            <a href="javascript:void(0)" class="item-option btn-add-remove-wishlist" data-toggle="tooltip" data-placement="left" data-product-id="18575" data-reload="0" title="Favoriler">
+                                                <i class="icon-heart-o"></i>
+                                            </a>
+                                        </div>
+
+
+                                    </div>
+
+
+                                    <span class="ui small blue ribbon label" style="bottom: -10px !important; position: absolute; z-index: 2; left: -13px !important; right: unset;"><i class="icon-download-solid"></i>&nbsp;&nbsp;Otomatik Teslim</span>
+
+                                </div>
+
+                                <div class="row-custom item-details item-details-gumus">
+
+                                    <h2 class="product-title">
+                                        <a href="1-aylik-s-sport-plus-abonelik-kodu-18575.html" data-toggle="tooltip" data-placement="bottom" title="1 Aylık S Sport Plus Abonelik Kodu">1 Aylık S Sport Plus Abonelik Kodu</a>
+                                    </h2>
+
+                                    <p class="product-user text-truncate">
+                                        <b>Mağaza:</b> <a href="magaza/premiumbird.html">
+                                            <font color="#2185d0" style="text-shadow: 1px 1px 3px #2185d0;">
+
+                                                Premiumbird
+                                            </font>
+                                        </a><i data-toggle="tooltip" class="icon-verified icon-verified-member-product" title="Doğrulanmış Satıcı"></i>
+
+                                    </p>
+
+                                    <div class="product-item-rating">
+                                        <div class="rating">
+                                            <i class="icon-star-o"></i>
+                                            <i class="icon-star-o"></i>
+                                            <i class="icon-star-o"></i>
+                                            <i class="icon-star-o"></i>
+                                            <i class="icon-star-o"></i>
+                                        </div><span class="item-wishlist"><i class="icon-heart-o"></i>0</span>
+                                    </div>
+
+                                    <div class="item-meta" style="color: #fff;">
+
+                                        <span class="price">14,99 ₺</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6 col-sm-4 col-md-3 col-mds-5 col-product">
+
+                            <div class="product-item product-item-default">
+
+                                <div class="row-custom">
+                                    <a class="item-wishlist-button item-wishlist-enable " data-product-id="18571"></a>
+                                    <div class="img-product-container" style="border-top-left-radius: 14px;border-top-right-radius: 14px">
+                                        <a href="red-dead-redemption-2-ps4ps5-garanti-destek-18571.html">
+                                            <img src="https://cdn.itemhesap.com/uploads/images/202304/img_x300_6436fe5be894d8-82111024-89605266.webp" data-src="https://cdn.itemhesap.com/uploads/images/202304/img_x300_6436fe5be894d8-82111024-89605266.webp" alt="RED DEAD REDEMPTİON 2 PS4/PS5 +GARANTİ +DESTEK" class="img-fluid img-product" loading="lazy" width="200" height="260">
+                                        </a>
+                                        <div class="product-item-options" style="top: 40px">
+                                            <a href="javascript:void(0)" class="item-option btn-add-remove-wishlist" data-toggle="tooltip" data-placement="left" data-product-id="18571" data-reload="0" title="Favoriler">
+                                                <i class="icon-heart-o"></i>
+                                            </a>
+                                            <a href="javascript:void(0)" class="item-option btn-item-add-to-cart" data-toggle="tooltip" data-placement="left" data-product-id="18571" data-reload="0" title="Sepete Ekle">
+                                                <i class="icon-cart"></i>
+                                            </a>
+                                        </div>
+
+
+                                    </div>
+
+
+                                </div>
+
+                                <div class="row-custom item-details item-details-default">
+
+                                    <h2 class="product-title">
+                                        <a href="red-dead-redemption-2-ps4ps5-garanti-destek-18571.html" data-toggle="tooltip" data-placement="bottom" title="RED DEAD REDEMPTİON 2 PS4/PS5 +GARANTİ +DESTEK">RED DEAD REDEMPTİON 2 PS4/PS5 +GARANTİ +DESTEK</a>
+                                    </h2>
+
+                                    <p class="product-user text-truncate">
+                                        <b>Mağaza:</b> <a href="magaza/jc2blue35.html">
+                                            <font color="#888">
+
+                                                Hızlı Teslimat
+                                            </font>
+                                        </a><i data-toggle="tooltip" class="icon-verified icon-verified-member-product" title="Doğrulanmış Satıcı"></i>
+
+                                    </p>
+
+                                    <div class="product-item-rating">
+                                        <div class="rating">
+                                            <i class="icon-star-o"></i>
+                                            <i class="icon-star-o"></i>
+                                            <i class="icon-star-o"></i>
+                                            <i class="icon-star-o"></i>
+                                            <i class="icon-star-o"></i>
+                                        </div><span class="item-wishlist"><i class="icon-heart-o"></i>0</span>
+                                    </div>
+
+                                    <div class="item-meta">
+
+                                        <del class="discount-original-price">
+                                            469,90 ₺
+                                        </del>
+                                        <span class="price">75,18 ₺</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6 col-sm-4 col-md-3 col-mds-5 col-product">
+
+                            <div class="product-item product-item-altin">
+
+                                <div class="row-custom">
+                                    <a class="item-wishlist-button item-wishlist-enable " data-product-id="18570"></a>
+                                    <div class="img-product-container" style="border-top-left-radius: 14px;border-top-right-radius: 14px">
+                                        <a href="hogwarts-legacy-deluxe-edition-the-last-of-us-part-1-deluxe-edition-resident-evil-4-garanti-18570.html">
+                                            <img src="https://cdn.itemhesap.com/uploads/images/202304/img_x300_6436fa9e148f40-83427408-39172354.webp" data-src="https://cdn.itemhesap.com/uploads/images/202304/img_x300_6436fa9e148f40-83427408-39172354.webp" alt="Hogwarts Legacy Deluxe Edition + The Last Of Us Part 1 Deluxe Edition + Resident Evil 4 + Garanti" class="img-fluid img-product" loading="lazy" width="200" height="260">
+                                        </a>
+                                        <div class="product-item-options" style="top: 40px">
+                                            <a href="javascript:void(0)" class="item-option btn-add-remove-wishlist" data-toggle="tooltip" data-placement="left" data-product-id="18570" data-reload="0" title="Favoriler">
+                                                <i class="icon-heart-o"></i>
+                                            </a>
+                                            <a href="javascript:void(0)" class="item-option btn-item-add-to-cart" data-toggle="tooltip" data-placement="left" data-product-id="18570" data-reload="0" title="Sepete Ekle">
+                                                <i class="icon-cart"></i>
+                                            </a>
+                                        </div>
+
+
+                                    </div>
+
+
+                                </div>
+
+                                <div class="row-custom item-details item-details-altin">
+
+                                    <h2 class="product-title">
+                                        <a href="hogwarts-legacy-deluxe-edition-the-last-of-us-part-1-deluxe-edition-resident-evil-4-garanti-18570.html" data-toggle="tooltip" data-placement="bottom" title="Hogwarts Legacy Deluxe Edition + The Last Of Us Part 1 Deluxe Edition + Resident Evil 4 + Garanti">Hogwarts Legacy Deluxe Edition + The Last Of Us Part 1 Deluxe Edition + Resident Evil 4 + Garanti</a>
+                                    </h2>
+
+                                    <p class="product-user text-truncate">
+                                        <b>Mağaza:</b> <a href="magaza/opssgamershop.html">
+                                            <font color="#dc143c" style="text-shadow: 1px 1px 3px #dc143c;">
+
+                                                OpssGamerShop
+                                            </font>
+                                        </a><i data-toggle="tooltip" class="icon-verified icon-verified-member-product" title="Doğrulanmış Satıcı"></i>
+
+                                    </p>
+
+                                    <div class="product-item-rating">
+                                        <div class="rating">
+                                            <i class="icon-star-o"></i>
+                                            <i class="icon-star-o"></i>
+                                            <i class="icon-star-o"></i>
+                                            <i class="icon-star-o"></i>
+                                            <i class="icon-star-o"></i>
+                                        </div><span class="item-wishlist"><i class="icon-heart-o"></i>0</span>
+                                    </div>
+
+                                    <div class="item-meta" style="color: #fff;">
+
+                                        <span class="price">34,90 ₺</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6 col-sm-4 col-md-3 col-mds-5 col-product">
+
+                            <div class="product-item product-item-default">
+
+                                <div class="row-custom">
+                                    <a class="item-wishlist-button item-wishlist-enable " data-product-id="18565"></a>
+                                    <div class="img-product-container" style="border-top-left-radius: 14px;border-top-right-radius: 14px">
+                                        <a href="valorant-cok-ucuza-vandal-garantili-random-hesaplar-18565.html">
+                                            <img src="https://cdn.itemhesap.com/uploads/images/202304/img_x300_6436d0b4a0ceb3-00110231-31165160.webp" data-src="https://cdn.itemhesap.com/uploads/images/202304/img_x300_6436d0b4a0ceb3-00110231-31165160.webp" alt="Valorant Çok Ucuza Vandal Garantili Random Hesaplar" class="img-fluid img-product" loading="lazy" width="200" height="260">
+                                        </a>
+                                        <div class="product-item-options" style="top: 40px">
+                                            <a href="javascript:void(0)" class="item-option btn-add-remove-wishlist" data-toggle="tooltip" data-placement="left" data-product-id="18565" data-reload="0" title="Favoriler">
+                                                <i class="icon-heart-o"></i>
+                                            </a>
+                                            <a href="valorant-cok-ucuza-vandal-garantili-random-hesaplar-18565.html" class="item-option" data-toggle="tooltip" data-placement="left" data-product-id="18565" data-reload="0" title="Onay Gerekli">
+                                                <i class="icon-cart"></i>
+                                            </a>
+                                        </div>
+
+
+                                    </div>
+
+
+                                </div>
+
+                                <div class="row-custom item-details item-details-default">
+
+                                    <h2 class="product-title">
+                                        <a href="valorant-cok-ucuza-vandal-garantili-random-hesaplar-18565.html" data-toggle="tooltip" data-placement="bottom" title="Valorant Çok Ucuza Vandal Garantili Random Hesaplar">Valorant Çok Ucuza Vandal Garantili Random Hesaplar</a>
+                                    </h2>
+
+                                    <p class="product-user text-truncate">
+                                        <b>Mağaza:</b> <a href="magaza/burakpro089.html">
+                                            <font color="#888">
+
+                                                Pyscoms
+                                            </font>
+                                        </a><i data-toggle="tooltip" class="icon-verified icon-verified-member-product" title="Doğrulanmış Satıcı"></i>
+
+                                    </p>
+
+                                    <div class="product-item-rating">
+                                        <div class="rating">
+                                            <i class="icon-star-o"></i>
+                                            <i class="icon-star-o"></i>
+                                            <i class="icon-star-o"></i>
+                                            <i class="icon-star-o"></i>
+                                            <i class="icon-star-o"></i>
+                                        </div><span class="item-wishlist"><i class="icon-heart-o"></i>0</span>
+                                    </div>
+
+                                    <div class="item-meta">
+
+                                        <del class="discount-original-price">
+                                            40 ₺
+                                        </del>
+                                        <span class="price">20 ₺</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6 col-sm-4 col-md-3 col-mds-5 col-product">
+
+                            <div class="product-item product-item-default">
+
+                                <div class="row-custom">
+                                    <a class="item-wishlist-button item-wishlist-enable " data-product-id="18563"></a>
+                                    <div class="img-product-container" style="border-top-left-radius: 14px;border-top-right-radius: 14px">
+                                        <a href="roblox-20k-totalli-hesap-aciklama-okuyun-18563.html">
+                                            <img src="assets/img/no-image.webp" data-src="https://www.itemhesap.com/assets/img/no-image.webp" alt="Roblox 20K Totalli Hesap Açiklama Okuyun" class="img-fluid img-product" loading="lazy" width="200" height="260">
+                                        </a>
+                                        <div class="product-item-options" style="top: 40px">
+                                            <a href="javascript:void(0)" class="item-option btn-add-remove-wishlist" data-toggle="tooltip" data-placement="left" data-product-id="18563" data-reload="0" title="Favoriler">
+                                                <i class="icon-heart-o"></i>
+                                            </a>
+                                            <a href="javascript:void(0)" class="item-option btn-item-add-to-cart" data-toggle="tooltip" data-placement="left" data-product-id="18563" data-reload="0" title="Sepete Ekle">
+                                                <i class="icon-cart"></i>
+                                            </a>
+                                        </div>
+
+
+                                    </div>
+
+
+                                </div>
+
+                                <div class="row-custom item-details item-details-default">
+
+                                    <h2 class="product-title">
+                                        <a href="roblox-20k-totalli-hesap-aciklama-okuyun-18563.html" data-toggle="tooltip" data-placement="bottom" title="Roblox 20K Totalli Hesap Açiklama Okuyun">Roblox 20K Totalli Hesap Açiklama Okuyun</a>
+                                    </h2>
+
+                                    <p class="product-user text-truncate">
+                                        <b>Mağaza:</b> <a href="magaza/ymert4838.html">
+                                            <font color="#888">
+
+                                                Xwhooz
+                                            </font>
+                                        </a>
+
+                                    </p>
+
+                                    <div class="product-item-rating">
+                                        <div class="rating">
+                                            <i class="icon-star-o"></i>
+                                            <i class="icon-star-o"></i>
+                                            <i class="icon-star-o"></i>
+                                            <i class="icon-star-o"></i>
+                                            <i class="icon-star-o"></i>
+                                        </div><span class="item-wishlist"><i class="icon-heart-o"></i>0</span>
+                                    </div>
+
+                                    <div class="item-meta">
+
+                                        <span class="price">800 ₺</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="section section-category-products">
+                <div class="card-header section-header">
+                    <h3 class="title">
+                        <a href="valorant/valorant-hesap-satisi.html">Valorant Hesap Satışı</a>
+                    </h3>
+                </div>
+                <div class="card-body">
+                    <div class="row row-product">
+                        <div class="col-6 col-sm-4 col-md-3 col-mds-5 col-product">
+
+                            <div class="product-item product-item-gumus">
+
+                                <div class="row-custom">
+                                    <a class="item-wishlist-button item-wishlist-enable " data-product-id="18521"></a>
+                                    <div class="img-product-container" style="border-top-left-radius: 14px;border-top-right-radius: 14px">
+                                        <a href="valorant-40-230-skin-ve-bicak-garantili-random-hesap-treu-18521.html">
+                                            <img src="https://cdn.itemhesap.com/uploads/images/202304/img_x300_6435c20c9fc764-04127267-18259588.webp" data-src="https://cdn.itemhesap.com/uploads/images/202304/img_x300_6435c20c9fc764-04127267-18259588.webp" alt="Valorant 40-230 Skin Ve Bıçak Garantili Random Hesap Tr/Eu" class="img-fluid img-product" loading="lazy" width="200" height="260">
+                                        </a>
+                                        <div class="product-item-options" style="top: 40px">
+                                            <a href="javascript:void(0)" class="item-option btn-add-remove-wishlist" data-toggle="tooltip" data-placement="left" data-product-id="18521" data-reload="0" title="Favoriler">
+                                                <i class="icon-heart-o"></i>
+                                            </a>
+                                            <a href="valorant-40-230-skin-ve-bicak-garantili-random-hesap-treu-18521.html" class="item-option" data-toggle="tooltip" data-placement="left" data-product-id="18521" data-reload="0" title="Onay Gerekli">
+                                                <i class="icon-cart"></i>
+                                            </a>
+                                        </div>
+
+                                        <span class="ui small red corner label"><span style="cursor: default;position: relative;top: 0.64285714em;left: 0.78571429em;font-size: 1.14285714em;margin: 0;"><i class="fa fa-percent" aria-hidden="true"></i>50</span></span>
+
+                                    </div>
+
+
+                                </div>
+
+                                <div class="row-custom item-details item-details-gumus">
+
+                                    <h2 class="product-title">
+                                        <a href="valorant-40-230-skin-ve-bicak-garantili-random-hesap-treu-18521.html" data-toggle="tooltip" data-placement="bottom" title="Valorant 40-230 Skin Ve Bıçak Garantili Random Hesap Tr/Eu">Valorant 40-230 Skin Ve Bıçak Garantili Random Hesap Tr/Eu</a>
+                                    </h2>
+
+                                    <p class="product-user text-truncate">
+                                        <b>Mağaza:</b> <a href="magaza/cagalasalih.html">
+                                            <font color="#2185d0" style="text-shadow: 1px 1px 3px #2185d0;">
+
+                                                tekshop
+                                            </font>
+                                        </a><i data-toggle="tooltip" class="icon-verified icon-verified-member-product" title="Doğrulanmış Satıcı"></i>
+
+                                    </p>
+
+                                    <div class="product-item-rating">
+                                        <div class="rating">
+                                            <i class="icon-star-o"></i>
+                                            <i class="icon-star-o"></i>
+                                            <i class="icon-star-o"></i>
+                                            <i class="icon-star-o"></i>
+                                            <i class="icon-star-o"></i>
+                                        </div><span class="item-wishlist"><i class="icon-heart-o"></i>0</span>
+                                    </div>
+
+                                    <div class="item-meta" style="color: #fff;">
+
+                                        <del class="discount-original-price">
+                                            79,78 ₺
+                                        </del>
+                                        <span class="price">39,89 ₺</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6 col-sm-4 col-md-3 col-mds-5 col-product">
+
+                            <div class="product-item product-item-default">
+
+                                <div class="row-custom">
+                                    <a class="item-wishlist-button item-wishlist-enable " data-product-id="18513"></a>
+                                    <div class="img-product-container" style="border-top-left-radius: 14px;border-top-right-radius: 14px">
+                                        <a href="kaosun-baslangici-garantili-hesap-ucuz-18513.html">
+                                            <img src="https://cdn.itemhesap.com/uploads/images/202304/img_x300_6435a9e8e07bf5-46073577-63679435.webp" data-src="https://cdn.itemhesap.com/uploads/images/202304/img_x300_6435a9e8e07bf5-46073577-63679435.webp" alt="Kaosun Başlangıcı Garantili Hesap Ucuz" class="img-fluid img-product" loading="lazy" width="200" height="260">
+                                        </a>
+                                        <div class="product-item-options" style="top: 40px">
+                                            <a href="javascript:void(0)" class="item-option btn-add-remove-wishlist" data-toggle="tooltip" data-placement="left" data-product-id="18513" data-reload="0" title="Favoriler">
+                                                <i class="icon-heart-o"></i>
+                                            </a>
+                                            <a href="kaosun-baslangici-garantili-hesap-ucuz-18513.html" class="item-option" data-toggle="tooltip" data-placement="left" data-product-id="18513" data-reload="0" title="Onay Gerekli">
+                                                <i class="icon-cart"></i>
+                                            </a>
+                                        </div>
+
+
+                                    </div>
+
+
+                                </div>
+
+                                <div class="row-custom item-details item-details-default">
+
+                                    <h2 class="product-title">
+                                        <a href="kaosun-baslangici-garantili-hesap-ucuz-18513.html" data-toggle="tooltip" data-placement="bottom" title="Kaosun Başlangıcı Garantili Hesap Ucuz">Kaosun Başlangıcı Garantili Hesap Ucuz</a>
+                                    </h2>
+
+                                    <p class="product-user text-truncate">
+                                        <b>Mağaza:</b> <a href="magaza/atesbarut4441.html">
+                                            <font color="#888">
+
+                                                ValBazaar
+                                            </font>
+                                        </a>
+
+                                    </p>
+
+                                    <div class="product-item-rating">
+                                        <div class="rating">
+                                            <i class="icon-star-o"></i>
+                                            <i class="icon-star-o"></i>
+                                            <i class="icon-star-o"></i>
+                                            <i class="icon-star-o"></i>
+                                            <i class="icon-star-o"></i>
+                                        </div><span class="item-wishlist"><i class="icon-heart-o"></i>0</span>
+                                    </div>
+
+                                    <div class="item-meta">
+
+                                        <span class="price">15 ₺</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6 col-sm-4 col-md-3 col-mds-5 col-product">
+
+                            <div class="product-item product-item-default">
+
+                                <div class="row-custom">
+                                    <a class="item-wishlist-button item-wishlist-enable " data-product-id="18565"></a>
+                                    <div class="img-product-container" style="border-top-left-radius: 14px;border-top-right-radius: 14px">
+                                        <a href="valorant-cok-ucuza-vandal-garantili-random-hesaplar-18565.html">
+                                            <img src="https://cdn.itemhesap.com/uploads/images/202304/img_x300_6436d0b4a0ceb3-00110231-31165160.webp" data-src="https://cdn.itemhesap.com/uploads/images/202304/img_x300_6436d0b4a0ceb3-00110231-31165160.webp" alt="Valorant Çok Ucuza Vandal Garantili Random Hesaplar" class="img-fluid img-product" loading="lazy" width="200" height="260">
+                                        </a>
+                                        <div class="product-item-options" style="top: 40px">
+                                            <a href="javascript:void(0)" class="item-option btn-add-remove-wishlist" data-toggle="tooltip" data-placement="left" data-product-id="18565" data-reload="0" title="Favoriler">
+                                                <i class="icon-heart-o"></i>
+                                            </a>
+                                            <a href="valorant-cok-ucuza-vandal-garantili-random-hesaplar-18565.html" class="item-option" data-toggle="tooltip" data-placement="left" data-product-id="18565" data-reload="0" title="Onay Gerekli">
+                                                <i class="icon-cart"></i>
+                                            </a>
+                                        </div>
+
+
+                                    </div>
+
+
+                                </div>
+
+                                <div class="row-custom item-details item-details-default">
+
+                                    <h2 class="product-title">
+                                        <a href="valorant-cok-ucuza-vandal-garantili-random-hesaplar-18565.html" data-toggle="tooltip" data-placement="bottom" title="Valorant Çok Ucuza Vandal Garantili Random Hesaplar">Valorant Çok Ucuza Vandal Garantili Random Hesaplar</a>
+                                    </h2>
+
+                                    <p class="product-user text-truncate">
+                                        <b>Mağaza:</b> <a href="magaza/burakpro089.html">
+                                            <font color="#888">
+
+                                                Pyscoms
+                                            </font>
+                                        </a><i data-toggle="tooltip" class="icon-verified icon-verified-member-product" title="Doğrulanmış Satıcı"></i>
+
+                                    </p>
+
+                                    <div class="product-item-rating">
+                                        <div class="rating">
+                                            <i class="icon-star-o"></i>
+                                            <i class="icon-star-o"></i>
+                                            <i class="icon-star-o"></i>
+                                            <i class="icon-star-o"></i>
+                                            <i class="icon-star-o"></i>
+                                        </div><span class="item-wishlist"><i class="icon-heart-o"></i>0</span>
+                                    </div>
+
+                                    <div class="item-meta">
+
+                                        <del class="discount-original-price">
+                                            40 ₺
+                                        </del>
+                                        <span class="price">20 ₺</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6 col-sm-4 col-md-3 col-mds-5 col-product">
+
+                            <div class="product-item product-item-default">
+
+                                <div class="row-custom">
+                                    <a class="item-wishlist-button item-wishlist-enable " data-product-id="18514"></a>
+                                    <div class="img-product-container" style="border-top-left-radius: 14px;border-top-right-radius: 14px">
+                                        <a href="valorant-dolu-18514.html">
+                                            <img src="../cdn.itemhesap.com/uploads/images/202304/img_x300_6435aeea6c9992-28065959-74321977.jpg" data-src="https://cdn.itemhesap.com/uploads/images/202304/img_x300_6435aeea6c9992-28065959-74321977.JPG" alt="Valorant Dolu" class="img-fluid img-product" loading="lazy" width="200" height="260">
+                                        </a>
+                                        <div class="product-item-options" style="top: 40px">
+                                            <a href="javascript:void(0)" class="item-option btn-add-remove-wishlist" data-toggle="tooltip" data-placement="left" data-product-id="18514" data-reload="0" title="Favoriler">
+                                                <i class="icon-heart-o"></i>
+                                            </a>
+                                            <a href="valorant-dolu-18514.html" class="item-option" data-toggle="tooltip" data-placement="left" data-product-id="18514" data-reload="0" title="Onay Gerekli">
+                                                <i class="icon-cart"></i>
+                                            </a>
+                                        </div>
+
+
+                                    </div>
+
+
+                                </div>
+
+                                <div class="row-custom item-details item-details-default">
+
+                                    <h2 class="product-title">
+                                        <a href="valorant-dolu-18514.html" data-toggle="tooltip" data-placement="bottom" title="Valorant Dolu">Valorant Dolu</a>
+                                    </h2>
+
+                                    <p class="product-user text-truncate">
+                                        <b>Mağaza:</b> <a href="magaza/beklenenoyun.html">
+                                            <font color="#888">
+
+                                                Gamerucz
+                                            </font>
+                                        </a>
+
+                                    </p>
+
+                                    <div class="product-item-rating">
+                                        <div class="rating">
+                                            <i class="icon-star-o"></i>
+                                            <i class="icon-star-o"></i>
+                                            <i class="icon-star-o"></i>
+                                            <i class="icon-star-o"></i>
+                                            <i class="icon-star-o"></i>
+                                        </div><span class="item-wishlist"><i class="icon-heart-o"></i>0</span>
+                                    </div>
+
+                                    <div class="item-meta">
+
+                                        <span class="price">300 ₺</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6 col-sm-4 col-md-3 col-mds-5 col-product">
+
+                            <div class="product-item product-item-default">
+
+                                <div class="row-custom">
+                                    <a class="item-wishlist-button item-wishlist-enable " data-product-id="18505"></a>
+                                    <div class="img-product-container" style="border-top-left-radius: 14px;border-top-right-radius: 14px">
+                                        <a href="delipop-garantili-random-hesap-18505.html">
+                                            <img src="https://cdn.itemhesap.com/uploads/images/202304/img_x300_6435a65561b9e6-23794090-29637300.webp" data-src="https://cdn.itemhesap.com/uploads/images/202304/img_x300_6435a65561b9e6-23794090-29637300.webp" alt="Delipop Garantili Random Hesap" class="img-fluid img-product" loading="lazy" width="200" height="260">
+                                        </a>
+                                        <div class="product-item-options" style="top: 40px">
+                                            <a href="javascript:void(0)" class="item-option btn-add-remove-wishlist" data-toggle="tooltip" data-placement="left" data-product-id="18505" data-reload="0" title="Favoriler">
+                                                <i class="icon-heart-o"></i>
+                                            </a>
+                                            <a href="delipop-garantili-random-hesap-18505.html" class="item-option" data-toggle="tooltip" data-placement="left" data-product-id="18505" data-reload="0" title="Onay Gerekli">
+                                                <i class="icon-cart"></i>
+                                            </a>
+                                        </div>
+
+
+                                    </div>
+
+
+                                </div>
+
+                                <div class="row-custom item-details item-details-default">
+
+                                    <h2 class="product-title">
+                                        <a href="delipop-garantili-random-hesap-18505.html" data-toggle="tooltip" data-placement="bottom" title="Delipop Garantili Random Hesap">Delipop Garantili Random Hesap</a>
+                                    </h2>
+
+                                    <p class="product-user text-truncate">
+                                        <b>Mağaza:</b> <a href="magaza/atesbarut4441.html">
+                                            <font color="#888">
+
+                                                ValBazaar
+                                            </font>
+                                        </a>
+
+                                    </p>
+
+                                    <div class="product-item-rating">
+                                        <div class="rating">
+                                            <i class="icon-star-o"></i>
+                                            <i class="icon-star-o"></i>
+                                            <i class="icon-star-o"></i>
+                                            <i class="icon-star-o"></i>
+                                            <i class="icon-star-o"></i>
+                                        </div><span class="item-wishlist"><i class="icon-heart-o"></i>0</span>
+                                    </div>
+
+                                    <div class="item-meta">
+
+                                        <span class="price">20 ₺</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="section section-category-products">
+                <div class="card-header section-header">
+                    <h3 class="title">
+                        <a href="steam/steam-hesap-satisi.html">Steam Hesap &amp; Oyun Satışı</a>
+                    </h3>
+                </div>
+                <div class="card-body">
+                    <div class="row row-product">
+                        <div class="col-6 col-sm-4 col-md-3 col-mds-5 col-product">
+
+                            <div class="product-item product-item-altin">
+
+                                <div class="row-custom">
+                                    <a class="item-wishlist-button item-wishlist-enable " data-product-id="18554"></a>
+                                    <div class="img-product-container" style="border-top-left-radius: 14px;border-top-right-radius: 14px">
+                                        <a href="cities-skylines-uncharted-legacy-of-thieves-collection-18554.html">
+                                            <img src="https://cdn.itemhesap.com/uploads/images/202304/img_x300_643673b8db0df3-07762313-55472620.webp" data-src="https://cdn.itemhesap.com/uploads/images/202304/img_x300_643673b8db0df3-07762313-55472620.webp" alt="Cities Skylines + Uncharted Legacy of Thieves Collection" class="img-fluid img-product" loading="lazy" width="200" height="260">
+                                        </a>
+                                        <div class="product-item-options" style="top: 40px">
+                                            <a href="javascript:void(0)" class="item-option btn-add-remove-wishlist" data-toggle="tooltip" data-placement="left" data-product-id="18554" data-reload="0" title="Favoriler">
+                                                <i class="icon-heart-o"></i>
+                                            </a>
+                                            <a href="javascript:void(0)" class="item-option btn-item-add-to-cart" data-toggle="tooltip" data-placement="left" data-product-id="18554" data-reload="0" title="Sepete Ekle">
+                                                <i class="icon-cart"></i>
+                                            </a>
+                                        </div>
+
+
+                                    </div>
+
+
+                                </div>
+
+                                <div class="row-custom item-details item-details-altin">
+
+                                    <h2 class="product-title">
+                                        <a href="cities-skylines-uncharted-legacy-of-thieves-collection-18554.html" data-toggle="tooltip" data-placement="bottom" title="Cities Skylines + Uncharted Legacy of Thieves Collection">Cities Skylines + Uncharted Legacy of Thieves Collection</a>
+                                    </h2>
+
+                                    <p class="product-user text-truncate">
+                                        <b>Mağaza:</b> <a href="magaza/bahadir2004x.html">
+                                            <font color="#dc143c" style="text-shadow: 1px 1px 3px #dc143c;">
+
+                                                UcuzStore1
+                                            </font>
+                                        </a><i data-toggle="tooltip" class="icon-verified icon-verified-member-product" title="Doğrulanmış Satıcı"></i>
+
+                                    </p>
+
+                                    <div class="product-item-rating">
+                                        <div class="rating">
+                                            <i class="icon-star-o"></i>
+                                            <i class="icon-star-o"></i>
+                                            <i class="icon-star-o"></i>
+                                            <i class="icon-star-o"></i>
+                                            <i class="icon-star-o"></i>
+                                        </div><span class="item-wishlist"><i class="icon-heart-o"></i>0</span>
+                                    </div>
+
+                                    <div class="item-meta" style="color: #fff;">
+
+                                        <span class="price">14,90 ₺</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6 col-sm-4 col-md-3 col-mds-5 col-product">
+
+                            <div class="product-item product-item-altin">
+
+                                <div class="row-custom">
+                                    <a class="item-wishlist-button item-wishlist-enable " data-product-id="18551"></a>
+                                    <div class="img-product-container" style="border-top-left-radius: 14px;border-top-right-radius: 14px">
+                                        <a href="call-of-duty-infinite-warfare-call-of-duty-ghosts-call-of-duty-black-ops-2-18551.html">
+                                            <img src="https://cdn.itemhesap.com/uploads/images/202304/img_x300_643662e1baf4b7-97802518-20782388.webp" data-src="https://cdn.itemhesap.com/uploads/images/202304/img_x300_643662e1baf4b7-97802518-20782388.webp" alt="Call of Duty İnfinite Warfare + Call of Duty Ghosts + Call of Duty Black Ops 2" class="img-fluid img-product" loading="lazy" width="200" height="260">
+                                        </a>
+                                        <div class="product-item-options" style="top: 40px">
+                                            <a href="javascript:void(0)" class="item-option btn-add-remove-wishlist" data-toggle="tooltip" data-placement="left" data-product-id="18551" data-reload="0" title="Favoriler">
+                                                <i class="icon-heart-o"></i>
+                                            </a>
+                                            <a href="javascript:void(0)" class="item-option btn-item-add-to-cart" data-toggle="tooltip" data-placement="left" data-product-id="18551" data-reload="0" title="Sepete Ekle">
+                                                <i class="icon-cart"></i>
+                                            </a>
+                                        </div>
+
+
+                                    </div>
+
+
+                                </div>
+
+                                <div class="row-custom item-details item-details-altin">
+
+                                    <h2 class="product-title">
+                                        <a href="call-of-duty-infinite-warfare-call-of-duty-ghosts-call-of-duty-black-ops-2-18551.html" data-toggle="tooltip" data-placement="bottom" title="Call of Duty İnfinite Warfare + Call of Duty Ghosts + Call of Duty Black Ops 2">Call of Duty İnfinite Warfare + Call of Duty Ghosts + Call of Duty Black Ops 2</a>
+                                    </h2>
+
+                                    <p class="product-user text-truncate">
+                                        <b>Mağaza:</b> <a href="magaza/bahadir2004x.html">
+                                            <font color="#dc143c" style="text-shadow: 1px 1px 3px #dc143c;">
+
+                                                UcuzStore1
+                                            </font>
+                                        </a><i data-toggle="tooltip" class="icon-verified icon-verified-member-product" title="Doğrulanmış Satıcı"></i>
+
+                                    </p>
+
+                                    <div class="product-item-rating">
+                                        <div class="rating">
+                                            <i class="icon-star-o"></i>
+                                            <i class="icon-star-o"></i>
+                                            <i class="icon-star-o"></i>
+                                            <i class="icon-star-o"></i>
+                                            <i class="icon-star-o"></i>
+                                        </div><span class="item-wishlist"><i class="icon-heart-o"></i>0</span>
+                                    </div>
+
+                                    <div class="item-meta" style="color: #fff;">
+
+                                        <span class="price">14,90 ₺</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6 col-sm-4 col-md-3 col-mds-5 col-product">
+
+                            <div class="product-item product-item-altin">
+
+                                <div class="row-custom">
+                                    <a class="item-wishlist-button item-wishlist-enable " data-product-id="18570"></a>
+                                    <div class="img-product-container" style="border-top-left-radius: 14px;border-top-right-radius: 14px">
+                                        <a href="hogwarts-legacy-deluxe-edition-the-last-of-us-part-1-deluxe-edition-resident-evil-4-garanti-18570.html">
+                                            <img src="https://cdn.itemhesap.com/uploads/images/202304/img_x300_6436fa9e148f40-83427408-39172354.webp" data-src="https://cdn.itemhesap.com/uploads/images/202304/img_x300_6436fa9e148f40-83427408-39172354.webp" alt="Hogwarts Legacy Deluxe Edition + The Last Of Us Part 1 Deluxe Edition + Resident Evil 4 + Garanti" class="img-fluid img-product" loading="lazy" width="200" height="260">
+                                        </a>
+                                        <div class="product-item-options" style="top: 40px">
+                                            <a href="javascript:void(0)" class="item-option btn-add-remove-wishlist" data-toggle="tooltip" data-placement="left" data-product-id="18570" data-reload="0" title="Favoriler">
+                                                <i class="icon-heart-o"></i>
+                                            </a>
+                                            <a href="javascript:void(0)" class="item-option btn-item-add-to-cart" data-toggle="tooltip" data-placement="left" data-product-id="18570" data-reload="0" title="Sepete Ekle">
+                                                <i class="icon-cart"></i>
+                                            </a>
+                                        </div>
+
+
+                                    </div>
+
+
+                                </div>
+
+                                <div class="row-custom item-details item-details-altin">
+
+                                    <h2 class="product-title">
+                                        <a href="hogwarts-legacy-deluxe-edition-the-last-of-us-part-1-deluxe-edition-resident-evil-4-garanti-18570.html" data-toggle="tooltip" data-placement="bottom" title="Hogwarts Legacy Deluxe Edition + The Last Of Us Part 1 Deluxe Edition + Resident Evil 4 + Garanti">Hogwarts Legacy Deluxe Edition + The Last Of Us Part 1 Deluxe Edition + Resident Evil 4 + Garanti</a>
+                                    </h2>
+
+                                    <p class="product-user text-truncate">
+                                        <b>Mağaza:</b> <a href="magaza/opssgamershop.html">
+                                            <font color="#dc143c" style="text-shadow: 1px 1px 3px #dc143c;">
+
+                                                OpssGamerShop
+                                            </font>
+                                        </a><i data-toggle="tooltip" class="icon-verified icon-verified-member-product" title="Doğrulanmış Satıcı"></i>
+
+                                    </p>
+
+                                    <div class="product-item-rating">
+                                        <div class="rating">
+                                            <i class="icon-star-o"></i>
+                                            <i class="icon-star-o"></i>
+                                            <i class="icon-star-o"></i>
+                                            <i class="icon-star-o"></i>
+                                            <i class="icon-star-o"></i>
+                                        </div><span class="item-wishlist"><i class="icon-heart-o"></i>0</span>
+                                    </div>
+
+                                    <div class="item-meta" style="color: #fff;">
+
+                                        <span class="price">34,90 ₺</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6 col-sm-4 col-md-3 col-mds-5 col-product">
+
+                            <div class="product-item product-item-altin">
+
+                                <div class="row-custom">
+                                    <a class="item-wishlist-button item-wishlist-enable " data-product-id="18555"></a>
+                                    <div class="img-product-container" style="border-top-left-radius: 14px;border-top-right-radius: 14px">
+                                        <a href="days-gone-cyberpunk-2077-horizon-zero-dawn-18555.html">
+                                            <img src="https://cdn.itemhesap.com/uploads/images/202304/img_x300_643674ae6868e5-43638525-21526705.webp" data-src="https://cdn.itemhesap.com/uploads/images/202304/img_x300_643674ae6868e5-43638525-21526705.webp" alt="Days Gone + Cyberpunk 2077 + Horizon Zero Dawn" class="img-fluid img-product" loading="lazy" width="200" height="260">
+                                        </a>
+                                        <div class="product-item-options" style="top: 40px">
+                                            <a href="javascript:void(0)" class="item-option btn-add-remove-wishlist" data-toggle="tooltip" data-placement="left" data-product-id="18555" data-reload="0" title="Favoriler">
+                                                <i class="icon-heart-o"></i>
+                                            </a>
+                                            <a href="javascript:void(0)" class="item-option btn-item-add-to-cart" data-toggle="tooltip" data-placement="left" data-product-id="18555" data-reload="0" title="Sepete Ekle">
+                                                <i class="icon-cart"></i>
+                                            </a>
+                                        </div>
+
+
+                                    </div>
+
+
+                                </div>
+
+                                <div class="row-custom item-details item-details-altin">
+
+                                    <h2 class="product-title">
+                                        <a href="days-gone-cyberpunk-2077-horizon-zero-dawn-18555.html" data-toggle="tooltip" data-placement="bottom" title="Days Gone + Cyberpunk 2077 + Horizon Zero Dawn">Days Gone + Cyberpunk 2077 + Horizon Zero Dawn</a>
+                                    </h2>
+
+                                    <p class="product-user text-truncate">
+                                        <b>Mağaza:</b> <a href="magaza/bahadir2004x.html">
+                                            <font color="#dc143c" style="text-shadow: 1px 1px 3px #dc143c;">
+
+                                                UcuzStore1
+                                            </font>
+                                        </a><i data-toggle="tooltip" class="icon-verified icon-verified-member-product" title="Doğrulanmış Satıcı"></i>
+
+                                    </p>
+
+                                    <div class="product-item-rating">
+                                        <div class="rating">
+                                            <i class="icon-star-o"></i>
+                                            <i class="icon-star-o"></i>
+                                            <i class="icon-star-o"></i>
+                                            <i class="icon-star-o"></i>
+                                            <i class="icon-star-o"></i>
+                                        </div><span class="item-wishlist"><i class="icon-heart-o"></i>0</span>
+                                    </div>
+
+                                    <div class="item-meta" style="color: #fff;">
+
+                                        <span class="price">14,90 ₺</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6 col-sm-4 col-md-3 col-mds-5 col-product">
+
+                            <div class="product-item product-item-altin">
+
+                                <div class="row-custom">
+                                    <a class="item-wishlist-button item-wishlist-enable " data-product-id="18552"></a>
+                                    <div class="img-product-container" style="border-top-left-radius: 14px;border-top-right-radius: 14px">
+                                        <a href="the-callisto-protocol-18552.html">
+                                            <img src="https://cdn.itemhesap.com/uploads/images/202304/img_x300_64366fe18794f6-30908118-60856690.webp" data-src="https://cdn.itemhesap.com/uploads/images/202304/img_x300_64366fe18794f6-30908118-60856690.webp" alt="The Callisto Protocol" class="img-fluid img-product" loading="lazy" width="200" height="260">
+                                        </a>
+                                        <div class="product-item-options" style="top: 40px">
+                                            <a href="javascript:void(0)" class="item-option btn-add-remove-wishlist" data-toggle="tooltip" data-placement="left" data-product-id="18552" data-reload="0" title="Favoriler">
+                                                <i class="icon-heart-o"></i>
+                                            </a>
+                                            <a href="javascript:void(0)" class="item-option btn-item-add-to-cart" data-toggle="tooltip" data-placement="left" data-product-id="18552" data-reload="0" title="Sepete Ekle">
+                                                <i class="icon-cart"></i>
+                                            </a>
+                                        </div>
+
+
+                                    </div>
+
+
+                                </div>
+
+                                <div class="row-custom item-details item-details-altin">
+
+                                    <h2 class="product-title">
+                                        <a href="the-callisto-protocol-18552.html" data-toggle="tooltip" data-placement="bottom" title="The Callisto Protocol">The Callisto Protocol</a>
+                                    </h2>
+
+                                    <p class="product-user text-truncate">
+                                        <b>Mağaza:</b> <a href="magaza/bahadir2004x.html">
+                                            <font color="#dc143c" style="text-shadow: 1px 1px 3px #dc143c;">
+
+                                                UcuzStore1
+                                            </font>
+                                        </a><i data-toggle="tooltip" class="icon-verified icon-verified-member-product" title="Doğrulanmış Satıcı"></i>
+
+                                    </p>
+
+                                    <div class="product-item-rating">
+                                        <div class="rating">
+                                            <i class="icon-star-o"></i>
+                                            <i class="icon-star-o"></i>
+                                            <i class="icon-star-o"></i>
+                                            <i class="icon-star-o"></i>
+                                            <i class="icon-star-o"></i>
+                                        </div><span class="item-wishlist"><i class="icon-heart-o"></i>0</span>
+                                    </div>
+
+                                    <div class="item-meta" style="color: #fff;">
+
+                                        <span class="price">14,90 ₺</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12">
+                <div class="row-custom row-bn">
+                </div>
+            </div>
+            <div class="card section section-blog m-0">
+                <div class="card-header">
+                    <h3 class="title">
+                        <a href="blog.html">Son Blog Yazıları</a>
+                    </h3>
+                </div>
+                <div class="card-body row-custom">
+
+
+                    <div class="blog-slider-container">
+                        <div id="blog-slider" class="blog-slider">
+                            <div class="blog-item">
+                                <div class="blog-item-img">
+                                    <a href="blog/oyun-tanitimlari/cities-skylines-2-duyuruldu.html">
+                                        <img src="assets/img/img_bg_blog_small.jpg" data-src="https://www.itemhesap.com/uploads/blog/202304/img_thumb_6431d97d4d3319-80605491-17542284.webp" alt="Cities: Skylines 2 Duyuruldu" class="img-fluid lazyload" loading="lazy" width="500" height="332" />
+                                    </a>
+                                </div>
+                                <h3 class="blog-post-title">
+                                    <a href="blog/oyun-tanitimlari/cities-skylines-2-duyuruldu.html">
+                                        Cities: Skylines 2 Duyuruldu
+                                    </a>
+                                </h3>
+                                <div class="blog-post-meta">
+                                    <a href="blog/oyun-tanitimlari.html">
+                                        <i class="icon-folder"></i>Oyun Tanıtımları
+                                    </a>
+                                    <span><i class="icon-clock"></i>4 gün önce</span>
+                                </div>
+                                <div class="blog-post-description">
+                                    En popüler şehir kurma oyunlarından olan Cities Skylines serisinin 2.oyunu duyuruldu.
+                                </div>
+                            </div>
+                            <div class="blog-item">
+                                <div class="blog-item-img">
+                                    <a href="blog/duyuru/alisveris-puani-nedir.html">
+                                        <img src="assets/img/img_bg_blog_small.jpg" data-src="https://www.itemhesap.com/uploads/blog/202302/img_thumb_63ef6c67d07cf8-22064024-82175825.webp" alt="Alışveriş Puanları ile Tanış" class="img-fluid lazyload" loading="lazy" width="500" height="332" />
+                                    </a>
+                                </div>
+                                <h3 class="blog-post-title">
+                                    <a href="blog/duyuru/alisveris-puani-nedir.html">
+                                        Alışveriş Puanları ile Tanış
+                                    </a>
+                                </h3>
+                                <div class="blog-post-meta">
+                                    <a href="blog/duyuru.html">
+                                        <i class="icon-folder"></i>Duyuru
+                                    </a>
+                                    <span><i class="icon-clock"></i>2 ay önce</span>
+                                </div>
+                                <div class="blog-post-description">
+                                    Alışveriş Puanlarını cüzdan bakiyesine çevirerek alışverişe devam et!
+                                </div>
+                            </div>
+                            <div class="blog-item">
+                                <div class="blog-item-img">
+                                    <a href="blog/oyun-tanitimlari/hogwarts-legacy.html">
+                                        <img src="assets/img/img_bg_blog_small.jpg" data-src="https://www.itemhesap.com/uploads/blog/202211/img_thumb_637e733fac32e8-18254918-59405617.webp" alt="Hogwarts Legacy" class="img-fluid lazyload" loading="lazy" width="500" height="332" />
+                                    </a>
+                                </div>
+                                <h3 class="blog-post-title">
+                                    <a href="blog/oyun-tanitimlari/hogwarts-legacy.html">
+                                        Hogwarts Legacy
+                                    </a>
+                                </h3>
+                                <div class="blog-post-meta">
+                                    <a href="blog/oyun-tanitimlari.html">
+                                        <i class="icon-folder"></i>Oyun Tanıtımları
+                                    </a>
+                                    <span><i class="icon-clock"></i>5 ay önce</span>
+                                </div>
+                                <div class="blog-post-description">
+                                    Harry Potter kitaplarından tanıştığımız evrende geçen, açık dünyaya sahip bir RPG oyunudur.
+                                </div>
+                            </div>
+                            <div class="blog-item">
+                                <div class="blog-item-img">
+                                    <a href="blog/oyun-tanitimlari/manor-lords.html">
+                                        <img src="assets/img/img_bg_blog_small.jpg" data-src="https://www.itemhesap.com/uploads/blog/202211/img_thumb_63791cbf4402b1-24281038-15984750.webp" alt="Manor Lords" class="img-fluid lazyload" loading="lazy" width="500" height="332" />
+                                    </a>
+                                </div>
+                                <h3 class="blog-post-title">
+                                    <a href="blog/oyun-tanitimlari/manor-lords.html">
+                                        Manor Lords
+                                    </a>
+                                </h3>
+                                <div class="blog-post-meta">
+                                    <a href="blog/oyun-tanitimlari.html">
+                                        <i class="icon-folder"></i>Oyun Tanıtımları
+                                    </a>
+                                    <span><i class="icon-clock"></i>5 ay önce</span>
+                                </div>
+                                <div class="blog-post-description">
+                                    Manor Lords, derinlemesine şehir kurma, büyük ölçekli taktiksel savaşlar ve karmaşık ekonomik ve sosyal...
+                                </div>
+                            </div>
+                            <div class="blog-item">
+                                <div class="blog-item-img">
+                                    <a href="blog/oyun-tanitimlari/football-manager-in-game-editor-nedir.html">
+                                        <img src="assets/img/img_bg_blog_small.jpg" data-src="https://www.itemhesap.com/uploads/blog/202211/img_thumb_63717b26a20056-89896087-11469877.webp" alt="Football Manager In Game Editor Nedir? FM23 In Game Editor" class="img-fluid lazyload" loading="lazy" width="500" height="332" />
+                                    </a>
+                                </div>
+                                <h3 class="blog-post-title">
+                                    <a href="blog/oyun-tanitimlari/football-manager-in-game-editor-nedir.html">
+                                        Football Manager In Game Editor Nedir? FM23 In Game Editor
+                                    </a>
+                                </h3>
+                                <div class="blog-post-meta">
+                                    <a href="blog/oyun-tanitimlari.html">
+                                        <i class="icon-folder"></i>Oyun Tanıtımları
+                                    </a>
+                                    <span><i class="icon-clock"></i>5 ay önce</span>
+                                </div>
+                                <div class="blog-post-description">
+                                    Football Manager oyununda in game editor DLC paketini sıkça duyuyor olmalısınız. In Game Editor nedir...
+                                </div>
+                            </div>
+                            <div class="blog-item">
+                                <div class="blog-item-img">
+                                    <a href="blog/haberler/netflix-ne-izlenir.html">
+                                        <img src="assets/img/img_bg_blog_small.jpg" data-src="https://www.itemhesap.com/uploads/blog/202112/img_thumb_61c85e56a66ab7-09828903-77664689.webp" alt="Netflix&#039;de Ne İzlenir? Netflix Dizi ve Film Önerileri" class="img-fluid lazyload" loading="lazy" width="500" height="332" />
+                                    </a>
+                                </div>
+                                <h3 class="blog-post-title">
+                                    <a href="blog/haberler/netflix-ne-izlenir.html">
+                                        Netflix&#039;de Ne İzlenir? Netflix Dizi ve Film Önerileri
+                                    </a>
+                                </h3>
+                                <div class="blog-post-meta">
+                                    <a href="blog/haberler.html">
+                                        <i class="icon-folder"></i>Haberler
+                                    </a>
+                                    <span><i class="icon-clock"></i>1 yıl önce</span>
+                                </div>
+                                <div class="blog-post-description">
+                                    Keyifli vakit geçirmek için dizi ve film önerileri sunduğumuz konumuzu inceleyebilirsiniz.
+                                </div>
+                            </div>
+                            <div class="blog-item">
+                                <div class="blog-item-img">
+                                    <a href="blog/haberler/pc-icin-xbox-gamepass-adi-degisti.html">
+                                        <img src="assets/img/img_bg_blog_small.jpg" data-src="https://www.itemhesap.com/uploads/blog/202112/img_thumb_61bd9193ba7178-60939410-73096068.webp" alt="PC için Xbox Game Pass&#039;in Adı Değişti" class="img-fluid lazyload" loading="lazy" width="500" height="332" />
+                                    </a>
+                                </div>
+                                <h3 class="blog-post-title">
+                                    <a href="blog/haberler/pc-icin-xbox-gamepass-adi-degisti.html">
+                                        PC için Xbox Game Pass&#039;in Adı Değişti
+                                    </a>
+                                </h3>
+                                <div class="blog-post-meta">
+                                    <a href="blog/haberler.html">
+                                        <i class="icon-folder"></i>Haberler
+                                    </a>
+                                    <span><i class="icon-clock"></i>1 yıl önce</span>
+                                </div>
+                                <div class="blog-post-description">
+                                    Microsoft sonunda PC için gamepass&#039;in adını değiştirdi. Artık konsol ve pc sürümlerini ayırt etmek daha...
+                                </div>
+                            </div>
+                            <div class="blog-item">
+                                <div class="blog-item-img">
+                                    <a href="blog/duyuru/metin2-komisyonsuz-kampanya.html">
+                                        <img src="assets/img/img_bg_blog_small.jpg" data-src="https://www.itemhesap.com/uploads/blog/202111/img_thumb_617fea05f34cc4-44237494-86050663.webp" alt="Metin2 Kategorilerinde %0 Komisyonlu Satış" class="img-fluid lazyload" loading="lazy" width="500" height="332" />
+                                    </a>
+                                </div>
+                                <h3 class="blog-post-title">
+                                    <a href="blog/duyuru/metin2-komisyonsuz-kampanya.html">
+                                        Metin2 Kategorilerinde %0 Komisyonlu Satış
+                                    </a>
+                                </h3>
+                                <div class="blog-post-meta">
+                                    <a href="blog/duyuru.html">
+                                        <i class="icon-folder"></i>Duyuru
+                                    </a>
+                                    <span><i class="icon-clock"></i>1 yıl önce</span>
+                                </div>
+                                <div class="blog-post-description">
+                                    Metin2 kategorilerinde geçerli olacak şekilde sattığınız ürünlerde %0 komisyon kampanyası başladı! Hemen...
+                                </div>
+                            </div>
+                            <div class="blog-item">
+                                <div class="blog-item-img">
+                                    <a href="blog/haberler/arcane-izle.html">
+                                        <img src="assets/img/img_bg_blog_small.jpg" data-src="https://www.itemhesap.com/uploads/blog/202110/img_thumb_617ae58f1799f9-64503256-49724076.webp" alt="Arcane İzle - League Of Legends Netflix Dizisi" class="img-fluid lazyload" loading="lazy" width="500" height="332" />
+                                    </a>
+                                </div>
+                                <h3 class="blog-post-title">
+                                    <a href="blog/haberler/arcane-izle.html">
+                                        Arcane İzle - League Of Legends Netflix Dizisi
+                                    </a>
+                                </h3>
+                                <div class="blog-post-meta">
+                                    <a href="blog/haberler.html">
+                                        <i class="icon-folder"></i>Haberler
+                                    </a>
+                                    <span><i class="icon-clock"></i>1 yıl önce</span>
+                                </div>
+                                <div class="blog-post-description">
+                                    Bir league of legends dizisi olan Arcane, 2021 sonbaharında netflix platformunda yayınlanacaktır.
+                                </div>
+                            </div>
+                            <div class="blog-item">
+                                <div class="blog-item-img">
+                                    <a href="blog/yardim/urun-satisa-ac-kapat.html">
+                                        <img src="assets/img/img_bg_blog_small.jpg" data-src="https://www.itemhesap.com/uploads/blog/202109/img_thumb_613c8adedc1ad4-93388696-91587093.webp" alt="Ürünü Satışa Aç/Kapat veya Süresini Uzat" class="img-fluid lazyload" loading="lazy" width="500" height="332" />
+                                    </a>
+                                </div>
+                                <h3 class="blog-post-title">
+                                    <a href="blog/yardim/urun-satisa-ac-kapat.html">
+                                        Ürünü Satışa Aç/Kapat veya Süresini Uzat
+                                    </a>
+                                </h3>
+                                <div class="blog-post-meta">
+                                    <a href="blog/yardim.html">
+                                        <i class="icon-folder"></i>Yardım
+                                    </a>
+                                    <span><i class="icon-clock"></i>2 yıl önce</span>
+                                </div>
+                                <div class="blog-post-description">
+                                    Bir ürünü satış açıp-kapatmak veya ilan bitiş tarihini güncelleme nasıl yapılır adlı rehber konusu.
+                                </div>
+                            </div>
+                        </div>
+                        <div id="blog-slider-nav" class="blog-slider-nav">
+                            <button class="prev"><i class="icon-arrow-left"></i></button>
+                            <button class="next"><i class="icon-arrow-right"></i></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-footer row-custom text-center">
+                    <a href="blog.html" class="link-see-more"><span>Tümünü Gör&nbsp;</span><i class="icon-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>

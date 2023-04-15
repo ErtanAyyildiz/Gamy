@@ -10,5 +10,10 @@ namespace Gamy.DataAccess.Abstracts
 {
     public interface IOrderDal:IRepository<Order>
     {
+        Task<Order> GetOrderByIdAsync(int id);
+        Task<List<Order>> GetOrdersByCustomerIdAsync(string customerId);
+        Task<Order> CreateOrderAsync(Order order);
+        Task<Order> UpdateOrderAsync(Order order);
+        Task DeleteOrderAsync(int id);
     }
 }

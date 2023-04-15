@@ -2,6 +2,7 @@
 using Gamy.DataAccess.Database;
 using Gamy.DataAccess.Repositories;
 using Gamy.Entity.Modals;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -19,5 +20,14 @@ namespace Gamy.DataAccess.MsEntityFramework
             _db = db;
 
         }
+
+        public Product GetProductIsSponsered()
+        {
+            return _db.Products
+                .Where(p => p.Sponsor == true)
+                .First();
+        }
+
+       
     }
 }

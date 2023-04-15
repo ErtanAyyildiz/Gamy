@@ -10,5 +10,7 @@ namespace Gamy.DataAccess.Abstracts
 {
     public interface IProductDal:IRepository<Product>
     {
+        public Product GetProductIsSponsered();
+
     }
 }

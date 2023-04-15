@@ -13,5 +13,7 @@ namespace Gamy.Entity.Modals
         public string Phone { get; set; }
         public List<Product> Products { get; set; }
         public List<Order> Orders { get; set; }
+        public AppUser User { get; set; }
+        public List<Comment> Comments { get; set; }
     }
 }

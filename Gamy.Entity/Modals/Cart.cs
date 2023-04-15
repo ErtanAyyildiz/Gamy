@@ -9,6 +9,6 @@ namespace Gamy.Entity.Modals
     public class Cart:BaseEntity
     {
         public List<CartItem> Items { get; set; }
-        public User User { get; set; }
+        public AppUser User { get; set; }
     }
 }

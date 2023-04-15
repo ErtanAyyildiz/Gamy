@@ -15,10 +15,10 @@ namespace Gamy.DataAccess.Repositories.IRepositories
         IOrderDal Order { get; }
         IOrderItemDal OrderItem { get; }
         IProductDal Product { get; }
-        IRoleDal Role { get; }
         ISellerDal Seller { get; }
-        IUserDal User { get; }
         IUserRoleDal UserRole { get; }
+        ICommentDal Comment { get; }
+        IAppUserDal AppUser { get; }
         void Save();
     }
 }

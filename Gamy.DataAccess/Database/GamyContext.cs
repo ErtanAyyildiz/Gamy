@@ -1,26 +1,15 @@
 ﻿using Gamy.Entity.Modals;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading;
-using System.Threading.Tasks;
 
 namespace Gamy.DataAccess.Database
 {
-    public class GamyContext:DbContext
+    public class GamyContext : IdentityDbContext<AppUser,AppRole,int>
     {
-        public GamyContext()
-        {
-        }
         public GamyContext(DbContextOptions options) : base(options)
         {
         }
 
-        public virtual DbSet<User> Users { get; private set; }
-        public virtual DbSet<Role> Roles { get; private set; }
-        public virtual DbSet<UserRole> UserRoles { get; private set; }
         public virtual DbSet<Product> Products { get; private set; }
         public virtual DbSet<Category> Categories { get; private set; }
         public virtual DbSet<Order> Orders { get; private set; }
@@ -28,6 +17,8 @@ namespace Gamy.DataAccess.Database
         public virtual DbSet<Cart> Carts { get; private set; }
         public virtual DbSet<CartItem> CartItems { get; private set; }
         public virtual DbSet<Seller> Sellers { get; private set; }
+        public virtual DbSet<Comment> Comments { get; private set; }
+        public virtual DbSet<SubCategory> SubCategories { get; private set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
@@ -35,11 +26,6 @@ namespace Gamy.DataAccess.Database
             {
                 optionsBuilder.UseSqlServer("Server=LAPTOP-0IN5JO9S;Database=GamyDB;Trusted_Connection=True;");
             }
-        }
-
-        protected override void OnModelCreating(ModelBuilder modelBuilder)
-        {
-            modelBuilder.Entity<UserRole>().HasNoKey();
         }
     }
 }
