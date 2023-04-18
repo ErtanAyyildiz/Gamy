@@ -4,7 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace Gamy.UI.ViewComponents.Home
 {
-    public class IndexMainSlider:ViewComponent
+    public class IndexMainSlider : ViewComponent
     {
         private readonly IProductService _productService;
         private readonly IAppUserService _userService;

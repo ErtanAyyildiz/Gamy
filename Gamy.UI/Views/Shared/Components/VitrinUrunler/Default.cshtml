@@ -1,0 +1,1060 @@
+﻿@model List<Product>
+
+<div class="sekme-content tab-content home-tab-content pt-3 ilktab active" id="vitrin">
+    <ul class="product-lister row gutters-xsmall">
+        @foreach (var item in Model)
+        {
+            <li class="col-lg-3 col-md-4 col-sm-6 col-12 mb-3 mobil-boyut" style="flex: 0 0 14.276667%; max-width: 14.276667%;">
+                <div class="product light-effect">
+                    <div class="p-0">
+                        <div class="product-img">
+                            <figure>
+                                <a title="@item.Name " href="/GamyEpin/ilan/random-hesap/4464.html">
+                                    <img src="images/lazy-epinkasa.webp" class="lazy" data-original="/GamyEpin/uploads/advert/minimum/44237592027245-kapak-35657470103571.jpg" />
+                                </a>
+                            </figure>
+
+                            <div class="featured" @(item.OneCikanUrun == true ? "" : "hidden")> Öne Çıkan</div>
+                            <div class="showcase" @(item.Vitrin == true ? "" : "hidden")>Vitrin İlanı</div>
+                            <div class="user-wrapper">
+                                <div class="user-profile">
+                                    <a href="/GamyEpin/category/pubg-mobile-hesap-satisi/55/1.html">
+                                        <img class="lazy" data-original="/GamyEpin/uploads/category/55-kapak-62544063734589.png">
+                                    </a>
+                                    <a data-toggle="tooltip" data-placement="top" title="@item.Name" class="kategoriyazi" href="/GamyEpin/category/pubg-mobile-hesap-satisi/55/1.html">@item.SubCategory.Name</a>
+                                </div>
+                            </div>
+                        </div>
+                        <a title="@item.Name " href="/GamyEpin/ilan/random-hesap/4464.html">
+                            <div class="product-infos">
+                                <div class="text-truncate">@item.Name </div>
+                                <span>@item.Description</span>
+                            </div>
+                            <div class="product-price">
+                                <div class="price">@item.Price ₺</div>
+                                <div class="user-profile">
+                                    <div class="user-infos ilankonumla" data-toggle="tooltip" data-placement="top" title="@item.User.UserName">
+                                        <a href="/GamyEpin/profile/Reyo.html"><img class="lazy aprof" height="24px" src="/GamyEpin/images/avatar/001-gamer.png" alt="">@item.User.UserName</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </li>
+
+        }
+
+
+
+
+
+        @*<li class="col-lg-3 col-md-4 col-sm-6 col-12 mb-3 mobil-boyut" style="flex: 0 0 14.276667%; max-width: 14.276667%;">
+            <div class="product light-effect">
+                <div class="p-0">
+                    <div class="product-img">
+                        <figure>
+                            <a title="Efsane hesaplar ucuz v" href="ilan/efsane-hesaplar-ucuz-ve-kaliteli-random-hesaplar/4044.html">
+                                <img src="images/lazy-epinkasa.webp" class="lazy" data-original="uploads/advert/minimum/65231110541535-kapak-23616192738791.jpg" />
+                            </a>
+                        </figure>
+                        <div class="featured">Öne Çıkan</div>
+                        <div class="showcase">Vitrin İlanı</div>
+                        <div class="user-wrapper">
+                            <div class="user-profile">
+                                <a href="category/pubg-mobile-hesap-satisi/55/1.html">
+                                    <img class="lazy" data-original="uploads/category/55-kapak-62544063734589.png">
+                                </a>
+                                <a data-toggle="tooltip" data-placement="top" title="PUBG Mobile Hesap Satışı" class="kategoriyazi" href="category/pubg-mobile-hesap-satisi/55/1.html">PUBG Mobile Hesap Satışı</a>
+                            </div>
+                        </div>
+                    </div>
+                    <a title="Efsane hesaplar ucuz v" href="ilan/efsane-hesaplar-ucuz-ve-kaliteli-random-hesaplar/4044.html">
+                        <div class="product-infos">
+                            <div class="text-truncate">Efsane hesaplar ucuz v...</div>
+                            <span>
+                                Efsane hesaplar 
+                                Kaliteli hesaplar 
+                                Uc...
+                            </span>
+                        </div>
+                        <div class="product-price">
+                            <div class="price">5.00 ₺</div>
+                            <div class="user-profile">
+                                <div class="user-infos ilankonumla" data-toggle="tooltip" data-placement="top" title="Deneme12">
+                                    <a href="profile/Deneme12.html"><img class="lazy aprof" height="24px" src="images/avatar/001-gamer.png" alt="">Deneme12</a>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </li>
+        <li class="col-lg-3 col-md-4 col-sm-6 col-12 mb-3 mobil-boyut" style="flex: 0 0 14.276667%; max-width: 14.276667%;">
+            <div class="product light-effect">
+                <div class="p-0">
+                    <div class="product-img">
+                        <figure>
+                            <a title="49,99 yerine 25 TL VİP" href="ilan/49-99-yerine-25-tl-vip-max-random/5197.html">
+                                <img src="images/lazy-epinkasa.webp" class="lazy" data-original="uploads/advert/minimum/68674253581283-kapak-71650455953762.jpg" />
+                            </a>
+                        </figure>
+                        <div class="featured">Öne Çıkan</div>
+                        <div class="showcase">Vitrin İlanı</div>
+                        <div class="user-wrapper">
+                            <div class="user-profile">
+                                <a href="category/pubg-mobile-hesap-satisi/55/1.html">
+                                    <img class="lazy" data-original="uploads/category/55-kapak-62544063734589.png">
+                                </a>
+                                <a data-toggle="tooltip" data-placement="top" title="PUBG Mobile Hesap Satışı" class="kategoriyazi" href="category/pubg-mobile-hesap-satisi/55/1.html">PUBG Mobile Hesap Satışı</a>
+                            </div>
+                        </div>
+                    </div>
+                    <a title="49,99 yerine 25 TL VİP" href="ilan/49-99-yerine-25-tl-vip-max-random/5197.html">
+                        <div class="product-infos">
+                            <div class="text-truncate">49,99 yerine 25 TL VİP...</div>
+                            <span>49,99 TL yerine sadece 24,99 TL içinde g...</span>
+                        </div>
+                        <div class="product-price">
+                            <div class="price">25.00 ₺</div>
+                            <div class="user-profile">
+                                <div class="user-infos ilankonumla" data-toggle="tooltip" data-placement="top" title="MonsterShop">
+                                    <a href="profile/MonsterShop.html"><img class="lazy aprof" height="24px" src="images/avatar/012-character.png" alt="">MonsterShop</a>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </li>
+        <li class="col-lg-3 col-md-4 col-sm-6 col-12 mb-3 mobil-boyut" style="flex: 0 0 14.276667%; max-width: 14.276667%;">
+            <div class="product light-effect">
+                <div class="p-0">
+                    <div class="product-img">
+                        <figure>
+                            <a title="25 TL RANDOM" href="ilan/25-tl-random/2220.html">
+                                <img src="images/lazy-epinkasa.webp" class="lazy" data-original="uploads/advert/minimum/65598184096258-kapak-65544739086656.jpg" />
+                            </a>
+                        </figure>
+                        <div class="featured">Öne Çıkan</div>
+                        <div class="showcase">Vitrin İlanı</div>
+                        <div class="user-wrapper">
+                            <div class="user-profile">
+                                <a href="category/pubg-mobile-hesap-satisi/55/1.html">
+                                    <img class="lazy" data-original="uploads/category/55-kapak-62544063734589.png">
+                                </a>
+                                <a data-toggle="tooltip" data-placement="top" title="PUBG Mobile Hesap Satışı" class="kategoriyazi" href="category/pubg-mobile-hesap-satisi/55/1.html">PUBG Mobile Hesap Satışı</a>
+                            </div>
+                        </div>
+                    </div>
+                    <a title="25 TL RANDOM" href="ilan/25-tl-random/2220.html">
+                        <div class="product-infos">
+                            <div class="text-truncate">25 TL RANDOM...</div>
+                            <span>Merhabalar. 25 TL random hesap satışımız...</span>
+                        </div>
+                        <div class="product-price">
+                            <div class="price">25.00 ₺</div>
+                            <div class="user-profile">
+                                <div class="user-infos ilankonumla" data-toggle="tooltip" data-placement="top" title="BigShop">
+                                    <a href="profile/BigShop.html"><img class="lazy aprof" height="24px" src="images/avatar/012-character.png" alt="">BigShop</a>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </li>
+        <li class="col-lg-3 col-md-4 col-sm-6 col-12 mb-3 mobil-boyut" style="flex: 0 0 14.276667%; max-width: 14.276667%;">
+            <div class="product light-effect">
+                <div class="p-0">
+                    <div class="product-img">
+                        <figure>
+                            <a title="20 TL lik hesap " href="ilan/20-tl-lik-hesap/1613.html">
+                                <img src="images/lazy-epinkasa.webp" class="lazy" data-original="uploads/advert/minimum/16727021700047-kapak-28443829441323.png" />
+                            </a>
+                        </figure>
+                        <div class="showcase">Vitrin İlanı</div>
+                        <div class="user-wrapper">
+                            <div class="user-profile">
+                                <a href="category/pubg-mobile-hesap-satisi/55/1.html">
+                                    <img class="lazy" data-original="uploads/category/55-kapak-62544063734589.png">
+                                </a>
+                                <a data-toggle="tooltip" data-placement="top" title="PUBG Mobile Hesap Satışı" class="kategoriyazi" href="category/pubg-mobile-hesap-satisi/55/1.html">PUBG Mobile Hesap Satışı</a>
+                            </div>
+                        </div>
+                    </div>
+                    <a title="20 TL lik hesap " href="ilan/20-tl-lik-hesap/1613.html">
+                        <div class="product-infos">
+                            <div class="text-truncate">20 TL lik hesap ...</div>
+                            <span>20 TL&amp;#39;LİK BUZ DİYARLI RANDOM HESAP Y...</span>
+                        </div>
+                        <div class="product-price">
+                            <div class="price">20.00 ₺</div>
+                            <div class="user-profile">
+                                <div class="user-infos ilankonumla" data-toggle="tooltip" data-placement="top" title="Muhrey">
+                                    <a href="profile/Muhrey.html"><img class="lazy aprof" height="24px" src="images/avatar/015-character.png" alt="">Muhrey</a>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </li>
+        <li class="col-lg-3 col-md-4 col-sm-6 col-12 mb-3 mobil-boyut" style="flex: 0 0 14.276667%; max-width: 14.276667%;">
+            <div class="product light-effect">
+                <div class="p-0">
+                    <div class="product-img">
+                        <figure>
+                            <a title="25 TL&#039;ilk random hesap" href="ilan/25-tl-ilk-random-hesap/5211.html">
+                                <img src="images/lazy-epinkasa.webp" class="lazy" data-original="uploads/advert/minimum/51826480336719-kapak-27755067124444.jpg" />
+                            </a>
+                        </figure>
+                        <div class="showcase">Vitrin İlanı</div>
+                        <div class="user-wrapper">
+                            <div class="user-profile">
+                                <a href="category/pubg-mobile-hesap-satisi/55/1.html">
+                                    <img class="lazy" data-original="uploads/category/55-kapak-62544063734589.png">
+                                </a>
+                                <a data-toggle="tooltip" data-placement="top" title="PUBG Mobile Hesap Satışı" class="kategoriyazi" href="category/pubg-mobile-hesap-satisi/55/1.html">PUBG Mobile Hesap Satışı</a>
+                            </div>
+                        </div>
+                    </div>
+                    <a title="25 TL&#039;ilk random hesap" href="ilan/25-tl-ilk-random-hesap/5211.html">
+                        <div class="product-infos">
+                            <div class="text-truncate">25 TL&#039;ilk random hesap...</div>
+                            <span>25 TL&amp;#39;İLK RANDOM HESAP YA DOLU YA BO...</span>
+                        </div>
+                        <div class="product-price">
+                            <div class="price">25.00 ₺</div>
+                            <div class="user-profile">
+                                <div class="user-infos ilankonumla" data-toggle="tooltip" data-placement="top" title="Muhrey">
+                                    <a href="profile/Muhrey.html"><img class="lazy aprof" height="24px" src="images/avatar/015-character.png" alt="">Muhrey</a>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </li>
+        <li class="col-lg-3 col-md-4 col-sm-6 col-12 mb-3 mobil-boyut" style="flex: 0 0 14.276667%; max-width: 14.276667%;">
+            <div class="product light-effect">
+                <div class="p-0">
+                    <div class="product-img">
+                        <figure>
+                            <a title="PUBG MOBİLE VİP GOLD 5" href="ilan/pubg-mobile-vip-gold-5-stoklu-mumya-random-hesap-giris-garantili/5064.html">
+                                <img src="images/lazy-epinkasa.webp" class="lazy" data-original="uploads/advert/minimum/28522975098344-kapak-89941732654642.jpg" />
+                            </a>
+                        </figure>
+                        <div class="featured">Öne Çıkan</div>
+                        <div class="showcase">Vitrin İlanı</div>
+                        <div class="user-wrapper">
+                            <div class="user-profile">
+                                <a href="category/pubg-mobile-hesap-satisi/55/1.html">
+                                    <img class="lazy" data-original="uploads/category/55-kapak-62544063734589.png">
+                                </a>
+                                <a data-toggle="tooltip" data-placement="top" title="PUBG Mobile Hesap Satışı" class="kategoriyazi" href="category/pubg-mobile-hesap-satisi/55/1.html">PUBG Mobile Hesap Satışı</a>
+                            </div>
+                        </div>
+                    </div>
+                    <a title="PUBG MOBİLE VİP GOLD 5" href="ilan/pubg-mobile-vip-gold-5-stoklu-mumya-random-hesap-giris-garantili/5064.html">
+                        <div class="product-infos">
+                            <div class="text-truncate">PUBG MOBİLE VİP GOLD 5...</div>
+                            <span>PUBG MOBİLE VİP GOLD 5 STOKLU RANDOM HES...</span>
+                        </div>
+                        <div class="product-price">
+                            <div class="price">79.99 ₺</div>
+                            <div class="user-profile">
+                                <div class="user-infos ilankonumla" data-toggle="tooltip" data-placement="top" title="esatis">
+                                    <a href="profile/esatis.html"><img class="lazy aprof" height="24px" src="uploads/user/avatar/14770-10617472009364.jpg" alt="">esatis</a>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </li>
+        <li class="col-lg-3 col-md-4 col-sm-6 col-12 mb-3 mobil-boyut" style="flex: 0 0 14.276667%; max-width: 14.276667%;">
+            <div class="product light-effect">
+                <div class="p-0">
+                    <div class="product-img">
+                        <figure>
+                            <a title="PUBG MOBİLE RANDOM HES" href="ilan/pubg-mobile-random-hesap-sok-fiyata/4333.html">
+                                <img src="images/lazy-epinkasa.webp" class="lazy" data-original="uploads/advert/minimum/28813721152824-kapak-48174878590168.jpg" />
+                            </a>
+                        </figure>
+                        <div class="featured">Öne Çıkan</div>
+                        <div class="showcase">Vitrin İlanı</div>
+                        <div class="user-wrapper">
+                            <div class="user-profile">
+                                <a href="category/pubg-mobile-hesap-satisi/55/1.html">
+                                    <img class="lazy" data-original="uploads/category/55-kapak-62544063734589.png">
+                                </a>
+                                <a data-toggle="tooltip" data-placement="top" title="PUBG Mobile Hesap Satışı" class="kategoriyazi" href="category/pubg-mobile-hesap-satisi/55/1.html">PUBG Mobile Hesap Satışı</a>
+                            </div>
+                        </div>
+                    </div>
+                    <a title="PUBG MOBİLE RANDOM HES" href="ilan/pubg-mobile-random-hesap-sok-fiyata/4333.html">
+                        <div class="product-infos">
+                            <div class="text-truncate">PUBG MOBİLE RANDOM HES...</div>
+                            <span>UYGUN FİYATA DOLU HESAP ÇIKARMA ŞANSIYLA...</span>
+                        </div>
+                        <div class="product-price">
+                            <div class="price">15.00 ₺</div>
+                            <div class="user-profile">
+                                <div class="user-infos ilankonumla" data-toggle="tooltip" data-placement="top" title="viaSHOP">
+                                    <a href="profile/viaSHOP.html"><img class="lazy aprof" height="24px" src="uploads/user/avatar/12180-27501592759792.jpg" alt="">viaSHOP</a>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </li>
+        <li class="col-lg-3 col-md-4 col-sm-6 col-12 mb-3 mobil-boyut" style="flex: 0 0 14.276667%; max-width: 14.276667%;">
+            <div class="product light-effect">
+                <div class="p-0">
+                    <div class="product-img">
+                        <figure>
+                            <a title="PUBG MOBİLE VİP GOLD 5" href="ilan/pubg-mobile-vip-gold-5-stoktan-birinde-sari-mumya-random-hesap-giris-garantili/5152.html">
+                                <img src="images/lazy-epinkasa.webp" class="lazy" data-original="uploads/advert/minimum/67849913627722-kapak-42617477270887.jpg" />
+                            </a>
+                        </figure>
+                        <div class="featured">Öne Çıkan</div>
+                        <div class="showcase">Vitrin İlanı</div>
+                        <div class="user-wrapper">
+                            <div class="user-profile">
+                                <a href="category/pubg-mobile-hesap-satisi/55/1.html">
+                                    <img class="lazy" data-original="uploads/category/55-kapak-62544063734589.png">
+                                </a>
+                                <a data-toggle="tooltip" data-placement="top" title="PUBG Mobile Hesap Satışı" class="kategoriyazi" href="category/pubg-mobile-hesap-satisi/55/1.html">PUBG Mobile Hesap Satışı</a>
+                            </div>
+                        </div>
+                    </div>
+                    <a title="PUBG MOBİLE VİP GOLD 5" href="ilan/pubg-mobile-vip-gold-5-stoktan-birinde-sari-mumya-random-hesap-giris-garantili/5152.html">
+                        <div class="product-infos">
+                            <div class="text-truncate">PUBG MOBİLE VİP GOLD 5...</div>
+                            <span>PUBG MOBİLE VİP GOLD 5 STOKLU RANDOM HES...</span>
+                        </div>
+                        <div class="product-price">
+                            <div class="price">49.99 ₺</div>
+                            <div class="user-profile">
+                                <div class="user-infos ilankonumla" data-toggle="tooltip" data-placement="top" title="esatis">
+                                    <a href="profile/esatis.html"><img class="lazy aprof" height="24px" src="uploads/user/avatar/14770-10617472009364.jpg" alt="">esatis</a>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </li>
+        <li class="col-lg-3 col-md-4 col-sm-6 col-12 mb-3 mobil-boyut" style="flex: 0 0 14.276667%; max-width: 14.276667%;">
+            <div class="product light-effect">
+                <div class="p-0">
+                    <div class="product-img">
+                        <figure>
+                            <a title="VIP ELMAS PUBG MOBİLE " href="ilan/vip-elmas-pubg-mobile-random-hesaplar/5063.html">
+                                <img src="images/lazy-epinkasa.webp" class="lazy" data-original="uploads/advert/minimum/35505293327998-kapak-47604087670623.jpg" />
+                            </a>
+                        </figure>
+                        <div class="featured">Öne Çıkan</div>
+                        <div class="showcase">Vitrin İlanı</div>
+                        <div class="user-wrapper">
+                            <div class="user-profile">
+                                <a href="category/pubg-mobile-hesap-satisi/55/1.html">
+                                    <img class="lazy" data-original="uploads/category/55-kapak-62544063734589.png">
+                                </a>
+                                <a data-toggle="tooltip" data-placement="top" title="PUBG Mobile Hesap Satışı" class="kategoriyazi" href="category/pubg-mobile-hesap-satisi/55/1.html">PUBG Mobile Hesap Satışı</a>
+                            </div>
+                        </div>
+                    </div>
+                    <a title="VIP ELMAS PUBG MOBİLE " href="ilan/vip-elmas-pubg-mobile-random-hesaplar/5063.html">
+                        <div class="product-infos">
+                            <div class="text-truncate">VIP ELMAS PUBG MOBİLE ...</div>
+                            <span>PUBG MOBİLE VIP ELMAS RANDOM HESAPLAR İL...</span>
+                        </div>
+                        <div class="product-price">
+                            <div class="price">250.00 ₺</div>
+                            <div class="user-profile">
+                                <div class="user-infos ilankonumla" data-toggle="tooltip" data-placement="top" title="Cheapstore">
+                                    <a href="profile/Cheapstore.html"><img class="lazy aprof" height="24px" src="uploads/user/avatar/1829-28331982057636.jpg" alt="">Cheapstore</a>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </li>
+        <li class="col-lg-3 col-md-4 col-sm-6 col-12 mb-3 mobil-boyut" style="flex: 0 0 14.276667%; max-width: 14.276667%;">
+            <div class="product light-effect">
+                <div class="p-0">
+                    <div class="product-img">
+                        <figure>
+                            <a title="KOMBİNE RANDOM " href="ilan/kombine-random/4965.html">
+                                <img src="images/lazy-epinkasa.webp" class="lazy" data-original="uploads/advert/minimum/65765994367599-kapak-87954937818183.png" />
+                            </a>
+                        </figure>
+                        <div class="showcase">Vitrin İlanı</div>
+                        <div class="user-wrapper">
+                            <div class="user-profile">
+                                <a href="category/pubg-mobile-hesap-satisi/55/1.html">
+                                    <img class="lazy" data-original="uploads/category/55-kapak-62544063734589.png">
+                                </a>
+                                <a data-toggle="tooltip" data-placement="top" title="PUBG Mobile Hesap Satışı" class="kategoriyazi" href="category/pubg-mobile-hesap-satisi/55/1.html">PUBG Mobile Hesap Satışı</a>
+                            </div>
+                        </div>
+                    </div>
+                    <a title="KOMBİNE RANDOM " href="ilan/kombine-random/4965.html">
+                        <div class="product-infos">
+                            <div class="text-truncate">KOMBİNE RANDOM ...</div>
+                            <span>•TEK SATIN ALIMDA 10 HESAP GİRİŞ BİLGİSİ...</span>
+                        </div>
+                        <div class="product-price">
+                            <div class="price">15.00 ₺</div>
+                            <div class="user-profile">
+                                <div class="user-infos ilankonumla" data-toggle="tooltip" data-placement="top" title="Vexx12">
+                                    <a href="profile/Vexx12.html"><img class="lazy aprof" height="24px" src="images/avatar/001-gamer.png" alt="">Vexx12</a>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </li>
+        <li class="col-lg-3 col-md-4 col-sm-6 col-12 mb-3 mobil-boyut" style="flex: 0 0 14.276667%; max-width: 14.276667%;">
+            <div class="product light-effect">
+                <div class="p-0">
+                    <div class="product-img">
+                        <figure>
+                            <a title="⭐ULTRA VIP RANDOM HESA" href="ilan/ultra-vip-random-hesap-giris-garantili/5315.html">
+                                <img src="images/lazy-epinkasa.webp" class="lazy" data-original="uploads/advert/minimum/49820815604672-kapak-16167994851923.png" />
+                            </a>
+                        </figure>
+                        <div class="featured">Öne Çıkan</div>
+                        <div class="showcase">Vitrin İlanı</div>
+                        <div class="user-wrapper">
+                            <div class="user-profile">
+                                <a href="category/valorant-random-hesap/407/1.html">
+                                    <img class="lazy" data-original="uploads/category/407-kapak-68266194950691.png">
+                                </a>
+                                <a data-toggle="tooltip" data-placement="top" title="Valorant Random Hesap" class="kategoriyazi" href="category/valorant-random-hesap/407/1.html">Valorant Random Hesap</a>
+                            </div>
+                        </div>
+                    </div>
+                    <a title="⭐ULTRA VIP RANDOM HESA" href="ilan/ultra-vip-random-hesap-giris-garantili/5315.html">
+                        <div class="product-infos">
+                            <div class="text-truncate">⭐ULTRA VIP RANDOM HESA...</div>
+                            <span>HESAPLARIMIZ KALİTELİ HESAPLARDIR EN AZ ...</span>
+                        </div>
+                        <div class="product-price">
+                            <div class="price">14.99 ₺</div>
+                            <div class="user-profile">
+                                <div class="user-infos ilankonumla" data-toggle="tooltip" data-placement="top" title="esatis">
+                                    <a href="profile/esatis.html"><img class="lazy aprof" height="24px" src="uploads/user/avatar/14770-10617472009364.jpg" alt="">esatis</a>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </li>
+        <li class="col-lg-3 col-md-4 col-sm-6 col-12 mb-3 mobil-boyut" style="flex: 0 0 14.276667%; max-width: 14.276667%;">
+            <div class="product light-effect">
+                <div class="p-0">
+                    <div class="product-img">
+                        <figure>
+                            <a title="INSTAGRAM 2000 TAKİPÇİ" href="ilan/instagram-2000-takipci/2860.html">
+                                <img src="images/lazy-epinkasa.webp" class="lazy" data-original="uploads/advert/minimum/38428131969391-kapak-56803683700859.jpg" />
+                            </a>
+                        </figure>
+                        <div class="featured">Öne Çıkan</div>
+                        <div class="showcase">Vitrin İlanı</div>
+                        <div class="user-wrapper">
+                            <div class="user-profile">
+                                <a href="category/instagram-hesap-satisi/281/1.html">
+                                    <img class="lazy" data-original="uploads/category/281-kapak-30168585002601.png">
+                                </a>
+                                <a data-toggle="tooltip" data-placement="top" title="instagram" class="kategoriyazi" href="category/instagram-hesap-satisi/281/1.html">instagram</a>
+                            </div>
+                        </div>
+                    </div>
+                    <a title="INSTAGRAM 2000 TAKİPÇİ" href="ilan/instagram-2000-takipci/2860.html">
+                        <div class="product-infos">
+                            <div class="text-truncate">INSTAGRAM 2000 TAKİPÇİ...</div>
+                            <span>Merhabalar. Her türlü takipçi satışlarım...</span>
+                        </div>
+                        <div class="product-price">
+                            <div class="price">17.00 ₺</div>
+                            <div class="user-profile">
+                                <div class="user-infos ilankonumla" data-toggle="tooltip" data-placement="top" title="BigShop">
+                                    <a href="profile/BigShop.html"><img class="lazy aprof" height="24px" src="images/avatar/012-character.png" alt="">BigShop</a>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </li>
+        <li class="col-lg-3 col-md-4 col-sm-6 col-12 mb-3 mobil-boyut" style="flex: 0 0 14.276667%; max-width: 14.276667%;">
+            <div class="product light-effect">
+                <div class="p-0">
+                    <div class="product-img">
+                        <figure>
+                            <a title="10 TL YE FULL + FULL R" href="ilan/10-tl-ye-full-full-random/5295.html">
+                                <img src="images/lazy-epinkasa.webp" class="lazy" data-original="uploads/advert/minimum/52818479464144-kapak-34560278047509.jpg" />
+                            </a>
+                        </figure>
+                        <div class="featured">Öne Çıkan</div>
+                        <div class="showcase">Vitrin İlanı</div>
+                        <div class="user-wrapper">
+                            <div class="user-profile">
+                                <a href="category/pubg-mobile-hesap-satisi/55/1.html">
+                                    <img class="lazy" data-original="uploads/category/55-kapak-62544063734589.png">
+                                </a>
+                                <a data-toggle="tooltip" data-placement="top" title="PUBG Mobile Hesap Satışı" class="kategoriyazi" href="category/pubg-mobile-hesap-satisi/55/1.html">PUBG Mobile Hesap Satışı</a>
+                            </div>
+                        </div>
+                    </div>
+                    <a title="10 TL YE FULL + FULL R" href="ilan/10-tl-ye-full-full-random/5295.html">
+                        <div class="product-infos">
+                            <div class="text-truncate">10 TL YE FULL + FULL R...</div>
+                            <span>Hesapların çoğu yüksektir ve aralarında ...</span>
+                        </div>
+                        <div class="product-price">
+                            <div class="price">10.00 ₺</div>
+                            <div class="user-profile">
+                                <div class="user-infos ilankonumla" data-toggle="tooltip" data-placement="top" title="Leyla123">
+                                    <a href="profile/Leyla123.html"><img class="lazy aprof" height="24px" src="images/avatar/001-gamer.png" alt="">Leyla123</a>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </li>
+        <li class="col-lg-3 col-md-4 col-sm-6 col-12 mb-3 mobil-boyut" style="flex: 0 0 14.276667%; max-width: 14.276667%;">
+            <div class="product light-effect">
+                <div class="p-0">
+                    <div class="product-img">
+                        <figure>
+                            <a title="3TL random pubg" href="ilan/3tl-random-pubg/4780.html">
+                                <img src="images/lazy-epinkasa.webp" class="lazy" data-original="uploads/advert/minimum/79290325496415-kapak-64877479454968.jpg" />
+                            </a>
+                        </figure>
+                        <div class="featured">Öne Çıkan</div>
+                        <div class="showcase">Vitrin İlanı</div>
+                        <div class="user-wrapper">
+                            <div class="user-profile">
+                                <a href="category/pubg-mobile-hesap-satisi/55/1.html">
+                                    <img class="lazy" data-original="uploads/category/55-kapak-62544063734589.png">
+                                </a>
+                                <a data-toggle="tooltip" data-placement="top" title="PUBG Mobile Hesap Satışı" class="kategoriyazi" href="category/pubg-mobile-hesap-satisi/55/1.html">PUBG Mobile Hesap Satışı</a>
+                            </div>
+                        </div>
+                    </div>
+                    <a title="3TL random pubg" href="ilan/3tl-random-pubg/4780.html">
+                        <div class="product-infos">
+                            <div class="text-truncate">3TL random pubg...</div>
+                            <span>
+                                Hesaplar randomdur
+                                giriş garantisi veri...
+                            </span>
+                        </div>
+                        <div class="product-price">
+                            <div class="price">3.00 ₺</div>
+                            <div class="user-profile">
+                                <div class="user-infos ilankonumla" data-toggle="tooltip" data-placement="top" title="Mortal">
+                                    <a href="profile/Mortal.html"><img class="lazy aprof" height="24px" src="images/avatar/003-knight.png" alt="">Mortal</a>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </li>
+        <li class="col-lg-3 col-md-4 col-sm-6 col-12 mb-3 mobil-boyut" style="flex: 0 0 14.276667%; max-width: 14.276667%;">
+            <div class="product light-effect">
+                <div class="p-0">
+                    <div class="product-img">
+                        <figure>
+                            <a title="RANDOM HESAP 2 TL VİP " href="ilan/random-hesap-2-tl-vip-sans-kasasi/5328.html">
+                                <img src="images/lazy-epinkasa.webp" class="lazy" data-original="uploads/advert/minimum/13828766688455-kapak-74302779733123.jpg" />
+                            </a>
+                        </figure>
+                        <div class="featured">Öne Çıkan</div>
+                        <div class="showcase">Vitrin İlanı</div>
+                        <div class="user-wrapper">
+                            <div class="user-profile">
+                                <a href="category/pubg-mobile-hesap-satisi/55/1.html">
+                                    <img class="lazy" data-original="uploads/category/55-kapak-62544063734589.png">
+                                </a>
+                                <a data-toggle="tooltip" data-placement="top" title="PUBG Mobile Hesap Satışı" class="kategoriyazi" href="category/pubg-mobile-hesap-satisi/55/1.html">PUBG Mobile Hesap Satışı</a>
+                            </div>
+                        </div>
+                    </div>
+                    <a title="RANDOM HESAP 2 TL VİP " href="ilan/random-hesap-2-tl-vip-sans-kasasi/5328.html">
+                        <div class="product-infos">
+                            <div class="text-truncate">RANDOM HESAP 2 TL VİP ...</div>
+                            <span>KASASI ŞANS KASA RANDOM HESAPLAR İLANINA...</span>
+                        </div>
+                        <div class="product-price">
+                            <div class="price">1.99 ₺</div>
+                            <div class="user-profile">
+                                <div class="user-infos ilankonumla" data-toggle="tooltip" data-placement="top" title="Stilsatis">
+                                    <a href="profile/Stilsatis.html"><img class="lazy aprof" height="24px" src="uploads/user/avatar/3707-18804678481736.png" alt="">Stilsatis</a>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </li>
+        <li class="col-lg-3 col-md-4 col-sm-6 col-12 mb-3 mobil-boyut" style="flex: 0 0 14.276667%; max-width: 14.276667%;">
+            <div class="product light-effect">
+                <div class="p-0">
+                    <div class="product-img">
+                        <figure>
+                            <a title="25 TL DOLU HESAP GARAN" href="ilan/25-tl-dolu-hesap-garantili-giris-garantilidir-7-seviye-buz-diyari-m4-cikartma-sansi-yuksektir/3220.html">
+                                <img src="images/lazy-epinkasa.webp" class="lazy" data-original="uploads/advert/minimum/75574172397377-kapak-14095958400350.jpg" />
+                            </a>
+                        </figure>
+                        <div class="featured">Öne Çıkan</div>
+                        <div class="showcase">Vitrin İlanı</div>
+                        <div class="user-wrapper">
+                            <div class="user-profile">
+                                <a href="category/pubg-mobile-hesap-satisi/55/1.html">
+                                    <img class="lazy" data-original="uploads/category/55-kapak-62544063734589.png">
+                                </a>
+                                <a data-toggle="tooltip" data-placement="top" title="PUBG Mobile Hesap Satışı" class="kategoriyazi" href="category/pubg-mobile-hesap-satisi/55/1.html">PUBG Mobile Hesap Satışı</a>
+                            </div>
+                        </div>
+                    </div>
+                    <a title="25 TL DOLU HESAP GARAN" href="ilan/25-tl-dolu-hesap-garantili-giris-garantilidir-7-seviye-buz-diyari-m4-cikartma-sansi-yuksektir/3220.html">
+                        <div class="product-infos">
+                            <div class="text-truncate">25 TL DOLU HESAP GARAN...</div>
+                            <span>
+                                25 TL YE DOLU HESAP GARANTİLİ HESAPLA...
+                            </span>
+                        </div>
+                        <div class="product-price">
+                            <div class="price">25.00 ₺</div>
+                            <div class="user-profile">
+                                <div class="user-infos ilankonumla" data-toggle="tooltip" data-placement="top" title="ayberkozk01">
+                                    <a href="profile/ayberkozk01.html"><img class="lazy aprof" height="24px" src="images/avatar/012-character.png" alt="">ayberkozk01</a>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </li>
+        <li class="col-lg-3 col-md-4 col-sm-6 col-12 mb-3 mobil-boyut" style="flex: 0 0 14.276667%; max-width: 14.276667%;">
+            <div class="product light-effect">
+                <div class="p-0">
+                    <div class="product-img">
+                        <figure>
+                            <a title="15 TL RANDOM" href="ilan/15-tl-random/2221.html">
+                                <img src="images/lazy-epinkasa.webp" class="lazy" data-original="uploads/advert/minimum/95987202017605-kapak-65907884200089.jpg" />
+                            </a>
+                        </figure>
+                        <div class="featured">Öne Çıkan</div>
+                        <div class="showcase">Vitrin İlanı</div>
+                        <div class="user-wrapper">
+                            <div class="user-profile">
+                                <a href="category/pubg-mobile-hesap-satisi/55/1.html">
+                                    <img class="lazy" data-original="uploads/category/55-kapak-62544063734589.png">
+                                </a>
+                                <a data-toggle="tooltip" data-placement="top" title="PUBG Mobile Hesap Satışı" class="kategoriyazi" href="category/pubg-mobile-hesap-satisi/55/1.html">PUBG Mobile Hesap Satışı</a>
+                            </div>
+                        </div>
+                    </div>
+                    <a title="15 TL RANDOM" href="ilan/15-tl-random/2221.html">
+                        <div class="product-infos">
+                            <div class="text-truncate">15 TL RANDOM...</div>
+                            <span>Merhabalar. 15 TL random hesap satışımız...</span>
+                        </div>
+                        <div class="product-price">
+                            <div class="price">15.00 ₺</div>
+                            <div class="user-profile">
+                                <div class="user-infos ilankonumla" data-toggle="tooltip" data-placement="top" title="BigShop">
+                                    <a href="profile/BigShop.html"><img class="lazy aprof" height="24px" src="images/avatar/012-character.png" alt="">BigShop</a>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </li>
+        <li class="col-lg-3 col-md-4 col-sm-6 col-12 mb-3 mobil-boyut" style="flex: 0 0 14.276667%; max-width: 14.276667%;">
+            <div class="product light-effect">
+                <div class="p-0">
+                    <div class="product-img">
+                        <figure>
+                            <a title="GİRİŞ GARANTİLİ 5 TL M" href="ilan/giris-garantili-5-tl-mumya-firavun-7-level-hesap-gelebilir/5325.html">
+                                <img src="images/lazy-epinkasa.webp" class="lazy" data-original="uploads/advert/minimum/58155084816156-kapak-91156471813708.jpg" />
+                            </a>
+                        </figure>
+                        <div class="featured">Öne Çıkan</div>
+                        <div class="showcase">Vitrin İlanı</div>
+                        <div class="user-wrapper">
+                            <div class="user-profile">
+                                <a href="category/pubg-mobile-hesap-satisi/55/1.html">
+                                    <img class="lazy" data-original="uploads/category/55-kapak-62544063734589.png">
+                                </a>
+                                <a data-toggle="tooltip" data-placement="top" title="PUBG Mobile Hesap Satışı" class="kategoriyazi" href="category/pubg-mobile-hesap-satisi/55/1.html">PUBG Mobile Hesap Satışı</a>
+                            </div>
+                        </div>
+                    </div>
+                    <a title="GİRİŞ GARANTİLİ 5 TL M" href="ilan/giris-garantili-5-tl-mumya-firavun-7-level-hesap-gelebilir/5325.html">
+                        <div class="product-infos">
+                            <div class="text-truncate">GİRİŞ GARANTİLİ 5 TL M...</div>
+                            <span>GİRİŞ GARANTİLİ 5 TL MUMYA FİRAVUN 7 LEV...</span>
+                        </div>
+                        <div class="product-price">
+                            <div class="price">5.00 ₺</div>
+                            <div class="user-profile">
+                                <div class="user-infos ilankonumla" data-toggle="tooltip" data-placement="top" title="ESATISCIM">
+                                    <a href="profile/ESATISCIM.html"><img class="lazy aprof" height="24px" src="uploads/user/avatar/12787-26064297323590.jpg" alt="">ESATISCIM</a>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </li>
+        <li class="col-lg-3 col-md-4 col-sm-6 col-12 mb-3 mobil-boyut" style="flex: 0 0 14.276667%; max-width: 14.276667%;">
+            <div class="product light-effect">
+                <div class="p-0">
+                    <div class="product-img">
+                        <figure>
+                            <a title="BUZ DİYARI + MUMYA SET" href="ilan/buz-diyari-mumya-set-cikarma-sansi/4816.html">
+                                <img src="images/lazy-epinkasa.webp" class="lazy" data-original="uploads/advert/minimum/76407402677105-kapak-72711370147415.jpg" />
+                            </a>
+                        </figure>
+                        <div class="featured">Öne Çıkan</div>
+                        <div class="showcase">Vitrin İlanı</div>
+                        <div class="user-wrapper">
+                            <div class="user-profile">
+                                <a href="category/pubg-mobile-hesap-satisi/55/1.html">
+                                    <img class="lazy" data-original="uploads/category/55-kapak-62544063734589.png">
+                                </a>
+                                <a data-toggle="tooltip" data-placement="top" title="PUBG Mobile Hesap Satışı" class="kategoriyazi" href="category/pubg-mobile-hesap-satisi/55/1.html">PUBG Mobile Hesap Satışı</a>
+                            </div>
+                        </div>
+                    </div>
+                    <a title="BUZ DİYARI + MUMYA SET" href="ilan/buz-diyari-mumya-set-cikarma-sansi/4816.html">
+                        <div class="product-infos">
+                            <div class="text-truncate">BUZ DİYARI + MUMYA SET...</div>
+                            <span>PUBG MOBİLE DEMİR VİP RANDOM HESAPLAR İL...</span>
+                        </div>
+                        <div class="product-price">
+                            <div class="price">2.50 ₺</div>
+                            <div class="user-profile">
+                                <div class="user-infos ilankonumla" data-toggle="tooltip" data-placement="top" title="FastMan">
+                                    <a href="profile/FastMan.html"><img class="lazy aprof" height="24px" src="images/avatar/001-gamer.png" alt="">FastMan</a>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </li>
+        <li class="col-lg-3 col-md-4 col-sm-6 col-12 mb-3 mobil-boyut" style="flex: 0 0 14.276667%; max-width: 14.276667%;">
+            <div class="product light-effect">
+                <div class="p-0">
+                    <div class="product-img">
+                        <figure>
+                            <a title="VIP PLATİN RANDOM HESA" href="ilan/vip-platin-random-hesaplar/5246.html">
+                                <img src="images/lazy-epinkasa.webp" class="lazy" data-original="uploads/advert/minimum/23270249251074-kapak-85098703477787.jpg" />
+                            </a>
+                        </figure>
+                        <div class="featured">Öne Çıkan</div>
+                        <div class="showcase">Vitrin İlanı</div>
+                        <div class="user-wrapper">
+                            <div class="user-profile">
+                                <a href="category/pubg-mobile-hesap-satisi/55/1.html">
+                                    <img class="lazy" data-original="uploads/category/55-kapak-62544063734589.png">
+                                </a>
+                                <a data-toggle="tooltip" data-placement="top" title="PUBG Mobile Hesap Satışı" class="kategoriyazi" href="category/pubg-mobile-hesap-satisi/55/1.html">PUBG Mobile Hesap Satışı</a>
+                            </div>
+                        </div>
+                    </div>
+                    <a title="VIP PLATİN RANDOM HESA" href="ilan/vip-platin-random-hesaplar/5246.html">
+                        <div class="product-infos">
+                            <div class="text-truncate">VIP PLATİN RANDOM HESA...</div>
+                            <span>PUBG MOBİLE VIP PLATİN RANDOM HESAPLAR İ...</span>
+                        </div>
+                        <div class="product-price">
+                            <div class="price">120.00 ₺</div>
+                            <div class="user-profile">
+                                <div class="user-infos ilankonumla" data-toggle="tooltip" data-placement="top" title="Cheapstore">
+                                    <a href="profile/Cheapstore.html"><img class="lazy aprof" height="24px" src="uploads/user/avatar/1829-28331982057636.jpg" alt="">Cheapstore</a>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </li>
+        <li class="col-lg-3 col-md-4 col-sm-6 col-12 mb-3 mobil-boyut" style="flex: 0 0 14.276667%; max-width: 14.276667%;">
+            <div class="product light-effect">
+                <div class="p-0">
+                    <div class="product-img">
+                        <figure>
+                            <a title="5 TL MEGA HESAPLAR GİR" href="ilan/5-tl-mega-hesaplar-giris-garantilidir-buz-m4-7-level-cikma-sansi-yuksektir/5043.html">
+                                <img src="images/lazy-epinkasa.webp" class="lazy" data-original="uploads/advert/minimum/87998053551559-kapak-78810564403688.jpg" />
+                            </a>
+                        </figure>
+                        <div class="featured">Öne Çıkan</div>
+                        <div class="showcase">Vitrin İlanı</div>
+                        <div class="user-wrapper">
+                            <div class="user-profile">
+                                <a href="category/pubg-mobile-hesap-satisi/55/1.html">
+                                    <img class="lazy" data-original="uploads/category/55-kapak-62544063734589.png">
+                                </a>
+                                <a data-toggle="tooltip" data-placement="top" title="PUBG Mobile Hesap Satışı" class="kategoriyazi" href="category/pubg-mobile-hesap-satisi/55/1.html">PUBG Mobile Hesap Satışı</a>
+                            </div>
+                        </div>
+                    </div>
+                    <a title="5 TL MEGA HESAPLAR GİR" href="ilan/5-tl-mega-hesaplar-giris-garantilidir-buz-m4-7-level-cikma-sansi-yuksektir/5043.html">
+                        <div class="product-infos">
+                            <div class="text-truncate">5 TL MEGA HESAPLAR GİR...</div>
+                            <span>
+                                Hesap satışlarına kaldığım yerden dev...
+                            </span>
+                        </div>
+                        <div class="product-price">
+                            <div class="price">5.00 ₺</div>
+                            <div class="user-profile">
+                                <div class="user-infos ilankonumla" data-toggle="tooltip" data-placement="top" title="ayberkozk01">
+                                    <a href="profile/ayberkozk01.html"><img class="lazy aprof" height="24px" src="images/avatar/012-character.png" alt="">ayberkozk01</a>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </li>
+        <li class="col-lg-3 col-md-4 col-sm-6 col-12 mb-3 mobil-boyut" style="flex: 0 0 14.276667%; max-width: 14.276667%;">
+            <div class="product light-effect">
+                <div class="p-0">
+                    <div class="product-img">
+                        <figure>
+                            <a title="VIP GOLD RANDOM HESAPL" href="ilan/vip-gold-random-hesaplar/5245.html">
+                                <img src="images/lazy-epinkasa.webp" class="lazy" data-original="uploads/advert/minimum/95378834029618-kapak-75333153660665.jpg" />
+                            </a>
+                        </figure>
+                        <div class="featured">Öne Çıkan</div>
+                        <div class="showcase">Vitrin İlanı</div>
+                        <div class="user-wrapper">
+                            <div class="user-profile">
+                                <a href="category/pubg-mobile-hesap-satisi/55/1.html">
+                                    <img class="lazy" data-original="uploads/category/55-kapak-62544063734589.png">
+                                </a>
+                                <a data-toggle="tooltip" data-placement="top" title="PUBG Mobile Hesap Satışı" class="kategoriyazi" href="category/pubg-mobile-hesap-satisi/55/1.html">PUBG Mobile Hesap Satışı</a>
+                            </div>
+                        </div>
+                    </div>
+                    <a title="VIP GOLD RANDOM HESAPL" href="ilan/vip-gold-random-hesaplar/5245.html">
+                        <div class="product-infos">
+                            <div class="text-truncate">VIP GOLD RANDOM HESAPL...</div>
+                            <span>PUBG MOBİLE VIP GOLD RANDOM HESAPLAR İLA...</span>
+                        </div>
+                        <div class="product-price">
+                            <div class="price">70.00 ₺</div>
+                            <div class="user-profile">
+                                <div class="user-infos ilankonumla" data-toggle="tooltip" data-placement="top" title="Cheapstore">
+                                    <a href="profile/Cheapstore.html"><img class="lazy aprof" height="24px" src="uploads/user/avatar/1829-28331982057636.jpg" alt="">Cheapstore</a>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </li>
+        <li class="col-lg-3 col-md-4 col-sm-6 col-12 mb-3 mobil-boyut" style="flex: 0 0 14.276667%; max-width: 14.276667%;">
+            <div class="product light-effect">
+                <div class="p-0">
+                    <div class="product-img">
+                        <figure>
+                            <a title="Random hesap" href="ilan/random-hesap/5191.html">
+                                <img src="images/lazy-epinkasa.webp" class="lazy" data-original="uploads/advert/minimum/76456663222682-kapak-23816507535614.jpg" />
+                            </a>
+                        </figure>
+                        <div class="featured">Öne Çıkan</div>
+                        <div class="showcase">Vitrin İlanı</div>
+                        <div class="user-wrapper">
+                            <div class="user-profile">
+                                <a href="category/hesap/225/1.html">
+                                    <img class="lazy" data-original="uploads/category/225-kapak-66295517917790.png">
+                                </a>
+                                <a data-toggle="tooltip" data-placement="top" title="Hesap " class="kategoriyazi" href="category/hesap/225/1.html">Hesap </a>
+                            </div>
+                        </div>
+                    </div>
+                    <a title="Random hesap" href="ilan/random-hesap/5191.html">
+                        <div class="product-infos">
+                            <div class="text-truncate">Random hesap...</div>
+                            <span>Buz diyari  garantili random hesap...</span>
+                        </div>
+                        <div class="product-price">
+                            <div class="price">30.00 ₺</div>
+                            <div class="user-profile">
+                                <div class="user-infos ilankonumla" data-toggle="tooltip" data-placement="top" title="Muhammedenes">
+                                    <a href="profile/Muhammedenes.html"><img class="lazy aprof" height="24px" src="images/avatar/001-gamer.png" alt="">Muhammedenes</a>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </li>
+        <li class="col-lg-3 col-md-4 col-sm-6 col-12 mb-3 mobil-boyut" style="flex: 0 0 14.276667%; max-width: 14.276667%;">
+            <div class="product light-effect">
+                <div class="p-0">
+                    <div class="product-img">
+                        <figure>
+                            <a title="34,99 TL Yerine 15 TL " href="ilan/34-99-tl-yerine-15-tl-vip-max-random/5198.html">
+                                <img src="images/lazy-epinkasa.webp" class="lazy" data-original="uploads/advert/minimum/19091239826931-kapak-38568814091867.jpg" />
+                            </a>
+                        </figure>
+                        <div class="featured">Öne Çıkan</div>
+                        <div class="showcase">Vitrin İlanı</div>
+                        <div class="user-wrapper">
+                            <div class="user-profile">
+                                <a href="category/pubg-mobile-hesap-satisi/55/1.html">
+                                    <img class="lazy" data-original="uploads/category/55-kapak-62544063734589.png">
+                                </a>
+                                <a data-toggle="tooltip" data-placement="top" title="PUBG Mobile Hesap Satışı" class="kategoriyazi" href="category/pubg-mobile-hesap-satisi/55/1.html">PUBG Mobile Hesap Satışı</a>
+                            </div>
+                        </div>
+                    </div>
+                    <a title="34,99 TL Yerine 15 TL " href="ilan/34-99-tl-yerine-15-tl-vip-max-random/5198.html">
+                        <div class="product-infos">
+                            <div class="text-truncate">34,99 TL Yerine 15 TL ...</div>
+                            <span>34,99TL yerine sadece 15 TL içinde gayet...</span>
+                        </div>
+                        <div class="product-price">
+                            <div class="price">15.00 ₺</div>
+                            <div class="user-profile">
+                                <div class="user-infos ilankonumla" data-toggle="tooltip" data-placement="top" title="MonsterShop">
+                                    <a href="profile/MonsterShop.html"><img class="lazy aprof" height="24px" src="images/avatar/012-character.png" alt="">MonsterShop</a>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </li>
+        <li class="col-lg-3 col-md-4 col-sm-6 col-12 mb-3 mobil-boyut" style="flex: 0 0 14.276667%; max-width: 14.276667%;">
+            <div class="product light-effect">
+                <div class="p-0">
+                    <div class="product-img">
+                        <figure>
+                            <a title="RAMAZANA ÖZEL PAKET GE" href="ilan/ramazana-ozel-paket-geldiii/4801.html">
+                                <img src="images/lazy-epinkasa.webp" class="lazy" data-original="uploads/advert/minimum/34329595097862-kapak-14460252258573.png" />
+                            </a>
+                        </figure>
+                        <div class="featured">Öne Çıkan</div>
+                        <div class="showcase">Vitrin İlanı</div>
+                        <div class="user-wrapper">
+                            <div class="user-profile">
+                                <a href="category/pubg-mobile-hesap-satisi/55/1.html">
+                                    <img class="lazy" data-original="uploads/category/55-kapak-62544063734589.png">
+                                </a>
+                                <a data-toggle="tooltip" data-placement="top" title="PUBG Mobile Hesap Satışı" class="kategoriyazi" href="category/pubg-mobile-hesap-satisi/55/1.html">PUBG Mobile Hesap Satışı</a>
+                            </div>
+                        </div>
+                    </div>
+                    <a title="RAMAZANA ÖZEL PAKET GE" href="ilan/ramazana-ozel-paket-geldiii/4801.html">
+                        <div class="product-infos">
+                            <div class="text-truncate">RAMAZANA ÖZEL PAKET GE...</div>
+                            <span>KASASI ŞANS KASA RANDOM HESAPLAR İLANINA...</span>
+                        </div>
+                        <div class="product-price">
+                            <div class="price">1.50 ₺</div>
+                            <div class="user-profile">
+                                <div class="user-infos ilankonumla" data-toggle="tooltip" data-placement="top" title="AztekStore">
+                                    <a href="profile/AztekStore.html"><img class="lazy aprof" height="24px" src="uploads/user/avatar/11497-25770863521866.jpg" alt="">AztekStore</a>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </li>
+        <li class="col-lg-3 col-md-4 col-sm-6 col-12 mb-3 mobil-boyut" style="flex: 0 0 14.276667%; max-width: 14.276667%;">
+            <div class="product light-effect">
+                <div class="p-0">
+                    <div class="product-img">
+                        <figure>
+                            <a title="100 TL RANDOM (ÖZEL HE" href="ilan/100-tl-random-ozel-hesaplar/2212.html">
+                                <img src="images/lazy-epinkasa.webp" class="lazy" data-original="uploads/advert/minimum/79238807013272-kapak-53793188183207.jpg" />
+                            </a>
+                        </figure>
+                        <div class="featured">Öne Çıkan</div>
+                        <div class="showcase">Vitrin İlanı</div>
+                        <div class="user-wrapper">
+                            <div class="user-profile">
+                                <a href="category/pubg-mobile-hesap-satisi/55/1.html">
+                                    <img class="lazy" data-original="uploads/category/55-kapak-62544063734589.png">
+                                </a>
+                                <a data-toggle="tooltip" data-placement="top" title="PUBG Mobile Hesap Satışı" class="kategoriyazi" href="category/pubg-mobile-hesap-satisi/55/1.html">PUBG Mobile Hesap Satışı</a>
+                            </div>
+                        </div>
+                    </div>
+                    <a title="100 TL RANDOM (ÖZEL HE" href="ilan/100-tl-random-ozel-hesaplar/2212.html">
+                        <div class="product-infos">
+                            <div class="text-truncate">100 TL RANDOM (ÖZEL HE...</div>
+                            <span>Merhabalar. 100 TL random hesap satışımı...</span>
+                        </div>
+                        <div class="product-price">
+                            <div class="price">100.00 ₺</div>
+                            <div class="user-profile">
+                                <div class="user-infos ilankonumla" data-toggle="tooltip" data-placement="top" title="BigShop">
+                                    <a href="profile/BigShop.html"><img class="lazy aprof" height="24px" src="images/avatar/012-character.png" alt="">BigShop</a>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </li>
+        <li class="col-lg-3 col-md-4 col-sm-6 col-12 mb-3 mobil-boyut" style="flex: 0 0 14.276667%; max-width: 14.276667%;">
+            <div class="product light-effect">
+                <div class="p-0">
+                    <div class="product-img">
+                        <figure>
+                            <a title="5 TL RANDOM" href="ilan/5-tl-random/2223.html">
+                                <img src="images/lazy-epinkasa.webp" class="lazy" data-original="uploads/advert/minimum/21492881075656-kapak-28603343252180.jpg" />
+                            </a>
+                        </figure>
+                        <div class="featured">Öne Çıkan</div>
+                        <div class="showcase">Vitrin İlanı</div>
+                        <div class="user-wrapper">
+                            <div class="user-profile">
+                                <a href="category/pubg-mobile-hesap-satisi/55/1.html">
+                                    <img class="lazy" data-original="uploads/category/55-kapak-62544063734589.png">
+                                </a>
+                                <a data-toggle="tooltip" data-placement="top" title="PUBG Mobile Hesap Satışı" class="kategoriyazi" href="category/pubg-mobile-hesap-satisi/55/1.html">PUBG Mobile Hesap Satışı</a>
+                            </div>
+                        </div>
+                    </div>
+                    <a title="5 TL RANDOM" href="ilan/5-tl-random/2223.html">
+                        <div class="product-infos">
+                            <div class="text-truncate">5 TL RANDOM...</div>
+                            <span>Merhabalar. 5 TL random hesap satışımızd...</span>
+                        </div>
+                        <div class="product-price">
+                            <div class="price">5.00 ₺</div>
+                            <div class="user-profile">
+                                <div class="user-infos ilankonumla" data-toggle="tooltip" data-placement="top" title="BigShop">
+                                    <a href="profile/BigShop.html"><img class="lazy aprof" height="24px" src="images/avatar/012-character.png" alt="">BigShop</a>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </li>*@
+    </ul>
+</div>

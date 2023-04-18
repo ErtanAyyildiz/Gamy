@@ -1,0 +1,64 @@
+﻿@model List<Category>
+@{
+    ViewData["Title"] = "Categories";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<nav class="brreadcrumb">
+    <div class="container" style="position:relative;">
+        <ul>
+            <li><a href="index.html">Ana Sayfa</a></li>
+            <li><a href="categories.html">Tüm Oyunlar</a></li>
+        </ul>
+    </div>
+</nav>
+
+
+<main class="main-content pt-xl-4 pt-3">
+    <div class="container">
+        <div class="sub-top-bg" style="margin-bottom:50px;">
+            <div class="row align-items-center no-gutters justify-content-between">
+                <style>
+                    .cat-search {
+                        width: 1400px !important;
+                    }
+                </style>
+                <div class="col-xl-auto col-12 mt-xl-0 mt-2">
+                    <form action="/Home/Categories/">
+                        <div class="d-flex align-items-center">
+                            <input type="text" name="s" class="cat-search" onkeyup="var value = $(this).val().toLowerCase();
+                                   $(&quot;.kategori&quot;).filter(function() {
+                                   $(this).toggle($(this).text().toLowerCase().indexOf(value)> -1)
+                            });" placeholder="Ne aradığınızı buraya yazınız...">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <style>
+            .oranla {
+                flex: 0 0 14%;
+                max-width: 14%;
+            }
+        </style>
+        <div class="row mt-xl4 mt-3 cat-product-list">
+            @foreach (var item in Model)
+            {
+                <div class="kategori oranla col-lg-3 col-md-4 col-12 mb-xl-4 mb-3">
+                    <div class="cat-product catergory-zoom">
+                        <a href="category/pubg-mobile/53.html" class="pc-img">
+                            <figure>
+                                <img class="lazy" data-original="/GamyEpin/uploads/category/@item.CategoryImageUrl" height="293px" width="220px" alt="" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAMCAYAAABWdVznAAAABHNCSVQICAgIfAhkiAAAABlJREFUKFNjfPDi/X8GEgDjqAYiQmtEhhIACfsslTOcRcIAAAAASUVORK5CYII=">
+                            </figure>
+                        </a>
+                        <div class="pc-name">
+                            <a href="category/pubg-mobile/53.html">@item.Name</a>
+
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</main>

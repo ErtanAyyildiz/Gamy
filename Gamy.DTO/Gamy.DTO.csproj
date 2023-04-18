@@ -10,4 +10,8 @@
     <Folder Include="OrderDTOs\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Gamy.Entity\Gamy.Entity.csproj" />
+  </ItemGroup>
+
 </Project>

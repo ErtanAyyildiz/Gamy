@@ -1,9 +1,11 @@
-﻿using Gamy.Business.Abstracts;
+﻿using Enoca.DataAccess.Wrappers.Filters;
+using Gamy.Business.Abstracts;
 using Gamy.DataAccess.Repositories.IRepositories;
 using Gamy.Entity.Modals;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -34,12 +36,30 @@ namespace Gamy.Business.Concretes
             return _unitOfWork.Product.GetList();
         }
 
+        public List<Product> GetListByFilter(Expression<Func<Product, bool>> filter)
+        {
+            return _unitOfWork.Product.GetListByFilter(filter);
+        }
+
+        public List<Product> GetPageData(PaginationFilter filter)
+        {
+            return _unitOfWork.Product.GetPageData(filter);
+        }
+
         public Product GetProductIsSponsered()
         {
             return _unitOfWork.Product.GetProductIsSponsered();
         }
 
-     
+        public List<Product> GetProductsOrderByCreationDate(PaginationFilter filter)
+        {
+            return _unitOfWork.Product.GetProductsOrderByCreationDate(filter);
+        }
+
+        public List<Product> GetProductsOrderByNumberDescending(PaginationFilter filter)
+        {
+            return _unitOfWork.Product.GetProductsOrderByNumberDescending(filter);
+        }
 
         public void Remove(Product entity)
         {

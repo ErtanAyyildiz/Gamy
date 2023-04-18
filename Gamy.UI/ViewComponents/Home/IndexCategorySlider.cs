@@ -2,7 +2,7 @@
 
 namespace Gamy.UI.ViewComponents.Home
 {
-    public class IndexCategorySlider: ViewComponent
+    public class IndexCategorySlider : ViewComponent
     {
         public IViewComponentResult Invoke()
         {

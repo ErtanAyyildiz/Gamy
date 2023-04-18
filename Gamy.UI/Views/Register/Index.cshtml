@@ -1,0 +1,195 @@
+﻿@model UserSignUpDTO
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<main class="main-content pt-xl-4 pt-3">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-7 col-12 mb-xl-0 mb-2">
+                <form asp-action="Index" method="POST">
+                    <input type="hidden" name="_token" value="3K2eaKBkRSkzV0SvGssTX4xYcAVKu7QxHQUkFruC"> <div class="bg-white-two p-3">
+                        <div class="border-bottom pb-3 mb-3">
+                            <div class="fs-20 font-weight-bold">Hemen Şimdi Kayıt Ol</div>
+                            <div class="mt-2">
+                                Kayıt olmak tamamen ücretsiz sadece 1 dakikanı ayırıp kayıt ol.
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <div class="font-weight-semibold mb-2 fs-12">Kullanıcı Adı</div>
+                            <input asp-for="@Model.UserName"  type="text" class="form-control">
+                            <span asp-validation-for="@Model.UserName" class="text-danger"></span>
+                        </div>
+                        <div class="row gutters-small">
+                            <div class="col-xl-6 col-12">
+                                <div class="mb-3">
+                                    <div class="font-weight-semibold mb-2 fs-12">Mail Adresi</div>
+                                    <input asp-for="@Model.Email" type="email" class="form-control">
+                                    <span asp-validation-for="@Model.Email" class="text-danger"></span>
+                                </div>
+                            </div>
+                            <div class="col-xl-6 col-12">
+                                <div class="mb-3">
+                                    <div class="font-weight-semibold mb-2 fs-12">Mail Adresi (Tekrar)</div>
+                                    <input asp-for="@Model.ConfirmEmail" type="email" class="form-control">
+                                    <span asp-validation-for="@Model.ConfirmEmail" class="text-danger"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row gutters-small">
+                            <div class="col-xl-6 col-12">
+                                <div class="mb-3">
+                                    <div class="font-weight-semibold mb-2 fs-12">Parola</div>
+                                    <input asp-for="@Model.Password" type="password" class="form-control" aria-autocomplete="list">
+                                    <span asp-validation-for="@Model.Password" class="text-danger"></span>
+                                </div>
+                            </div>
+                            <div class="col-xl-6 col-12">
+                                <div class="mb-3">
+                                    <div class="font-weight-semibold mb-2 fs-12">Parola (Tekrar)</div>
+                                    <input asp-for="@Model.ConfirmPassword" type="password" class="form-control">
+                                    <span asp-validation-for="@Model.ConfirmEmail" class="text-danger"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <div class="font-weight-semibold mb-2 fs-12">Adınız ve Soyadınız</div>
+                            <input asp-for="@Model.NameSurname" type="text" class="form-control">
+                            <span asp-validation-for="@Model.NameSurname" class="text-danger"></span>
+                        </div>
+                        <div class="mb-3">
+                            <div class="font-weight-semibold mb-2 fs-12">Telefon Numaranız <small>* Başında 0 Olmadan</small></div>
+                            <input asp-for="@Model.Phone" maxlength="10" type="text" class="form-control" onkeypress="return boslukEngelle()">
+                            <span asp-validation-for="@Model.Phone" class="text-danger"></span>
+                        </div>
+                        <div class="mb-3">
+                            <div class="font-weight-semibold mb-2 fs-12">Doğum Tarihiniz</div>
+                            <input asp-for="@Model.BirthDateTime" type="date" class="form-control">
+                            <span asp-validation-for="@Model.BirthDateTime" class="text-danger"></span>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">
+                                <input required="" id="sozlesme" type="checkbox">
+                                <span></span>
+                                <a href="/GamyEpin/kullanici-sozlesmesi" target="_blank"><b>Kullanıcı Sözleşmesini </b> </a>&nbsp;Okudum ve Kabul Ediyorum.
+                            </label>
+                        </div>
+                        <button type="submit" class="btn btn-primary pt-3 pb-3 font-weight-bold fs-15 btn-block">
+                            KAYIT OL
+                        </button>
+
+                        <div class="text-danger" asp-validation-summary="ModelOnly"></div>
+                    </div>
+                </form>
+            </div>
+            <div class="col-xl-5 col-12">
+                <div class="bg-white-two p-3">
+                    <div class="pb-3">
+                        <div class="fs-20 font-weight-bold">Neden Epinkasa</div>
+                        <div class="mt-2">
+                            Neden bizi tercih etmelisiniz?
+                        </div>
+                    </div>
+                    <ul class="reg-list">
+                        <li class="pt-3 pb-3 border-top">
+                            <div class="row no-gutters align-items-center">
+                                <div class="col-xl-1 col-2">
+                                    <img src="images/hizli-kayit-ol.svg" alt="">
+                                </div>
+                                <div class="col-xl-11 col-10 pl-3">
+                                    <div class="fs-16 font-weight-bold">Hızlı Kayıt Ol</div>
+                                    <div class="fs-11 mt-1">
+                                        Sitemize sadece 1 dakikanızı ayırarak kayıt olun.
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="pt-3 pb-3 border-top">
+                            <div class="row no-gutters align-items-center">
+                                <div class="col-xl-1 col-2">
+                                    <img src="images/uygun-fiyat.svg" alt="">
+                                </div>
+                                <div class="col-xl-11 col-10 pl-3">
+                                    <div class="fs-16 font-weight-bold">Uygun Fiyat</div>
+                                    <div class="fs-11 mt-1">
+                                        En ucuz Epin kodları sadece Epinkasa’da.
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="pt-3 pb-3 border-top">
+                            <div class="row no-gutters align-items-center">
+                                <div class="col-xl-1 col-2">
+                                    <img src="images/guvenilirlik.svg" alt="">
+                                </div>
+                                <div class="col-xl-11 col-10 pl-3">
+                                    <div class="fs-16 font-weight-bold">Güvenilirlik</div>
+                                    <div class="fs-11 mt-1">
+                                        Epinkasa türkiye içerisinde faaliyet gösteren kurumsal bir şirkettir.
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="pt-3 pb-3 border-top">
+                            <div class="row no-gutters align-items-center">
+                                <div class="col-xl-1 col-2">
+                                    <img src="images/duyarli-tasarim.svg" alt="">
+                                </div>
+                                <div class="col-xl-11 col-10 pl-3">
+                                    <div class="fs-16 font-weight-bold">Duyarlı Tasarım</div>
+                                    <div class="fs-11 mt-1">
+                                        Bilgisayar ve mobil cihazlardaki tarayıcılara tam uyumlu tasarım.
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="pt-3 pb-3 border-top">
+                            <div class="row no-gutters align-items-center">
+                                <div class="col-xl-1 col-2">
+                                    <img src="images/odeme-kolayligi.svg" alt="">
+                                </div>
+                                <div class="col-xl-11 col-10 pl-3">
+                                    <div class="fs-16 font-weight-bold">Ödeme Kolaylığı</div>
+                                    <div class="fs-11 mt-1">
+                                        Çeşitli ödeme yöntemlerimizden size en uygun olanını seçip bakiye
+                                        yükleyebilirsiniz.
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="pt-3 pb-3 border-top">
+                            <div class="row no-gutters align-items-center">
+                                <div class="col-xl-1 col-2">
+                                    <img src="images/oyuncu-pazar.svg" alt="">
+                                </div>
+                                <div class="col-xl-11 col-10 pl-3">
+                                    <div class="fs-16 font-weight-bold">Oyuncu Pazarı</div>
+                                    <div class="fs-11 mt-1">
+                                        Epinkasa oyuncu pazarında oynadığınız oyunlardaki hesap , item , skin ve diğer
+                                        ürünleri sitemizde satışını yaparak para kazanabilirsiniz.
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="pt-3 pb-3 border-top">
+                            <div class="row no-gutters align-items-center">
+                                <div class="col-xl-1 col-2">
+                                    <img src="images/canli-destek.svg" alt="">
+                                </div>
+                                <div class="col-xl-11 col-10 pl-3">
+                                    <div class="fs-16 font-weight-bold">Canlı Destek</div>
+                                    <div class="fs-11 mt-1">
+                                        Sabah 10:00 ile gece 02:00 arasında Epinkasa canlı destek birimine aklınızdaki
+                                        tüm soru ve görüşleriniz için ulaşabilirsiniz.
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>

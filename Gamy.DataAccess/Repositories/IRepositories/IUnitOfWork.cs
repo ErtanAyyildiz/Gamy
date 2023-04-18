@@ -19,6 +19,7 @@ namespace Gamy.DataAccess.Repositories.IRepositories
         IUserRoleDal UserRole { get; }
         ICommentDal Comment { get; }
         IAppUserDal AppUser { get; }
+        ISubCategoryDal SubCategory { get; }
         void Save();
     }
 }

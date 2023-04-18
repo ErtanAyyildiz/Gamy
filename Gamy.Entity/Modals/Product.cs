@@ -21,6 +21,7 @@ namespace Gamy.Entity.Modals
         public int DeliveryTime { get; set; }
         public int WarrantyPeriod { get; set; }
         public string ProductType { get; set; }
+        public bool StokluUrun { get; set; }
         public bool OneCikanUrun { get; set; }
         public bool Vitrin { get; set; }
         public bool Firsat { get; set; }

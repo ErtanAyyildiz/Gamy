@@ -1,4 +1,5 @@
-﻿using Gamy.DataAccess.Abstracts;
+﻿using Enoca.DataAccess.Wrappers.Filters;
+using Gamy.DataAccess.Abstracts;
 using Gamy.DataAccess.Database;
 using Gamy.DataAccess.Repositories;
 using Gamy.Entity.Modals;
@@ -21,6 +22,16 @@ namespace Gamy.DataAccess.MsEntityFramework
 
         }
 
+        public List<Product> GetPageData(PaginationFilter filter)
+        {
+            return _db.Products
+                .Include(p=>p.SubCategory)
+                .Include(p=>p.User)
+                .Skip((filter.PageNumber - 1) * filter.PageSize)
+                .Take(filter.PageSize)
+                .ToList();
+        }
+
         public Product GetProductIsSponsered()
         {
             return _db.Products
@@ -28,6 +39,26 @@ namespace Gamy.DataAccess.MsEntityFramework
                 .First();
         }
 
-       
+        public List<Product> GetProductsOrderByCreationDate(PaginationFilter filter)
+        {
+            return _db.Products
+                .Include(p => p.SubCategory)
+                .Include(p => p.User)
+                .OrderByDescending(p=>p.CreateDate)
+                .Skip((filter.PageNumber - 1) * filter.PageSize)
+                .Take(filter.PageSize)
+                .ToList();
+        }
+
+        public List<Product> GetProductsOrderByNumberDescending(PaginationFilter filter)
+        {
+            return _db.Products
+                .Include(p => p.SubCategory)
+                .Include(p => p.User)
+                .OrderByDescending(p => p.CountClick)
+                .Skip((filter.PageNumber - 1) * filter.PageSize)
+                .Take(filter.PageSize)
+                .ToList();
+        }
     }
 }

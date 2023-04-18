@@ -63,6 +63,9 @@ namespace Gamy.DataAccess.Migrations
                     b.Property<int>("AccessFailedCount")
                         .HasColumnType("int");
 
+                    b.Property<DateTime>("BirthDateTime")
+                        .HasColumnType("datetime2");
+
                     b.Property<string>("ConcurrencyStamp")
                         .IsConcurrencyToken()
                         .HasColumnType("nvarchar(max)");
@@ -83,7 +86,7 @@ namespace Gamy.DataAccess.Migrations
                     b.Property<DateTimeOffset?>("LockoutEnd")
                         .HasColumnType("datetimeoffset");
 
-                    b.Property<string>("Name")
+                    b.Property<string>("NameSurname")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
@@ -105,10 +108,6 @@ namespace Gamy.DataAccess.Migrations
                         .HasColumnType("bit");
 
                     b.Property<string>("SecurityStamp")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("SurName")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<bool>("TwoFactorEnabled")
@@ -190,7 +189,7 @@ namespace Gamy.DataAccess.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
-                    b.Property<string>("ImageUrl")
+                    b.Property<string>("CategoryImageUrl")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
@@ -353,6 +352,9 @@ namespace Gamy.DataAccess.Migrations
 
                     b.Property<int>("StockAmount")
                         .HasColumnType("int");
+
+                    b.Property<bool>("StokluUrun")
+                        .HasColumnType("bit");
 
                     b.Property<int>("SubCategoryId")
                         .HasColumnType("int");

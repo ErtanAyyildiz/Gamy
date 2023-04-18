@@ -16,6 +16,8 @@ namespace Gamy.Business.IoC
             services.AddScoped<IOrderService, OrderService>();
             services.AddScoped<IProductService, ProductService>();
             services.AddScoped<IAppUserService, AppUserService>();
+            services.AddScoped<ICategoryService, CategoryService>();
+            services.AddScoped<ISubCategoryService, SubCategoryService>();
 
             services.AddScoped<IValidator<Order>, OrderValidator>();
             services.AddScoped<IValidator<Cart>, CartValidator>();

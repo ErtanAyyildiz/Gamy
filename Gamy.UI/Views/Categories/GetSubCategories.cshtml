@@ -1,0 +1,60 @@
+﻿@using Gamy.DTO.CategoryDTOs
+@model GetSubCategoriesDTO
+
+@{
+    ViewData["Title"] = "GetSubCategories";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<main class="main-content pt-xl-4 pt-3">
+    <div class="container">
+        <div class="sub-top-bg bg-grey p-3">
+            <div class="row align-items-center no-gutters justify-content-between">
+                <div class="col-xl-auto col-12 mb-xl-0 mb-2">
+                    <h1 class="m-0 p-0 fs-20 font-weight-bold">@Model.CategoryName</h1>
+                    <nav class="breadcrumbs">
+                        <ul>
+                            <li><a href="/Home/Index">Ana Sayfa</a></li>
+                            <li><a href="/Categories/Index">Kategoriler</a></li>
+                            <li><a href="#">@Model.CategoryName</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="col-xl-auto col-12 mt-xl-0 mt-2">
+                    <form action="/Categories/Index">
+                        <div class="d-flex align-items-center">
+                            <input type="text" name="s" class="cat-search" onkeyup="var value = $(this).val().toLowerCase();
+                                   $(&quot;.kategori&quot;).filter(function() {
+                                   $(this).toggle($(this).text().toLowerCase().indexOf(value)> -1)
+                            });" placeholder="Ne aradığınızı buraya yazınız...">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <style>
+            .oranla {
+                flex: 0 0 14%;
+                max-width: 14%;
+            }
+        </style>
+        <div class="row mt-xl4 mt-3 cat-product-list">
+            @foreach (var item in Model.SubCategories)
+            {
+                <div class="kategori oranla col-lg-3 col-md-4 col-12 mb-xl-4 mb-3">
+                    <div class="cat-product catergory-zoom">
+                        <a href="/Category/@Model.CategoryName/@item.CategoryId/@item.Id" class="pc-img">
+                            <figure>
+                                <img class="lazy" data-original="/GamyEpin/uploads/category/@item.ImageUrl" alt="" height="290px" width="222px" src="/GamyEpin/uploads/category/@item.ImageUrl" style="">
+                            </figure>
+                        </a>
+                        <div class="pc-name">
+                            <a href="/Category/@Model.CategoryName/@item.CategoryId/@item.Id">@item.Name</a>
+
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</main>
