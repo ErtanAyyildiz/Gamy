@@ -2,6 +2,7 @@ using Gamy.Business.IoC;
 using Gamy.DataAccess.Database;
 using Gamy.DataAccess.IoC;
 using Gamy.Entity.Modals;
+using Gamy.UI.Hubs;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc.Authorization;
 using Microsoft.EntityFrameworkCore;
@@ -25,11 +26,13 @@ builder.Services.AddMvc(config =>
 
 builder.Services.AddMvc();
 
+builder.Services.AddSignalR();
+
 //builder.Services.ConfigureApplicationCookie(options =>
 //{
 //    options.LoginPath = "/Login/SignIn/";
 //});
-
+//Action filter
 builder.Services.AddDataAccessServices();
 builder.Services.AddBusinessServices();
 
@@ -48,7 +51,14 @@ app.UseStaticFiles();
 app.UseAuthentication();
 app.UseRouting();
 
+
 app.UseAuthorization();
+
+app.UseEndpoints(endpoints =>
+{
+    endpoints.MapHub<ChatHub>("/chathub"); // ChatHub ismi deðiþtirilebilir
+    endpoints.MapControllers();
+});
 
 app.MapControllerRoute(
     name: "default",

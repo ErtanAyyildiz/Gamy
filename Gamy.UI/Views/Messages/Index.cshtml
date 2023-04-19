@@ -1,0 +1,70 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<main class="main-content pt-xl-4 pt-3">
+    <div class="container">
+        <div class="row align-items-center no-gutters justify-content-between">
+            <div class="col-xl-auto col-12 mb-xl-0 mb-2">
+                <h1 class="m-0 p-0 fs-20 font-weight-bold">Mesajlarım</h1>
+            </div>
+            <div class="col-xl-auto col-12">
+                <a class="btn-grey" data-toggle="modal" data-target="#sohbet"><i>+</i> YENİ SOHBET</a>
+            </div>
+        </div>
+        <div class="row mt-4">
+            <div class="col-xl-3 col-lg-3 col-12 mb-xl-0 mb-3">
+                <input type="text" name="s" style="width: 100%; border-radius:0px;" class="cat-search" onkeyup="var value = $(this).val().toLowerCase();
+                       $(&quot;.isim&quot;).filter(function() {
+                       $(this).toggle($(this).text().toLowerCase().indexOf(value)> -1)
+                });" placeholder="Aradığınız Kullanıcıyı Yazın...">
+            </div>
+        </div>
+        <div class="row mt-4">
+            <div class="col-xl-3 col-lg-3 col-12 mb-xl-0 mb-3">
+                <div class="bg-white message-users" id="box_list">
+                    <div class="d-flex align-items-center">
+                    </div>
+                    <ul id="yenimesaj">
+                    </ul>
+                </div>
+            </div>
+            <div class="col-xl-9 col-lg-9 col-12" id="n">
+                <div class="bg-white mu-message-area pl-3 pb-3 pr-3">
+                    <div class="mma-top border-bottom">
+                        <div class="row mma-row justify-content-between align-items-center">
+                            <div style="display: none" id="mma-ustbar" class="col-xl-auto col-12">
+                                <div class="row align-items-center">
+                                    <div class="col-auto">
+                                        <div class="mma-image">
+                                            <a id="profilegit" alt=""><img id="pp" alt=""></a>
+                                        </div>
+                                    </div>
+                                    <div class="col-auto">
+                                        <div class="mma-name" id="mma-name">
+                                            Mesaj Seçiniz
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mma-content" id="mma-content">
+                    </div>
+                    <div class="mm-chat-sender">
+                        <div class="row no-gutters">
+                            <div class="col-xl-11 col-10">
+                                <input style="display: none" id="sendmessage" type="text" class="chat-input" placeholder="Bir şeyler yazın...">
+                            </div>
+                            <div class="col-xl-1 col-2">
+                                <button style="display: none" id="sendmessagebutton" onclick="mesaj_gonder()" class="chat-button"></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>

@@ -1,10 +1,12 @@
 ﻿using Gamy.DTO.UserDTOs;
 using Gamy.Entity.Modals;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Gamy.UI.Controllers
 {
+    [AllowAnonymous]
     public class RegisterController : Controller
     {
         private readonly UserManager<AppUser> _userManager;

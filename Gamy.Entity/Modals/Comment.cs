@@ -13,5 +13,6 @@ namespace Gamy.Entity.Modals
         public Product Product { get; set; }
         public int UserId { get; set; }
         public AppUser User { get; set; }
+        public DateTime CreatedAt { get; set; } = DateTime.Now;
     }
 }
