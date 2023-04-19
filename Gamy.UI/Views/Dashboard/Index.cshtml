@@ -1,0 +1,827 @@
+﻿@using Microsoft.AspNetCore.Http
+@inject IHttpContextAccessor HttpContextAccessor
+@model List<Product>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    var user = HttpContextAccessor.HttpContext.User;
+}
+
+<main class="main-content pt-xl-4 pt-3">
+    <div class="container">
+        <div class="my-profile-page">
+            <div class="p-3 tab-system">
+                <nav class="mpp-top userPanel-fix pb-3">
+                    <ul class="tabses">
+                        <li data-id="uye-paneli">
+                            <div class="mpp-item">
+                                <span class="mpp-img">
+                                    <img src="/GamyEpin/images/avatar/001-gamer.png" alt="">
+                                </span>
+                                <div class="mpp-name">
+                                    @user.Identity.Name
+                                </div>
+                            </div>
+                        </li>
+                        <li data-id="uye-paneli">
+                            <div class="mpp-item">
+                                <span class="mpp-icon">
+                                    <i class="icon-browser"></i>
+                                </span>
+                                <div class="mpp-name">
+                                    Üye Paneli
+                                </div>
+                            </div>
+                        </li>
+                        <li data-id="hakkimda">
+                            <div class="mpp-item">
+                                <span class="mpp-icon">
+                                    <i class="icon-userx"></i>
+                                </span>
+                                <div class="mpp-name">
+                                    Hakkımda
+                                </div>
+                            </div>
+                        </li>
+                        <li data-id="avatar">
+                            <div class="mpp-item">
+                                <span class="mpp-icon">
+                                    <i class="icon-avatar"></i>
+                                </span>
+                                <div class="mpp-name">
+                                    Avatar
+                                </div>
+                            </div>
+                        </li>
+                        <li data-id="kapak-resmi">
+                            <div class="mpp-item">
+                                <span class="mpp-icon">
+                                    <i class="icon-image"></i>
+                                </span>
+                                <div class="mpp-name">
+                                    Kapak Resmi
+                                </div>
+                            </div>
+                        </li>
+                        <li data-id="sifre-guncelle">
+                            <div class="mpp-item">
+                                <span class="mpp-icon">
+                                    <i class="icon-padlock"></i>
+                                </span>
+                                <div class="mpp-name">
+                                    Şifre Güncelle
+                                </div>
+                            </div>
+                        </li>
+                        <li data-id="eposta">
+                            <div class="mpp-item">
+                                <span class="mpp-icon">
+                                    <i class="icon-emailx"></i>
+                                </span>
+                                <div class="mpp-name">
+                                    E-Posta Güncelle
+                                </div>
+                            </div>
+                        </li>
+                        <li data-id="fatura-bilgilerim">
+                            <div class="mpp-item">
+                                <span class="mpp-icon">
+                                    <i class="icon-fatura"></i>
+                                </span>
+                                <div class="mpp-name">
+                                    Fatura Bilgilerim
+                                </div>
+                            </div>
+                        </li>
+                        <li data-id="banka-hesaplarim">
+                            <div class="mpp-item">
+                                <span class="mpp-icon">
+                                    <i class="icon-accounting"></i>
+                                </span>
+                                <div class="mpp-name">
+                                    Banka Hesaplarım
+                                </div>
+                            </div>
+                        </li>
+                        <li data-id="hesap-hareketleri">
+                            <div class="mpp-item">
+                                <span class="mpp-icon">
+                                    <i class="icon-share"></i>
+                                </span>
+                                <div class="mpp-name">
+                                    Hesap Hareketleri
+                                </div>
+                            </div>
+                        </li>
+                        <li data-id="odeme-bildirimleri">
+                            <div class="mpp-item">
+                                <span class="mpp-icon">
+                                    <i class="icon-add"></i>
+                                </span>
+                                <div class="mpp-name">
+                                    Ödeme Bildirimleri
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="tabs-content active" id="uye-paneli">
+                    <div class="mt-3">
+                        <div class="title-style2">Hesap Özeti</div>
+                        <div class="row mt-3">
+                            <div class="col-xl-3 col-md-6 col-12 mb-xl-0 mb-md-3 mb-3 mobilsize">
+                                <a href="" class="ho-bar row no-gutters align-items-center">
+                                    <span class="col-auto">
+                                        <span class="ho-icon ho-account-total"><i class="icon-wallet-filled-money-tool"></i></span>
+                                    </span>
+                                    <span class="col-auto pl-3">
+                                        <span class="ho-title">
+                                            0.00 <span>TL</span>
+                                        </span>
+                                        <span class="ho-sub">
+                                            Hesap Bakiyesi
+                                        </span>
+                                    </span>
+                                </a>
+                            </div>
+                            <div class="col-xl-3 col-md-6 col-12 mb-xl-0 mb-md-3 mb-3 mobilsize">
+                                <a style="cursor:pointer;" data-toggle="tooltip" data-placement="bottom" title="" class="ho-bar row no-gutters align-items-center" data-original-title="Blokeli Bakiye: İlan satışınızdan 24 saat sonra açılır. Çekilebilir duruma geçer. (Onaylı Hesaplar blokeli bakiye engeline takılmazlar)">
+                                    <span class="col-auto">
+                                        <span class="ho-icon ho-accepted"><i class="icon-tl"></i></span>
+                                    </span>
+                                    <span class="col-auto pl-3">
+                                        <span class="ho-title">
+                                            0 <span>TL</span>
+                                        </span>
+                                        <span class="ho-sub">
+                                            Blokeli Bakiye
+                                        </span>
+                                    </span>
+                                </a>
+                            </div>
+                            <div class="col-xl-3 col-md-6 col-12 mb-xl-0 mb-md-3 mb-3 mobilsize">
+                                <a style="cursor:pointer;" data-toggle="tooltip" data-placement="bottom" title="" class="ho-bar row no-gutters align-items-center" data-original-title="Satılan İlanlarınızın toplam sayısıdır">
+                                    <span class="col-auto">
+                                        <span class="ho-icon ho-shop"><i class="icon-02-shop"></i></span>
+                                    </span>
+                                    <span class="col-auto pl-3">
+                                        <span class="ho-title">
+                                            0
+                                        </span>
+                                        <span class="ho-sub">
+                                            Satılan Toplam İlan
+                                        </span>
+                                    </span>
+                                </a>
+                            </div>
+                            <div class="col-xl-3 col-md-6 col-12 mb-xl-0 mb-md-3 mb-3 mobilsize">
+                                <a style="cursor:pointer;" data-toggle="tooltip" data-placement="bottom" title="" class="ho-bar row no-gutters align-items-center" data-original-title="Çekilebilir bakiye: Banka hesabınıza veya Papara hesabınıza çekebileceğiniz Net tutardır.">
+                                    <span class="col-auto">
+                                        <span class="ho-icon ho-accepted"><i class="icon-money-two"></i></span>
+                                    </span>
+                                    <span class="col-auto pl-3">
+                                        <span class="ho-title">
+                                            0.00 <span>TL</span>
+                                        </span>
+                                        <span class="ho-sub">
+                                            Çekilebilir Tutar
+                                        </span>
+                                    </span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    @foreach(var item in Model)
+                    {
+                    <div class="mt-3">
+                        <div class="title-style2">İlan Özeti</div>
+                        <div class="bg-grey text-center mt-3 p-xl-5 pt-4 pb-4">
+                            <ul class="product-lister row gutters-small">
+                                <li class="col-xl-2 col-lg-3 col-md-4 col-sm-6 col-12 mb-3 mobil-boyut">
+                                    <div class="product">
+                                        <div class="p-1">
+                                            <div class="product-img">
+                                                <figure>
+                                                    <a href="/product/@item.Name/@item.Id">
+                                                        <img class="lazy" data-original="/GamyEpin/uploads/advert/93062015503950-kapak-62983609935970.png" alt="" src="https://www.epinkasa.com/uploads/advert/93062015503950-kapak-62983609935970.png" style="">
+                                                    </a>
+                                                </figure>
+                                                <div class="user-wrapper">
+                                                    <div class="user-profile">
+                                                        <div class="user-infos">
+                                                            <span>@item.Name</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="user-other-game">
+                                                        <a href="/category/@item.SubCategory.Name/@item.SubCategory.CategoryId/@item.SubCategoryId"><img class="lazy" data-original="https://www.epinkasa.com/uploads/category/407-kapak-68266194950691.png" alt="" data-toggle="tooltip" data-placement="top" title="" src="https://www.epinkasa.com/uploads/category/407-kapak-68266194950691.png" data-original-title="Valorant Random Hesap" style=""></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="product-infos">
+                                                <div class="row gutters-xxsmall align-items-center">
+                                                    <div class="col-auto">
+                                                        <a href="https://www.epinkasa.com/ilan/update/5392" data-toggle="tooltip" data-placement="top" title="" data-original-title="Düzenle"><img height="32px" class="lazy" data-original="https://www.epinkasa.com/images/editing.png" alt="" src="https://www.epinkasa.com/images/editing.png" style=""></a>
+                                                    </div>
+                                                    <div class="col-auto">
+                                                        <div onclick="doping('5392');" data-toggle="modal" data-target="#doping"><a onclick="doping('5392');" href="javascript:void(0);" data-toggle="tooltip" data-placement="top" title="" data-target="#doping" data-original-title="Doping Ekle"><img height="32px" onclick="doping('5392');" class="lazy" data-original="https://www.epinkasa.com/images/rocket.png" alt="" src="https://www.epinkasa.com/images/rocket.png" style=""></a></div>
+                                                    </div>
+                                                    <div onclick="
+                                                         Swal.fire({
+                                                         title: 'Emin misin?' ,
+                                                         text: 'İlanınızı silmek istediğinizden emin misiniz?' ,
+                                                         icon: 'warning' ,
+                                                         showCancelButton: true,
+                                                         confirmButtonColor: '#3085d6' ,
+                                                         cancelButtonColor: '#d33' ,
+                                                         confirmButtonText: 'Evet, Sil!' ,
+                                                         cancelButtonText: 'Hayır'
+                                                         }).then((result)=>
+                                                        {
+                                                        if (result.isConfirmed) {
+                                                        ilansil('5392')
+                                                        }
+                                                        })
+                                                        " class="col-auto">
+                                                        <a data-toggle="tooltip" data-placement="top" title="" data-original-title="İlanı sil"><img height="32px" class="lazy" data-original="https://www.epinkasa.com/images/cancel4.png" alt="" src="https://www.epinkasa.com/images/cancel4.png" style=""></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="product-price">
+                                                <div class="price">@item.Price₺</div>
+                                                <a href="https://www.epinkasa.com/ilan/test/5392" class="go"><i class="icon-right-open"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+
+                        </div>
+                    </div>
+                        
+                    }
+                    <div class="mt-3">
+                        <div class="title-style2">Rütbe Özeti</div>
+                        <div class="row mt-xl4 mt-3">
+                            <div class="col-md-2">
+                                <div class="bg-grey text-center mt-3 p-xl-4 pt-4 pb-4">
+                                    <div class="pt-xl-4 pb-xl-4">
+                                        <img data-toggle="tooltip" data-placement="top" title="" src="https://www.epinkasa.com/images/badge1.png" height="128px" alt="" data-original-title="Yeni satıcılara varsayılan olarak bu rütbe tahsis edilmektedir.">
+                                        <div class="fs-15 font-weight-bold mt-3">
+                                            Acemi satıcı
+                                            <font size="2px" color="green">
+                                                <br>(Aktif
+                                                Rütbeniz)
+                                            </font>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <img src="https://www.epinkasa.com/images/right-arrow.png" height="158px" alt="">
+                            <div class="col-md-2">
+                                <div class="bg-grey text-center mt-3 p-xl-4 pt-4 pb-4">
+                                    <div class="pt-xl-4 pb-xl-4">
+                                        <img data-toggle="tooltip" data-placement="top" title="" src="https://www.epinkasa.com/images/badge2.png" height="128px" alt="" data-original-title="Yaklaşık 11 adet ve üzeri başarılı işlemi olan satıcılara tahsis edilen rütbedir.">
+                                        <div class="fs-15 font-weight-bold mt-3">
+                                            Deneyimli satıcı
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <img src="https://www.epinkasa.com/images/right-arrow.png" height="158px" alt="">
+                            <div class="col-md-2">
+                                <div class="bg-grey text-center mt-3 p-xl-4 pt-4 pb-4">
+                                    <div class="pt-xl-4 pb-xl-4">
+                                        <img data-toggle="tooltip" data-placement="top" title="" src="https://www.epinkasa.com/images/badge3.png" height="128px" alt="" data-original-title="Yaklaşık 50-100 başarılı işlemi olan toplam işlem hacmi 400 TL'yi geçen satıcılara tahsis edilen rütbedir.">
+                                        <div class="fs-14 font-weight-bold mt-3">
+                                            Profesyonel satıcı
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <img src="https://www.epinkasa.com/images/right-arrow.png" height="158px" alt="">
+                            <div class="col-md-2">
+                                <div class="bg-grey text-center mt-3 p-xl-4 pt-4 pb-4">
+                                    <div class="pt-xl-4 pb-xl-4">
+                                        <img data-toggle="tooltip" data-placement="top" title="" src="https://www.epinkasa.com/images/badge4.png" height="128px" alt="" data-original-title="Yaklaşık 100-200 başarılı işlemi olan toplam işlem hacmi 500 TL'yi geçen satıcılara tahsis edilen rütbedir.">
+                                        <div class="fs-15 font-weight-bold mt-3">
+                                            Usta satıcı
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <img src="https://www.epinkasa.com/images/right-arrow.png" height="158px" alt="">
+                            <div class="col-md-2">
+                                <div class="bg-grey text-center mt-3 p-xl-4 pt-4 pb-4">
+                                    <div class="pt-xl-4 pb-xl-4">
+                                        <img data-toggle="tooltip" data-placement="top" title="" src="https://www.epinkasa.com/images/badge5.png" height="128px" alt="" data-original-title="Yaklaşık 200-500 başarılı işlemi olan toplam işlem hacmi 1000 TL'yi geçen satıcılara tahsis edilen rütbedir.">
+                                        <div class="fs-15 font-weight-bold mt-3">
+                                            Efsanevi satıcı
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tabs-content" id="odeme-bildirimleri">
+                    <div class="mt-2">
+                        <div class="title-style2">Ödeme Bildirimleri</div>
+                    </div>
+                    <table id="odeme-bildirimleri-table" class="table table-striped table-bordered" style="width:100%">
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>Hareket</th>
+                                <th>Tarih</th>
+                                <th>Yöntem</th>
+                                <th>Dönüş</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="tabs-content" id="hakkimda">
+                    <form method="post" id="hakkimdaform" action="https://www.epinkasa.com/dash/update/about">
+                        <input type="hidden" name="_token" value="qJ6A0SPERpWEqr94McIoCA7oIwA8Kf00mVv0YOzh"> <div class="mt-2">
+                            <div class="title-style2">Hakkımda</div>
+                            <div class="mt-2">
+                                <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                                    Buraya yazacağınız bilgiler profil sayfanızda paylaşılacaktır. Şifre veya özel
+                                    bilgiler kullanmayınız.
+                                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                        <span aria-hidden="true">×</span>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="mt-2">
+<textarea class="form-control" name="about" id="about" cols="5" rows="5" placeholder="Buraya yazabilirsin..."></textarea>
+                            </div>
+                        </div>
+                        <div class="mt-2">
+                            <button type="button" onclick="hakkimdaguncelle()" class="btn btn-primary pt-3 pb-3 font-weight-bold fs-15 btn-block">
+                                BİLGİLERİ GÜNCELLE
+                            </button>
+                        </div>
+                    </form>
+                </div>
+                <div class="tabs-content" id="avatar">
+                    <div class="mt-3">
+                        <div class="row">
+                            <div class="col-md-9">
+                                <div class="title-style2">Avatar Seçimi</div>
+                            </div>
+                            <div class="col-md-3">
+                                <div style="margin-left:75px;" class="title-style2">Aktif Avatar</div>
+                            </div>
+                        </div>
+                        <div class="row mt-3">
+                            <form id="form1" style="margin:5px;" enctype="multipart/form-data" method="post" action="https://www.epinkasa.com/dash/update/avatar">
+                                <div style="float: left !important;" class="col-md-9 col-12 mb-xl-0 mb-md-3 mb-3">
+                                    <div class="mt-2">
+                                        <input type="hidden" name="_token" value="qJ6A0SPERpWEqr94McIoCA7oIwA8Kf00mVv0YOzh"> <input type="hidden" id="selected_avatar" name="selected_avatar">
+                                        <img id="a" img="" src="https://www.epinkasa.com/images/avatar/001-gamer.png" alt="Avatar" class="selectable avatar">
+                                        <img id="b" img="" src="https://www.epinkasa.com/images/avatar/002-character.png" alt="Avatar" class="selectable avatar">
+                                        <img id="c" img="" src="https://www.epinkasa.com/images/avatar/003-knight.png" alt="Avatar" class="selectable avatar">
+                                        <img id="d" img="" src="https://www.epinkasa.com/images/avatar/004-ghost.png" alt="Avatar" class="selectable avatar">
+                                        <img id="e" img="" src="https://www.epinkasa.com/images/avatar/005-character.png" alt="Avatar" class="selectable avatar">
+                                        <img id="f" img="" src="https://www.epinkasa.com/images/avatar/006-character.png" alt="Avatar" class="selectable avatar">
+                                        <img id="g" img="" src="https://www.epinkasa.com/images/avatar/007-elf.png" alt="Avatar" class="selectable avatar">
+                                        <img id="q" img="" src="https://www.epinkasa.com/images/avatar/008-unicorn.png" alt="Avatar" class="selectable avatar">
+                                        <img id="w" img="" src="https://www.epinkasa.com/images/avatar/009-little.png" alt="Avatar" class="selectable avatar">
+                                        <img id="s" img="" src="https://www.epinkasa.com/images/avatar/011-character.png" alt="Avatar" class="selectable avatar">
+                                        <img id="r" img="" src="https://www.epinkasa.com/images/avatar/012-character.png" alt="Avatar" class="selectable avatar">
+                                        <img id="t" img="" src="https://www.epinkasa.com/images/avatar/013-cyber punk.png" alt="Avatar" class="selectable avatar">
+                                        <img id="y" img="" src="https://www.epinkasa.com/images/avatar/014-dragon.png" alt="Avatar" class="selectable avatar">
+                                        <img id="u" img="" src="https://www.epinkasa.com/images/avatar/015-character.png" alt="Avatar" class="selectable avatar">
+                                        <img id="o" img="" src="https://www.epinkasa.com/images/avatar/016-character.png" alt="Avatar" class="selectable avatar">
+                                        <img id="p" img="" src="https://www.epinkasa.com/images/avatar/017-gamer.png" alt="Avatar" class="selectable avatar">
+                                        <img id="z" img="" src="https://www.epinkasa.com/images/avatar/018-character.png" alt="Avatar" class="selectable avatar">
+                                        <img id="x" img="" src="https://www.epinkasa.com/images/avatar/019-gamer.png" alt="Avatar" class="selectable avatar">
+                                        <img id="v" img="" src="https://www.epinkasa.com/images/avatar/020-character.png" alt="Avatar" class="selectable avatar">
+                                    </div>
+                                </div>
+                                <div style="float: right !important;" class="col-md-3 col-12 mb-xl-0 mb-md-3 mb-3">
+                                    <img style="margin-left:80px;" img="" src="https://www.epinkasa.com/images/avatar/001-gamer.png" alt="Avatar" class="selectable avatar-select">
+                                    <div style="margin:5px;">
+                                        Beğendiğiniz avatar stilini seçebilir veya kendi avatarınızı yükleyebilirsiniz.
+                                        Avatar boyutu en fazla 400x400 olabilir.
+                                        <input type="file" id="fileUpload" name="avatar_file" style="margin:15px;">
+                                    </div>
+                                    <button onclick="$('#form1').submit();" class="btn btn-primary pt-3 pb-3 font-weight-bold fs-15 btn-block">
+                                        AVATARINI
+                                        GÜNCELLE
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="tabs-content" id="kapak-resmi">
+                    <div class="mt-3">
+                        <form id="form2" method="post" enctype="multipart/form-data" action="https://www.epinkasa.com/dash/update/kapak">
+                            <input type="hidden" name="_token" value="qJ6A0SPERpWEqr94McIoCA7oIwA8Kf00mVv0YOzh"> <input type="hidden" id="selected_kapak" name="selected_kapak">
+                            <div class="row">
+                                <div class="col-md-9">
+                                    <div class="title-style2">Kapak Resmi Seçimi</div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div style="margin-left:45px;" class="title-style2">Aktif Kapak Resminiz</div>
+                                </div>
+                            </div>
+                            <div class="row mt-3">
+                                <div class="col-md-9 col-12 mb-xl-0 mb-md-3 mb-3">
+                                    <div class="mt-2">
+                                        <img id="kapak_a" img="" src="https://www.epinkasa.com/images/img37.jpg" alt="kapak" class="selectable kapak">
+                                        <img id="kapak_c" img="" src="https://www.epinkasa.com/images/kapak-2.jpg" alt="kapak" class="selectable kapak">
+                                        <img id="kapak_d" img="" src="https://www.epinkasa.com/images/kapak-3.jpg" alt="kapak" class="selectable kapak">
+                                        <img id="kapak_e" img="" src="https://www.epinkasa.com/images/kapak-4.jpg" alt="kapak" class="selectable kapak">
+                                    </div>
+                                </div>
+                                <div class="col-md-3 col-12 mb-xl-0 mb-md-3 mb-3">
+                                    <img style="margin-left:-20px;" img="" src="https://www.epinkasa.com/images/img37.jpg" alt="Kapak" class="selectable kapak-select">
+                                    <div style="margin:5px;">
+                                        Beğendiğiniz kapak fotoğrafını seçebilir veya kendi avatarınızı
+                                        yükleyebilirsiniz. Kapak boyutu en fazla 1250x305 olabilir.
+                                        <input type="file" id="fileUpload" name="kapak_file" style="margin:15px;">
+                                    </div>
+                                    <button onclick="$('#form2').submit();" class="btn btn-primary pt-3 pb-3 font-weight-bold fs-15 btn-block">
+                                        KAPAK
+                                        RESMİNİ GÜNCELLE
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="tabs-content" id="sifre-guncelle">
+                    <div class="mt-2">
+                        <div class="title-style2">Şifre Güncelle</div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <form id="sifreform" method="post" action="https://www.epinkasa.com/dash/update/password">
+                                <input type="hidden" name="_token" value="qJ6A0SPERpWEqr94McIoCA7oIwA8Kf00mVv0YOzh"> <div class="mt-2">
+                                    <div class="alert alert-info alert-dismissible fade show" role="alert">
+                                        Şifre güncellemesi yaptığınızda mail onayınız alınacaktır.
+                                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                            <span aria-hidden="true">×</span>
+                                        </button>
+                                    </div>
+                                    <div class="mb-3">
+                                        <div class="font-weight-semibold mb-2 fs-12">Eski Parolanız</div>
+                                        <input name="old_password" id="old_password" type="password" class="form-control">
+                                    </div>
+                                    <div class="row gutters-small">
+                                        <div class="col-xl-6 col-12">
+                                            <div class="mb-3">
+                                                <div class="font-weight-semibold mb-2 fs-12">Yeni Parola</div>
+                                                <input name="new_password" id="new_password" type="password" class="form-control">
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-6 col-12">
+                                            <div class="mb-3">
+                                                <div class="font-weight-semibold mb-2 fs-12">Yeni Parola (Tekrar)</div>
+                                                <input name="new_password_repeat" id="new_password_repeat" type="password" class="form-control">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button onclick="sifreguncelle()" type="button" class="btn btn-primary pt-3 pb-3 font-weight-bold fs-15 btn-block">
+                                    GÜNCELLE
+                                </button>
+                            </form>
+                        </div>
+                        <div class="col-md-6">
+                            <img height="400px" src="https://www.epinkasa.com/images/undraw_control_panel_re_y3ar.svg">
+                        </div>
+                    </div>
+                </div>
+                <div class="tabs-content" id="eposta">
+                    <div class="mt-2">
+                        <div class="title-style2">E-Posta Güncelle</div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <form id="emailform" method="post" action="https://www.epinkasa.com/dash/update/email">
+                                <input type="hidden" name="_token" value="qJ6A0SPERpWEqr94McIoCA7oIwA8Kf00mVv0YOzh"> <div class="mt-2">
+                                    <div class="alert alert-info alert-dismissible fade show" role="alert">
+                                        Eposta güncellemesi yaptığınızda mail onayınız alınacaktır.
+                                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                            <span aria-hidden="true">×</span>
+                                        </button>
+                                    </div>
+                                    <div class="mb-3">
+                                        <div class="font-weight-semibold mb-2 fs-12">Eski E-Posta</div>
+                                        <input name="old_email" id="old_email" required="" type="email" class="form-control">
+                                    </div>
+                                    <div class="row gutters-small">
+                                        <div class="col-xl-6 col-12">
+                                            <div class="mb-3">
+                                                <div class="font-weight-semibold mb-2 fs-12">Yeni E-Posta</div>
+                                                <input name="new_email" id="new_email" required="" type="email" class="form-control">
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-6 col-12">
+                                            <div class="mb-3">
+                                                <div class="font-weight-semibold mb-2 fs-12">Yeni E-Posta (Tekrar)</div>
+                                                <input name="new_email_repeat" required="" id="new_email_repeat" type="email" class="form-control">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button type="button" onclick="emailguncelle()" class="btn btn-primary pt-3 pb-3 font-weight-bold fs-15 btn-block">
+                                    GÜNCELLE
+                                </button>
+                            </form>
+                        </div>
+                        <div class="col-md-6">
+                            <img height="400px" src="https://www.epinkasa.com/images/undraw_envelope_re_f5j4.svg">
+                        </div>
+                    </div>
+                </div>
+                <div class="tabs-content" id="fatura-bilgilerim">
+                    <div class="mt-2">
+                        <div class="title-style2">Fatura Bilgilerim</div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <form id="faturaform" method="post" action="https://www.epinkasa.com/dash/update/invoice">
+                                <input type="hidden" name="_token" value="qJ6A0SPERpWEqr94McIoCA7oIwA8Kf00mVv0YOzh"> <div class="mt-2">
+                                    <div class="alert alert-info alert-dismissible fade show" role="alert">
+                                        Bu alandaki bilgiler adınıza fatura kesilmesi için kullanılmaktadır..
+                                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                            <span aria-hidden="true">×</span>
+                                        </button>
+                                    </div>
+                                    <div class="form-check form-check-inline mb-3">
+                                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" checked="checked">
+                                        <label onclick="bireysel();" class="form-check-label" for="inlineRadio1"><strong>Bireysel</strong></label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                                        <label onclick="kurumsal();" class="form-check-label" for="inlineRadio2"><strong>Kurumsal</strong></label>
+                                    </div>
+                                    <div class="row gutters-small">
+                                        <div id="isim_div" class="col-xl-6 col-12">
+                                            <div class="mb-3">
+                                                <div id="isim_text" class="font-weight-semibold mb-2 fs-12">İsim</div>
+                                                <input name="invoice_firstname" id="invoice_firstname" value="" type="text" class="form-control">
+                                            </div>
+                                        </div>
+                                        <div id="soyisim_div" class="col-xl-6 col-12">
+                                            <div class="mb-3">
+                                                <div id="soyisim_text" class="font-weight-semibold mb-2 fs-12">
+                                                    Soyisim
+                                                </div>
+                                                <input id="invoice_surname" name="invoice_surname" type="text" value="" class="form-control">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row gutters-small">
+                                        <div class="col-xl-6 col-12">
+                                            <div class="mb-3">
+                                                <div class="font-weight-semibold mb-2 fs-12">Telefon No</div>
+                                                <input id="invoice_phone" name="invoice_phone" type="number" value="" class="form-control">
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-6 col-12">
+                                            <div class="mb-3">
+                                                <div id="tc_text" class="font-weight-semibold mb-2 fs-12">
+                                                    Tc Kimlik
+                                                    Numarası
+                                                </div>
+                                                <input id="invoice_tc" name="invoice_tc" type="text" maxlength="11" value="11111111111" class="form-control">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <input hidden="" id="invoice_type" name="invoice_type" value="bireysel">
+                                    <div class="row gutters-small">
+                                        <div class="col-xl-6 col-12">
+                                            <div class="mb-3">
+                                                <div class="font-weight-semibold mb-2 fs-12">İl</div>
+                                                <select name="invoice_il" id="Iller" class="form-control">
+                                                    <option value="0">
+                                                        Lütfen Bir İl Seçiniz
+                                                    </option>
+                                                    <option id="il_1" value="Adana">Adana</option>
+                                                    <option id="il_2" value="Adıyaman">Adıyaman</option>
+                                                    <option id="il_3" value="Afyonkarahisar">Afyonkarahisar</option>
+                                                    <option id="il_4" value="Ağrı">Ağrı</option>
+                                                    <option id="il_5" value="Amasya">Amasya</option>
+                                                    <option id="il_6" value="Ankara">Ankara</option>
+                                                    <option id="il_7" value="Antalya">Antalya</option>
+                                                    <option id="il_8" value="Artvin">Artvin</option>
+                                                    <option id="il_9" value="Aydın">Aydın</option>
+                                                    <option id="il_10" value="Balıkesir">Balıkesir</option>
+                                                    <option id="il_11" value="Bilecik">Bilecik</option>
+                                                    <option id="il_12" value="Bingöl">Bingöl</option>
+                                                    <option id="il_13" value="Bitlis">Bitlis</option>
+                                                    <option id="il_14" value="Bolu">Bolu</option>
+                                                    <option id="il_15" value="Burdur">Burdur</option>
+                                                    <option id="il_16" value="Bursa">Bursa</option>
+                                                    <option id="il_17" value="Çanakkale">Çanakkale</option>
+                                                    <option id="il_18" value="Çankırı">Çankırı</option>
+                                                    <option id="il_19" value="Çorum">Çorum</option>
+                                                    <option id="il_20" value="Denizli">Denizli</option>
+                                                    <option id="il_21" value="Diyarbakır">Diyarbakır</option>
+                                                    <option id="il_22" value="Edirne">Edirne</option>
+                                                    <option id="il_23" value="Elazığ">Elazığ</option>
+                                                    <option id="il_24" value="Erzincan">Erzincan</option>
+                                                    <option id="il_25" value="Erzurum">Erzurum</option>
+                                                    <option id="il_26" value="Eskişehir">Eskişehir</option>
+                                                    <option id="il_27" value="Gaziantep">Gaziantep</option>
+                                                    <option id="il_28" value="Giresun">Giresun</option>
+                                                    <option id="il_29" value="Gümüşhane">Gümüşhane</option>
+                                                    <option id="il_30" value="Hakkari">Hakkari</option>
+                                                    <option id="il_31" value="Hatay">Hatay</option>
+                                                    <option id="il_32" value="Isparta">Isparta</option>
+                                                    <option id="il_33" value="Mersin">Mersin</option>
+                                                    <option id="il_34" value="İstanbul">İstanbul</option>
+                                                    <option id="il_35" value="İzmir">İzmir</option>
+                                                    <option id="il_36" value="Kars">Kars</option>
+                                                    <option id="il_37" value="Kastamonu">Kastamonu</option>
+                                                    <option id="il_38" value="Kayseri">Kayseri</option>
+                                                    <option id="il_39" value="Kırklareli">Kırklareli</option>
+                                                    <option id="il_40" value="Kırşehir">Kırşehir</option>
+                                                    <option id="il_41" value="Kocaeli">Kocaeli</option>
+                                                    <option id="il_42" value="Konya">Konya</option>
+                                                    <option id="il_43" value="Kütahya">Kütahya</option>
+                                                    <option id="il_44" value="Malatya">Malatya</option>
+                                                    <option id="il_45" value="Manisa">Manisa</option>
+                                                    <option id="il_46" value="Kahramanmaraş">Kahramanmaraş</option>
+                                                    <option id="il_47" value="Mardin">Mardin</option>
+                                                    <option id="il_48" value="Muğla">Muğla</option>
+                                                    <option id="il_49" value="Muş">Muş</option>
+                                                    <option id="il_50" value="Nevşehir">Nevşehir</option>
+                                                    <option id="il_51" value="Niğde">Niğde</option>
+                                                    <option id="il_52" value="Ordu">Ordu</option>
+                                                    <option id="il_53" value="Rize">Rize</option>
+                                                    <option id="il_54" value="Sakarya">Sakarya</option>
+                                                    <option id="il_55" value="Samsun">Samsun</option>
+                                                    <option id="il_56" value="Siirt">Siirt</option>
+                                                    <option id="il_57" value="Sinop">Sinop</option>
+                                                    <option id="il_58" value="Sivas">Sivas</option>
+                                                    <option id="il_59" value="Tekirdağ">Tekirdağ</option>
+                                                    <option id="il_60" value="Tokat">Tokat</option>
+                                                    <option id="il_61" value="Trabzon">Trabzon</option>
+                                                    <option id="il_62" value="Tunceli">Tunceli</option>
+                                                    <option id="il_63" value="Şanlıurfa">Şanlıurfa</option>
+                                                    <option id="il_64" value="Uşak">Uşak</option>
+                                                    <option id="il_65" value="Van">Van</option>
+                                                    <option id="il_66" value="Yozgat">Yozgat</option>
+                                                    <option id="il_67" value="Zonguldak">Zonguldak</option>
+                                                    <option id="il_68" value="Aksaray">Aksaray</option>
+                                                    <option id="il_69" value="Bayburt">Bayburt</option>
+                                                    <option id="il_70" value="Karaman">Karaman</option>
+                                                    <option id="il_71" value="Kırıkkale">Kırıkkale</option>
+                                                    <option id="il_72" value="Batman">Batman</option>
+                                                    <option id="il_73" value="Şırnak">Şırnak</option>
+                                                    <option id="il_74" value="Bartın">Bartın</option>
+                                                    <option id="il_75" value="Ardahan">Ardahan</option>
+                                                    <option id="il_76" value="Iğdır">Iğdır</option>
+                                                    <option id="il_77" value="Yalova">Yalova</option>
+                                                    <option id="il_78" value="Karabük">Karabük</option>
+                                                    <option id="il_79" value="Kilis">Kilis</option>
+                                                    <option id="il_80" value="Osmaniye">Osmaniye</option>
+                                                    <option id="il_81" value="Düzce">Düzce</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-6 col-12">
+                                            <div class="mb-3">
+                                                <div class="font-weight-semibold mb-2 fs-12">İlçe</div>
+                                                <select name="invoice_ilce" id="Ilceler" disabled="" class="form-control">
+                                                    <option>
+                                                        Lütfen Bir İl Seçiniz
+                                                    </option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button type="button" onclick="faturaguncelle()" class="btn btn-primary pt-3 pb-3 font-weight-bold fs-15 btn-block mb-2">
+                                    Güncelle
+                                </button>
+                            </form>
+                        </div>
+                        <div class="col-md-6">
+                            <img height="370px" src="https://www.epinkasa.com/images/undraw_updated_resume_re_q1or.svg">
+                        </div>
+                    </div>
+                </div>
+                <div class="tabs-content" id="banka-hesaplarim">
+                    <div class="mt-2">
+                        <div class="title-style2">Banka Hesaplarım</div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <form id="bankaform" method="post" action="https://www.epinkasa.com/dash/update/bank">
+                                <input type="hidden" name="_token" value="qJ6A0SPERpWEqr94McIoCA7oIwA8Kf00mVv0YOzh"> <div class="mt-2">
+                                    <div class="btn-group btn-group-toggle mb-2" style="width:100%;" data-toggle="buttons">
+                                        <label onclick="bank()" class="btn btn-secondary active">
+                                            <input type="radio" name="banka_tur" value="Banka Hesabı" id="option1" autocomplete="off" checked=""> Banka Hesabı
+                                        </label>
+                                        <label onclick="papara()" class="btn btn-secondary">
+                                            <input type="radio" name="banka_tur" value="Papara" id="option3" autocomplete="off"> Papara
+                                        </label>
+                                    </div>
+                                    <div class="mb-3">
+                                        <div class="font-weight-semibold mb-2 fs-12">Hesabın Sahibi</div>
+                                        <input id="banka_unvan" name="banka_unvan" value="Ertan AYYILDIZ" type="text" class="form-control" readonly="">
+                                    </div>
+                                    <div class="row gutters-small">
+                                        <div id="banka_secim" class="col-xl-4 col-12">
+                                            <div class="mb-3">
+                                                <div class="font-weight-semibold mb-2 fs-12">Banka Seçiniz</div>
+                                                <select name="banka_secim" id="banka_secim_select" class="form-control">
+                                                    <option value="Akbank">Akbank</option>
+                                                    <option value="Albaraka Türk Katılım Bankası">
+                                                        Albaraka Türk Katılım
+                                                        Bankası
+                                                    </option>
+                                                    <option value="Denizbank">Denizbank</option>
+                                                    <option value="Fibabanka">Fibabanka</option>
+                                                    <option value="Finans Bank">Finans Bank</option>
+                                                    <option value="HSBC">HSBC</option>
+                                                    <option value="ING Bank">ING Bank</option>
+                                                    <option value="Kuveyt Türk Katılım Bankası">
+                                                        Kuveyt Türk Katılım
+                                                        Bankası
+                                                    </option>
+                                                    <option value="Türk Ekonomi Bankası">Türk Ekonomi Bankası</option>
+                                                    <option value="Türkiye Cumhuriyeti Ziraat Bankası">
+                                                        Türkiye
+                                                        Cumhuriyeti Ziraat Bankası
+                                                    </option>
+                                                    <option value="Türkiye Finans Katılım Bankası">
+                                                        Türkiye Finans
+                                                        Katılım Bankası
+                                                    </option>
+                                                    <option value="Türkiye Garanti Bankası">
+                                                        Türkiye Garanti Bankası
+                                                    </option>
+                                                    <option value="Türkiye Halk Bankası">Türkiye Halk Bankası</option>
+                                                    <option value="Türkiye İş Bankası">Türkiye İş Bankası</option>
+                                                    <option value="Türkiye Vakıflar Bankası">
+                                                        Türkiye Vakıflar Bankası
+                                                    </option>
+                                                    <option value="Yapı Ve Kredi Bankası">Yapı ve Kredi Bankası</option>
+                                                    <option value="Şekerbank">Şekerbank</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-8 col-12">
+                                            <div class="mb-3">
+                                                <div class="font-weight-semibold mb-2 fs-12">İBAN</div>
+                                                <input name="banka_iban" id="banka_iban" type="text" class="form-control">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="alert fade alert-simple alert-primary alert-dismissible text-left font__family-montserrat font__size-16 font__weight-light brk-library-rendered rendered show" role="alert" data-brk-library="component__alert">
+                                    <button type="button" class="close font__size-18" data-dismiss="alert">
+                                        <span aria-hidden="true"><i class="fa fa-times alertprimary"></i></span>
+                                        <span class="sr-only">Close</span>
+                                    </button>
+                                    <i class="start-icon fa fa-thumbs-up faa-bounce animated"></i>
+                                    <strong class="font__weight-semibold">! Önemli</strong> Sadece kendi adınıza kayıtlı bir banka hesabı ekleyebilirsiniz aksi taktirde bakiye nakit talebiniz hesabınıza ulaşmayacaktır.
+                                </div>
+                                <button type="button" onclick="bankaekle()" class="btn btn-primary pt-3 pb-3 font-weight-bold fs-15 btn-block mb-2">
+                                    BANKA
+                                    HESABINI EKLE
+                                </button>
+                            </form>
+                            <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                                Ekli banka hesabınız bulunamadı.
+                                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                    <span aria-hidden="true">×</span>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <img height="370px" width="100%" src="https://www.epinkasa.com/images/undraw_wallet_aym5.svg">
+                        </div>
+                    </div>
+                </div>
+                <div class="tabs-content" id="hesap-hareketleri">
+                    <div class="mt-2">
+                        <div class="title-style2">Hesap Hareketleri</div>
+                    </div>
+                    <table id="hesap-hareketleri-table" class="table table-striped table-bordered table-color" style="width:100%">
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>Hareket</th>
+                                <th>Tarih</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>

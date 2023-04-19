@@ -16,5 +16,6 @@ namespace Gamy.DataAccess.Abstracts
         public List<Product> GetProductsOrderByNumberDescending(PaginationFilter filter);
         public List<Product> GetProductsOrderByCreationDate(PaginationFilter filter);
         public Product GetProductWithIlan(int productId);
+        public List<Product> GetProductsWithSubCategory(int userId);
     }
 }

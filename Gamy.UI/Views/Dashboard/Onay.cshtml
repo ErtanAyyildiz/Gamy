@@ -1,0 +1,131 @@
+﻿
+@{
+    ViewData["Title"] = "Onay";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<main class="main-content pt-xl-4 pt-3">
+    <div class="container">
+        <div class="row align-items-center no-gutters justify-content-between">
+            <div class="col-xl-auto col-12 mb-xl-0 mb-2">
+                <h1 class="m-0 p-0 fs-20 font-weight-bold">Hesap Onayla</h1>
+            </div>
+        </div>
+        <style>
+            .yenialert {
+                position: relative;
+                padding: 0.75rem 1.25rem;
+                margin-bottom: 1rem;
+                border: 1px solid transparent;
+                border-radius: 0.25rem;
+            }
+
+            .yenialert-success {
+                background-color: #0f5600;
+                color: white;
+                font-weight: 700;
+                border-color: #c3e6cb;
+            }
+
+            .yenialert-danger {
+                background-color: #910303;
+                color: white;
+                font-weight: 700;
+                border-color: #910303;
+            }
+
+            .yenialert-warning {
+                background-color: #b47d00;
+                color: white;
+                font-weight: 700;
+                border-color: #747474;
+            }
+        </style>
+        <div class="row mt-4">
+            <div class="col-xl-3 col-12 mb-xl-0 mb-3">
+                <div class="bg-white">
+                    <nav class="oy-menu">
+                        <ul class="tabs">
+                            <li class="active" data-tab="magaza-olustur">
+                                <a class="row no-gutters align-items-center">
+                                    <br>
+                                    <h3 class="font-weight-bold" style="font-size: 20px;">Onaylı Değil</h3>
+                                    <div class="yenialert yenialert-danger" role="alert" style="width:220px">
+                                        Kimlik Ön Yüzü Fotoğrafı
+                                    </div>
+                                    <h3 class="font-weight-bold" style="font-size: 20px;">Onaylı Değil</h3>
+                                    <div class="yenialert yenialert-danger" role="alert" style="width:220px">
+                                        Kimlik Arka Yüzü Fotoğrafı
+                                    </div>
+                                    <h3 class="font-weight-bold" style="font-size: 20px;">Onaylı Değil</h3>
+                                    <div class="yenialert yenialert-danger" role="alert" style="width:220px">
+                                        Selfie Fotoğrafı
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+            <div class="col-xl-9 col-12">
+                <div class="tab-content active" id="magaza-olustur">
+                    <div class="bg-white">
+                        <div class="mag-content">
+                            <div class="fs-25 font-weight-bold">
+                                ONAY GEREKİYOR
+                            </div>
+                            <button class="btn btn-warning btn-block" onclick="tconay();">KİMLİK ONAYI (TIKLA)</button>
+                            <form enctype="multipart/form-data" method="post" action="https://www.epinkasa.com/dash/onay/tc_resim_verification">
+                                <div class="fs-25 font-weight-bold mt-3">
+                                    Hesap Onayla
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-4"><img src="https://www.epinkasa.com/images/id-card.png"></div>
+                                    <div class="col-md-4"><img src="https://www.epinkasa.com/images/id-card-back.png"></div>
+                                    <div class="col-md-4"><img src="https://www.epinkasa.com/images/id-card.png"></div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-4"><strong>Kimlik Ön yüzü</strong></div>
+                                    <div class="col-md-4"><strong>Kimlik Arka Yüzü</strong></div>
+                                    <div class="col-md-4"><strong>Özçekim (Selfie) Fotoğrafı</strong></div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <input type="file" name="tc_resim_on_verification" id="fileUpload">
+                                    </div>
+                                    <div class="col-md-4">
+                                        <input type="file" name="tc_resim_arka_verification" id="fileUpload">
+                                    </div>
+                                    <div class="col-md-4">
+                                        <input type="file" name="tc_resim_selfie_verification" id="fileUpload">
+                                    </div>
+                                </div>
+                                <button type="submit" class="btn btn-primary btn-block mt-3 font-weight-bold">
+                                    + GÖNDER
+                                </button>
+                                <input type="hidden" name="_token" value="YhTMqGWGDPcAmHMdFof7HIVOx54KUJNuYaN3WcGC">
+                            </form>
+                        </div>
+                    </div>
+                    <div class="bg-white mt-3 p-3">
+                        <div class="border-bottom pb-3 mb-3">
+                            <div class="fs-20 font-weight-bold">Onaylı Hesap Avantajları Nelerdir?</div>
+                            <div class="mt-2">
+                                Epinkasa.com sizlere en güvenilir alışveriş imkanlarını sağlamaktadır. Bu güvenilir alışveriş imkanlarını sağlaması için sizlerden kimlik onayınızı talep etmektedir.
+                                Kimliğinizin talep edilmesindeki tek amaç sitedeki alışverişlerinizin güvenirliğinin artmasıdır. Kimlik bilgileriniz kesinlikle 3. kişiler ile paylaşılmaz.
+                                Gerekli durumlarda yalnızca Türkiye Cumhuriyeti ilgili makamları ile paylaşılacaktır.
+                                Kimliğinizin ön yüzü, arka yüzü ve özçekiminizi eklediğinizde hesabınız onaylı hesap durumuna geçecektir.
+                                Onaylı hesap olmak sizlere Epinkasa üzerinde çeşitli avantajlar sağlayacaktır.
+                            </div>
+                        </div>
+                        <ul class="ul-style-dot">
+                            <li>Bakiye blokesi olmadan direkt olarak çekilebilir bakiyelerini hesaplarına alabilirler</li>
+                            <li>İlanlarını üst sıralara taşıyabilirler</li>
+                            <li>Mağazanızın satışlarına göre rütbe verilir, böylelikle mağaza güvenilirliğiniz de artacak ve satışlarınız çoğalacaktır.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>

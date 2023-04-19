@@ -61,6 +61,11 @@ namespace Gamy.Business.Concretes
             return _unitOfWork.Product.GetProductsOrderByNumberDescending(filter);
         }
 
+        public List<Product> GetProductsWithSubCategory(int userId)
+        {
+            return _unitOfWork.Product.GetProductsWithSubCategory(userId);
+        }
+
         public Product GetProductWithIlan(int productId)
         {
             return _unitOfWork.Product.GetProductWithIlan(productId);

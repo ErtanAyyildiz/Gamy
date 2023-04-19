@@ -45,6 +45,7 @@ namespace Gamy.UI.Controllers
 
             if (result.Succeeded)
             {
+                TempData["ErrorMessage"] = "Başarılı giriş yaptınız...";
                 return RedirectToAction("Index", "Home");
             }
             else if (result.IsNotAllowed)
