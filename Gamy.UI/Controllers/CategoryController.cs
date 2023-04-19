@@ -16,8 +16,8 @@ namespace Gamy.UI.Controllers
             _categoryService = categoryService;
         }
 
-        [HttpGet("category/{categoryName}/{categoryId:int}/{subCategoryId:int}")]
-        public IActionResult Index(string categoryName, int categoryId, int subCategoryId)
+        [HttpGet("category/{subCategoryName}/{categoryId:int}/{subCategoryId:int}")]
+        public IActionResult Index(string subCategoryName, int categoryId, int subCategoryId)
         {
             var products = _productService.GetListByFilter(x=>x.SubCategoryId==subCategoryId);
             return View(products);
