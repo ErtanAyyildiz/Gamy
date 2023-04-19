@@ -18,27 +18,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="wwwroot\GamySell\blog\etiket\KbA9BhVfA5L0we4tZsiRK456y1bxSoa6_CdjRezMD9A-1681344037-0-AVPdWkB5f+6LwpIdvLqB\0Gid0KUp3FD5Hns8usVXWD\" />
-    <Folder Include="wwwroot\GamySell\cdn-cgi\challenge-platform\h\g\scripts\alpha\" />
-    <Folder Include="wwwroot\GamySell\cdn-cgi\challenge-platform\h\g\scripts\cb\" />
-    <Folder Include="wwwroot\GamySell\league-of-legends\fs8kOWVPIXymhM1mnh4tf9RC.1bwvnhAF059OxCNtII-1681342737-0-Ae\GeXPGTW6k\wDAJwgQAPclf2n9K8xnGpcDiBVMHFT\" />
-    <Folder Include="wwwroot\GamySell\league-of-legends\sMBonZieb1W9eu_AHCLTpDuUb8n1DtWuS7VnrDTFp4Q-1681342716-0-AVsR6q7f3l+3F3zfCpSsZQpZX7RHSMOR181teHdgyi9\" />
-    <Folder Include="wwwroot\GamySell\metin2-pvp\8h4vfV9435F40DA2UTWP59FzAKMfQu7TGEd.rH_YDf4-1681343102-0-AXlSUr5JJU62GwCFbx9GQTgm4Um18W7uERcJTDRMVJW\" />
-    <Folder Include="wwwroot\GamySell\metin2-pvp\SZ1k5vYDZzuSpkTRpVUFmkyot0ZBcR8G32psDhrM0FE-1681343051-0-AesbQaerbmWieS8b2C2SdslenTYbinNnf\ASUVq8AYN\" />
-    <Folder Include="wwwroot\GamySell\metin2-pvp\Wu41pJDUS2sl3bfGkXsbxkjvSwZxeonZ_jui_bMp6Wg-1681343139-0-AWUq50+o99sweMkXG\oBptKrBBIm1rfg5WSQfZeteDB\" />
-    <Folder Include="wwwroot\GamySell\metin2\acM2YURu1sW5EgOm_BFtcxyLafNdp.mhVt5tvoYgBj4-1681343018-0-AS9cBG2X6Vd7zlV2aELK1rbjR9ccRxFpM0645obS2\+\" />
-    <Folder Include="wwwroot\GamySell\mobil-oyunlar\jzj1Q_hVAaLwM2.UYjI0R9V0XOQ37LF0UQtvBy5CalI-1681343436-0-ASRVf2F9NRK\d6FIJbP30Gpi5qWjQEPvjR08NtgCuLu\" />
-    <Folder Include="wwwroot\GamySell\mobil-oyunlar\m7bSerU6eGLIOi8dbVWOb7MDoOFeJp6JM6AXKqpbuQY-1681343373-0-ARJZo3r4f9LcJVvbzYFnIFA4M66y+3+tM0++1CSe7g5\" />
-    <Folder Include="wwwroot\GamySell\online-oyunlar\H8M3gFYR7hkCLctQ9XvjedrLaewIU27wmqZWYgI4qpQ-1681342787-0-AVEzNCBN\ywm\gwZR3tBphpOL5UR\CWTjqnnMxEbeA\" />
-    <Folder Include="wwwroot\GamySell\online-oyunlar\KZvXmKLqDVPVxu6mYNKju5FVTYVxYDz8Fu_7LajnBRo-1681342915-0-Abq8w+nz3ANZW9dZ7iH8npJJ4+jxRBhBSqFgcleHSwv\" />
-    <Folder Include="wwwroot\GamySell\platform-hesap-satisi\0wuvq.rZPZWqNza6suXK9cQqmMNREkKtxnBdQej36GY-1681343600-0-AVxl2jT3yyk1I+UR\gffa\OD2LRSYSvGZjteyQ3xHwK\" />
-    <Folder Include="wwwroot\GamySell\platform-hesap-satisi\bhSPDvf1JxlypKHwF3HWm06riSq.o7iIOk_pP0f9l5E-1681343780-0-AVZxLmelN8U8+23c8Cz1J4BRNJB0yO17nPaVlLKRX7Z\" />
-    <Folder Include="wwwroot\GamySell\pubg-mobile\GWu0tZcWOp6ovo55fD1ye7dv1yIPkbFBLJhMa5PEV1g-1681343260-0-AaSP0vADjsygsDYcbjlmXY1dFcXo2VFyn6g+vz8B3U9\" />
-    <Folder Include="wwwroot\GamySell\sosyal-medya\FadnniKwWlqJ9kBTXwoWMcmyp73bF0ZnBkR1pWXxNWI-1681343851-0-AWS2EPtJXXVPCGgisamf39kZzdzVBJqGFaiommLYfDp\" />
-    <Folder Include="wwwroot\GamySell\yazilim-ticareti\RI_KrLkqG7Z2BIdEvlVjZyPMeKoxd3wfthHCIi2onUw-1681343908-0-AcJgE7zBlToJoayZrGA7YbXnSvQYuiOqXVQCOe6fd6R\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\Gamy.Business\Gamy.Business.csproj" />
     <ProjectReference Include="..\Gamy.DTO\Gamy.DTO.csproj" />
   </ItemGroup>
