@@ -1,0 +1,342 @@
+﻿@model Product
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<main class="main-content">
+    <nav class="brreadcrumb">
+        <div class="container" style="position:relative;">
+            <ul>
+                <li><a href="/Home/Index">Ana Sayfa</a></li>
+                <li><a href="/Categories/Index">Tüm Oyunlar</a></li>
+                <li><a href="/category/@Model.SubCategory.Category.Name/@Model.SubCategory.Category.Id/@Model.SubCategoryId"> @Model.SubCategory.Name </a></li>
+                <li><a href="#">@Model.Name</a></li>
+            </ul>
+            <div style="float:right; margin-top: -20px;">
+                <span data-toggle="tooltip" data-placement="top" title="" data-original-title="İlanı gören kişi sayısı">
+                    <svg width="20" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M10.2882 0.00481888L10.002 0C5.86108 0 2.12926 2.92308 0.0609149 7.70583C-0.020305 7.89364 -0.020305 8.10636 0.0609149 8.29416L0.204239 8.61679C2.24638 13.0931 5.77544 15.8644 9.71179 15.9952L9.998 16C14.1389 16 17.8707 13.0769 19.9391 8.29416C20.0213 8.10399 20.0202 7.88839 19.9361 7.69904L19.7968 7.38563C17.7497 2.90091 14.2192 0.135466 10.2882 0.00481888ZM10.009 1.48942L10.2479 1.49456L10.5149 1.50845C13.7122 1.73484 16.6525 4.10553 18.429 7.99911L18.4197 8.02313C16.5987 12.0005 13.5569 14.3853 10.2589 14.505L10.004 14.5088L9.74693 14.5054L9.48061 14.4915C6.38271 14.2721 3.52637 12.0344 1.73914 8.3597L1.57 7.99911L1.72658 7.66619C3.61117 3.77315 6.69148 1.49027 10.009 1.48942ZM9.9995 4.11346C7.8391 4.11346 6.0885 5.85313 6.0885 8.0002C6.0885 10.1465 7.83929 11.8859 9.9995 11.8859C12.1598 11.8859 13.9115 10.1463 13.9115 8.0002C13.9115 5.85325 12.16 4.11346 9.9995 4.11346ZM9.9995 5.60378C11.3317 5.60378 12.4115 6.6764 12.4115 8.0002C12.4115 9.32312 11.3316 10.3956 9.9995 10.3956C8.66771 10.3956 7.5885 9.32338 7.5885 8.0002C7.5885 6.67614 8.6676 5.60378 9.9995 5.60378Z" fill="white"></path>
+                    </svg>
+                </span>
+                <span data-toggle="tooltip" data-placement="top" title="" data-original-title="İlanı gören kişi sayısı">@Model.CountClick</span>
+            </div>
+        </div>
+    </nav>
+
+    <div class="main-container bggrey pt-3 pb-3">
+        <div class="row" style="background: #2f3144; margin-right: 0px; margin-left: 0px;">
+            <div class="col-xl-9 col-md-9 col-12" style="padding-right: 0px; padding-left: 0px;">
+                <div class="row">
+                    <div class="col-xl-7 col-md-6 col-12">
+                        <div class="swiper-container sproduct-slider swiper-container-initialized swiper-container-horizontal swiper-container-pointer-events">
+                            <div class="swiper-wrapper" id="swiper-wrapper-f25248cc4e431aa1" aria-live="polite">
+                                <div class="swiper-slide swiper-slide-active" role="group" aria-label="1 / 1" style="width: 510px;">
+                                    <div class="sproduct-img">
+                                        <a href="../../uploads/advert/40621609001612-kapak-58298280581501.jpg" data-fancybox="group" data-caption="Random hesap adresi">
+                                            <img src="../../uploads/advert/40621609001612-kapak-58298280581501.jpg" alt="">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-button-next swiper-button-disabled" tabindex="-1" role="button" aria-label="Next slide" aria-controls="swiper-wrapper-f25248cc4e431aa1" aria-disabled="true"><i class="icon-right-open"></i></div>
+                            <div class="swiper-button-prev swiper-button-disabled" tabindex="-1" role="button" aria-label="Previous slide" aria-controls="swiper-wrapper-f25248cc4e431aa1" aria-disabled="true"><i class="icon-left-open"></i></div>
+                            <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
+                        </div>
+                    </div>
+                    <div class="col-xl-5 col-md-6 col-12">
+                        <div class="sproduct-detail">
+                            <div class="sproduct-detail__top">
+                                <div class="row justify-content-between align-items-center">
+                                    <div class="col-auto">
+                                        <div class="sproduct-no">#<span class="ilanno">@Model.Id</span></div>
+                                    </div>
+                                    <div class="col-auto">
+                                        <div class="sproduct-stock">
+                                            <span> 4</span>
+                                            Stok
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="sproduct-detail__long">
+                                <font size="5" style=""><b>@Model.Name</b></font><br>
+                                @Model.Description
+                            </p><div class="sproduct__ranks" style="position: absolute;bottom: 0; margin-bottom: -13px;">
+                                <div class="row justify-content-md-end justify-content-center gutters-small">
+                                    <div class="col-auto">
+                                    </div>
+                                    <div class="col-auto">
+                                        <div onclick="otomatik()" class="auto-complete mb-xl-3 mb-2" style="cursor:help;">
+                                            <span><img src="/GamyEpin/images/lightning.svg" alt=""></span>
+                                            <span> @(Model.StokluUrun == true ? "Otomatik Teslimat" : "")</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <p></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-3 col-md-3 col-12" style="padding-right: 0px; padding-left: 0px;">
+                <div class="sproduct-dealer" style="display: flex; flex-wrap: wrap;">
+                    <div class="dealer-buttons" style="width:100%; display: -webkit-inline-box;">
+                        <a data-toggle="modal" data-target="#login" href="#">
+                            <svg width="25" height="25" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M14.9643 1.80182C15.204 0.720611 14.1985 -0.255017 13.1099 0.0600375L1.06714 3.56423L0.950927 3.60286C-0.179453 4.02827 -0.352889 5.60259 0.705864 6.25437L5.68673 9.32022L8.68328 14.2846L8.7506 14.3871C9.45305 15.3712 11.0085 15.1329 11.3632 13.9399L14.9361 1.91025L14.9643 1.80182ZM13.4872 1.15701C13.7093 1.13316 13.8991 1.34922 13.83 1.58122L10.2569 13.6112L10.2335 13.6702C10.1218 13.8898 9.80583 13.9122 9.67081 13.6884L6.83406 8.98947L10.8742 4.92332L10.9298 4.85844C11.0966 4.63204 11.077 4.31161 10.8715 4.10749L10.8066 4.05185C10.5802 3.88503 10.2598 3.90472 10.0556 4.11021L6.02103 8.17106L1.31038 5.27183L1.25952 5.23364C1.07659 5.06699 1.13817 4.74492 1.38884 4.67216L13.4311 1.1681L13.4872 1.15701Z" fill="white"></path>
+                            </svg>
+
+                            Mesaj Gönder
+                        </a>
+                        <a href="#" data-toggle="modal" data-target="#smsgonder">
+                            <svg width="27" height="25" viewBox="0 0 17 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M12.1044 3.9586e-05L4.54682 0C1.90554 0 0 2.13459 0 4.88248V10.1175C0 12.8654 1.90554 15 4.54682 15H12.0974C13.366 14.9858 14.5668 14.4517 15.4271 13.5221C16.2875 12.5925 16.7322 11.3486 16.6577 10.08L16.6588 4.88248C16.7322 3.65142 16.2875 2.40746 15.4271 1.47787C14.5668 0.54828 13.366 0.014209 12.1044 3.9586e-05ZM4.54682 1.27369L12.0903 1.27365C13.0061 1.28393 13.8777 1.6716 14.5022 2.34635C15.1266 3.02111 15.4494 3.92406 15.3954 4.84491L15.3943 10.1175C15.4494 11.0759 15.1266 11.9789 14.5022 12.6536C13.8777 13.3284 13.0061 13.7161 12.0903 13.7264L4.54682 13.7263C2.63566 13.7263 1.26453 12.1904 1.26453 10.1175V4.88248C1.26453 2.80963 2.63566 1.27369 4.54682 1.27369ZM13.3534 4.69864C13.1352 4.42405 12.7373 4.37963 12.4646 4.59942L9.04858 7.35354L8.95066 7.42235C8.54789 7.67462 8.01898 7.65132 7.63318 7.34843L4.19214 4.59776L4.11469 4.54467C3.8478 4.38939 3.50118 4.45026 3.30384 4.70071C3.08677 4.97622 3.13253 5.3768 3.40605 5.59544L6.85145 8.34957L6.98587 8.44795C7.85257 9.03824 9.00112 9.00561 9.83237 8.35302L13.2549 5.59379L13.3235 5.52959C13.5333 5.30218 13.5517 4.94827 13.3534 4.69864Z" fill="white"></path>
+                            </svg>
+
+                            SMS Gönder
+                        </a>
+                    </div>
+                    <div class="row">
+                        <div class="col-4">
+                            <div class="dealer-img mt-2">
+                                <a href="/GamyEpin/profile/Mhyt11.html"><img src="/GamyEpin/images/avatar/001-gamer.png" alt=""></a>
+                                <div class="status offline"></div>
+                            </div>
+                        </div>
+                        <div class="col-8">
+                            <div class="dealer-nick mt-3">
+                                <a href="/GamyEpin/profile/Mhyt11.html">@Model.User.UserName</a>
+                                <div class="dealer-status offline mt-2">
+                                    7 Saat 29 Dakika Önce Aktif
+
+                                    <span><img data-toggle="tooltip" data-placement="bottom" title="" height="32px" src="../../images/gamer.svg" alt="" data-original-title="Henüz 1 ayını doldurmamış üye"></span>
+                                    <span><img height="32px" src="../../images/badge2.png" alt=""></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="dealer-ranks mt-3" style="width:100%">
+                        <img height="16px;" src="/GamyEpin/images/lightning.svg" alt=""> <font color="#c957f9">Bu ürün Stoktan anında teslim edilecektir.</font>
+                    </div>
+                    <div class="sproduct-price mt-3" style="width:100%">
+                        @Model.Price
+                    </div>
+                    <a data-toggle="modal" data-target="#login" class="sproduct-buy mt-2">
+                        <span>
+                            <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M1.00972 0.012776L0.893053 0.000574938C0.468501 -0.0149454 0.0872416 0.285291 0.012776 0.715537L0.000574938 0.832199C-0.0149454 1.25675 0.285291 1.63801 0.715537 1.71248L2.45086 2.01261L3.50255 14.5425L3.52432 14.7308C3.73591 16.1596 4.96484 17.2337 6.42853 17.2337H18.9771L19.1661 17.2277C20.5419 17.1399 21.6826 16.0995 21.8834 14.7174L22.9748 7.17534L22.9936 7.00211C23.094 5.62319 22.0017 4.42642 20.5951 4.42642H4.38398L4.11405 1.20448L4.0937 1.077C4.015 0.745435 3.74546 0.48627 3.40168 0.426769L1.00972 0.012776ZM6.29437 15.5015C5.72482 15.4392 5.26933 14.9818 5.22069 14.3986L4.52805 6.15138H20.5943L20.6957 6.15884C21.0588 6.21282 21.3211 6.55238 21.2667 6.92837L20.1754 14.4699L20.148 14.6047C20.0096 15.132 19.5319 15.5088 18.9763 15.5088H6.4277L6.29437 15.5015ZM4.4966 20.7979C4.4966 19.8364 5.27591 19.0557 6.23767 19.0557C7.1993 19.0557 7.97989 19.8363 7.97989 20.7979C7.97989 21.7596 7.19917 22.5389 6.23767 22.5389C5.27604 22.5389 4.4966 21.7595 4.4966 20.7979ZM17.4339 20.7979C17.4339 19.8363 18.2145 19.0557 19.1761 19.0557C20.1377 19.0557 20.9183 19.8363 20.9183 20.7979C20.9183 21.7596 20.1376 22.5389 19.1761 22.5389C18.2146 22.5389 17.4339 21.7596 17.4339 20.7979ZM17.9949 9.53923C17.9949 9.06289 17.6087 8.67674 17.1324 8.67674H13.9435L13.8265 8.68461C13.4055 8.74172 13.081 9.10258 13.081 9.53923C13.081 10.0156 13.4672 10.4017 13.9435 10.4017H17.1324L17.2494 10.3938C17.6704 10.3367 17.9949 9.97587 17.9949 9.53923Z" fill="white"></path>
+                            </svg>
+                        </span>
+                        <span style="color:white">SATIN AL</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="row mt-4 gutters-small">
+            <div class="col-md-4 col-12">
+                <div onclick="otomatik()" class="order-autocomplete">
+                    <span><img src="/GamyEpin/images/lightning.svg" alt=""></span>
+                    <span>Siparişleriniz <b>otomatik</b> olarak teslim edilecektir.</span>
+                </div>
+            </div>
+            <div class="col-md-4 col-12">
+                <div onclick="guvence()" class="order-secure" style="cursor:help">
+                    <span><img src="/GamyEpin/images/shield.svg" alt=""></span>
+                    <span>Paranız <b>%100 Epinkasa</b> güvencesi altındadır.</span>
+                </div>
+            </div>
+            <div class="col-md-4 col-12">
+                <div class="order-clock">
+                    <span><img src="/GamyEpin/images/chronometer.svg" alt=""></span>
+                    <span>Kalan süre: <b>29</b> gün <b>12</b> saat <b>55</b> dakika </span>
+                </div>
+            </div>
+        </div>
+        <div class="bg-advert"></div>
+        <div class="home-products tab-system mt-xl-4 mt-3">
+            <ul class="home-pro-tabs tabs">
+                <li data-tab="description" class="active">
+                    <div class="row align-items-center gutters-small justify-content-center">
+                        <div class="col-xl-auto col-12"><img height="28px" src="../../images/personal-profile.svg" alt=""></div>
+                        <div class="col-xl-auto col-12 mt-xl-0 mt-2">
+                            Ürün Açıklaması
+                        </div>
+                    </div>
+                </li>
+                <li data-tab="comments" class="">
+                    <div class="row align-items-center gutters-small justify-content-center">
+                        <div class="col-xl-auto col-12">
+                            <img height="28px" src="../../images/good-review.svg" alt="">
+                        </div>
+                        <div class="col-xl-auto col-12 mt-xl-0 mt-2">
+                            Satıcı Yorumları
+                        </div>
+                    </div>
+                </li>
+                <li data-tab="security" class="">
+                    <div class="row align-items-center gutters-small justify-content-center">
+                        <div class="col-xl-auto col-12">
+                            <img height="28px" src="../../images/security.svg" alt="">
+                        </div>
+                        <div class="col-xl-auto col-12 mt-xl-0 mt-2">
+                            Güvenli Ticaret
+                        </div>
+                    </div>
+                </li>
+            </ul>
+            <div class="tab-content active" id="description">
+                <div class="bg-white p-3 btl-r0">
+                    @Model.Description
+                </div>
+            </div>
+            <div class="tab-content" id="comments">
+                <div class="bg-white p-3 btl-r0">
+                    <div class="bg-grey p-3 product-det-reviews">
+                        <div class="d-flex flex-wrap ii-review align-items-center justify-content-xl-between">
+                            <div class="pdr-col">
+                                <div class="rating d-flex justify-content-between align-items-center">
+                                </div>
+                                <div class="fs-12 font-weight-bold">
+                                    <div class="total-value d-flex align-items-center">
+                                        <div class="value mr-2">
+                                            @Model.Comments.Count()
+                                        </div>
+                                        <div class="stars">
+                                            <i class="icon-star"></i>
+                                            <i class="icon-star"></i>
+                                            <i class="icon-star"></i>
+                                            <i class="icon-star"></i>
+                                            <i class="icon-star"></i>
+                                        </div>
+                                    </div>
+                                    @Model.Comments.Count() Değerlendirme
+                                </div>
+                            </div>
+                            <div class="pdr-col">
+                                <div class="pdr-text">
+                                    <div class="fs-12 font-weight-bold">Bilgilendirme</div>
+                                    Bu kısımda satıcıya ait yorumları görüntüleyebilirsiniz.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="review-comments">
+                    </div>
+                </div>
+            </div>
+            <div class="tab-content" id="security">
+                <div class="bg-white p-3 btl-r0">
+                    <div class="accordion-bar">
+                        <div class="acc-question">
+                            Güvenli Ticaret Nedir?
+                        </div>
+                        <div class="acc-answer" style="display: none;">
+                            <div class="pt-3">
+                                <p>Bu metinde epinkasa.com'un Güvenli Ticaret hizmeti hakkında detaylı bilgi açıklamalı şekilde anlatılacaktır.</p>
+                                <p>&nbsp;epinkasa.com'da yapılan Güvenli Ticaret'in işleyişi ve avantajlarına dair detaylı açıklamalar:</p>
+                                <p><br></p>
+                                <p>Epinkasa.com, alıcı ve satıcıların buluştuğu güvenli bir ticaret platformudur.</p>
+                                <p>&nbsp;İşlemlerin güvenli bir şekilde gerçekleşmesi için epinkasa.com, alıcı ve satıcıları bir araya getiren bir platform olarak Güvenli Ticaret hizmeti sunmaktadır.&nbsp;</p>
+                                <p>Bu hizmet, alıcıların ürünü almadan önce satıcıya ödeme yapmasını engelleyerek, her iki tarafın da güvende olmasını sağlamaktadır.</p>
+                                <p><br></p>
+                                <p>Güvenli Ticaret hizmeti, epinkasa.com'un işleyişi açısından oldukça önemlidir.&nbsp;</p>
+                                <p>İşlem yapacak olan satıcılar, öncelikle epinkasa.com'a üye olmak zorundadır. Üyelik işlemleri tamamlandıktan sonra satıcılar, sitede yer alan ilan oluşturma bölümünden ilanlarını oluşturabilirler.&nbsp;</p>
+                                <p>Alıcılar ise bu ilanları inceleyerek, satın alabilirler.</p>
+                                <p>&nbsp;</p>
+                                <p>Ürün teslimatı gerçekleştikten sonra alıcı, ürünü kontrol eder ve herhangi bir sorun olmadığına dair onay verir. Bu onayın ardından epinkasa.com, satıcıya ödeme yapar ve işlem tamamlanmış olur.</p>
+                                <p>&nbsp;Eğer alıcı, üründe bir problem olduğunu tespit ederse, epinkasa.com'a bu problemi bildirir ve sorun çözülene kadar ödeme yapmayı erteleyebilir.</p>
+                                <p><br></p>
+                                <p><br></p>
+                                <p>Güvenli Ticaret hizmeti, alıcı ve satıcıların güvende olmasını sağlayarak, ticaret işlemlerinin güvenli bir şekilde gerçekleşmesine yardımcı olmaktadır.&nbsp;</p>
+                                <p>epinkasa.com, bu hizmet sayesinde alıcıların ürünü teslim almadan önce ödeme yapmak zorunda kalmamasını sağlarken, satıcıların da ürünlerini güvenli bir şekilde satabilmelerini mümkün kılmaktadır.</p>
+                                <p><br></p>
+                                <p><br></p>
+                                <p>Güvenli Ticaret hizmetinin avantajları arasında, alıcıların ürünleri teslim almadan önce ödeme yapmak zorunda kalmaması, satıcıların da ürünlerini teslim etmeden önce ödeme almak zorunda kalmaması yer almaktadır.</p>
+                                <p>&nbsp;Bu nedenle, alıcı ve satıcı arasında gerçekleşen işlemlerde her iki tarafın da güvende olduğu bir ortam sağlanır.</p>
+                                <p><br></p>
+                                <p><br></p>
+                                <p>Epinkasa.com üzerinden gerçekleştirilen Güvenli Ticaret işlemlerinde, alıcılar ürünü teslim aldıktan sonra ürünün durumunu kontrol edebilir ve beklentilerine uygun olduğuna kanaat getirir ve teslim aldım butonuna tıklar.&nbsp;</p>
+                                <p>Bu sayede, alıcılar ürünü önceden ödeme yapmadan görme fırsatı bulurlar ve ürünün tam olarak kendilerine uygun olduğuna emin olabilirler.</p>
+                                <p><br></p>
+                                <p><br></p>
+                                <p>Satıcılar da aynı şekilde, ürünlerini teslim etmeden önce ödeme almak zorunda kalmadıkları için işlem sırasında daha rahat ve güvende hissederler.</p>
+                                <p>&nbsp;Bu durum, satıcıların işlem yapmaya daha istekli olmasına ve piyasada daha fazla ürün sunmalarına olanak tanır.</p>
+                                <p><br></p>
+                                <p>Güvenli Ticaret hizmeti, aynı zamanda dolandırıcılık girişimlerinin de önüne geçer.</p>
+                                <p>&nbsp;Epinkasa.com üzerinden gerçekleştirilen işlemlerde, ürünü görme fırsatı bulan alıcılar, ürünün gerçekten var olduğundan ve açıklamalarla uyumlu olduğundan emin olabilirler.&nbsp;</p>
+                                <p>Bu sayede, dolandırıcılık girişimleri büyük ölçüde engellenmiş olur.</p>
+                                <p><br></p>
+                                <p>Sonuç olarak, Epinkasa.com üzerinden gerçekleştirilen Güvenli Ticaret hizmeti, alıcılar ve satıcılar arasında güvenli ve adil bir işlem ortamı sağlar.</p>
+                                <p>&nbsp;Her iki tarafın da memnun kalacağı bir işlem gerçekleştirmek isteyenlerin tercih ettiği bu hizmet, birçok avantajı beraberinde getirir ve her geçen gün daha fazla kullanıcı tarafından tercih edilmektedir.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="mt-xl-4 bg-white p-3">
+            <div class="row align-items-center no-gutters">
+                <div class="col-auto">
+                    <img height="48" src="../../images/opacity.png" alt="">
+                </div>
+                <div class="col-auto ml-3">
+                    <h3 class="fs-25 m-0 p-0">
+                        <b>Benzer</b> İlanlar
+                    </h3>
+                </div>
+            </div>
+
+            <ul class="product-lister row gutters-small mt-3">
+                @foreach (var item in Model.SubCategory.Products)
+                {
+                    <li class="col-xl-2 col-lg-3 col-md-4 col-sm-6 col-12 mb-3 mobil-boyut">
+                        <div class="product">
+                            <div class="p-1">
+                                <div class="product-img">
+                                    <figure>
+                                        <a href="/product/@item.Name/@item.Id">
+                                            <img class="lazy" data-original="/GamyEpin/uploads/advert/minimum/44237592027245-kapak-35657470103571.jpg" alt="" src="https://www.epinkasa.com/uploads/advert/minimum/44237592027245-kapak-35657470103571.jpg" style="">
+                                        </a>
+                                    </figure>
+
+                                    <div class="featured" @(item.OneCikanUrun == true ? "" : "hidden")> Öne Çıkan</div>
+                                    <div class="showcase" @(item.Vitrin == true ? "" : "hidden")>Vitrin İlanı</div>
+                                    <div class="user-wrapper">
+                                        <div class="user-profile">
+                                            <a href="../../profile/Reyo.html"><img class="lazy" src="../../images/avatar/001-gamer.png" alt="" data-toggle="tooltip" data-placement="top" title="" data-original-title="Reyo"></a>
+                                            <div class="user-infos">
+                                                <a href="../../profile/Reyo.html">@item.User.UserName</a>
+                                                <span>Satıcı</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="product-infos">
+                                    <a href="../random-hesap/4464.html" class="text-truncate">@item.Name</a>
+                                    <span>@item.Description</span>
+                                </div>
+                                <div class="product-price">
+                                    <div class="price">@item.Price</div>
+                                    <a href="/product/@item.Name/@item.Id" class="go"><i class="icon-right-open"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                }
+            </ul>
+        </div>
+        <div class="mt-xl-4 mt-3 bg-white">
+            <div class="ilan-desc-title">
+                @Model.Name
+            </div>
+            <div class="p-3">
+                <div class="ilan-desc-text fs-12">
+                    @Model.Description
+                </div>
+            </div>
+        </div>
+    </div>
+</main>

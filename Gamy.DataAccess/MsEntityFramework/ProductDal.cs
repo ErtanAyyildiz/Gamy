@@ -54,11 +54,23 @@ namespace Gamy.DataAccess.MsEntityFramework
         {
             return _db.Products
                 .Include(p => p.SubCategory)
+                .ThenInclude(c=>c.Category)
                 .Include(p => p.User)
                 .OrderByDescending(p => p.CountClick)
                 .Skip((filter.PageNumber - 1) * filter.PageSize)
                 .Take(filter.PageSize)
                 .ToList();
+        }
+
+        public Product GetProductWithIlan(int productId)
+        {
+            return _db.Products
+                .Include(u => u.User)
+                .Include(c => c.Comments)
+                .Include(s=>s.SubCategory)
+                .ThenInclude(c=>c.Category)
+                .Where(p => p.Id == productId)
+                .First();
         }
     }
 }

@@ -19,11 +19,11 @@ namespace Gamy.UI.Controllers
 
         public IActionResult Index()
         {
-            if (!User.Identity.IsAuthenticated)
-            {
-                HttpContext.Items["class"] = "darkmode modal-open";
-                HttpContext.Items["style"] = "padding-right: 17px;";
-            }
+            //if (!User.Identity.IsAuthenticated)
+            //{
+            //    HttpContext.Items["class"] = "darkmode modal-open";
+            //    HttpContext.Items["style"] = "padding-right: 17px;";
+            //}
             return View();
         }
 

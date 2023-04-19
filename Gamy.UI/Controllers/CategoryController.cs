@@ -20,7 +20,7 @@ namespace Gamy.UI.Controllers
         public IActionResult Index(string categoryName, int categoryId, int subCategoryId)
         {
             var products = _productService.GetListByFilter(x=>x.SubCategoryId==subCategoryId);
-            return View();
+            return View(products);
         }
     }
 }
