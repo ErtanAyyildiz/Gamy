@@ -1,0 +1,171 @@
+﻿@{
+    ViewData["Title"] = "BoostEdit";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<main class="main-content pt-xl-4 pt-3">
+    <form id="ilanform" action="/Ilan/BoosEdit" method="post">
+        <input type="hidden" name="productId" value="@ViewBag.ProductId">
+        <div class="container">
+            <div class="row align-items-center no-gutters justify-content-between">
+                <div class="col-xl-auto col-12 mb-xl-0 mb-2">
+                    <h1 class="m-0 p-0 fs-20 font-weight-bold">İlan Ekle</h1>
+                </div>
+                <div class="col-xl-auto col-12">
+                    <a href="https://www.epinkasa.com/help/center" class="btn-grey"><i>+</i> YARDIM AL</a>
+                </div>
+            </div>
+            <div class="form-wizard">
+                <div class="mt-xl-4 mt-3 bg-white p-3">
+                    <div class="ilan-step-sys steps">
+                        <ul class="row no-gutters">
+                            <li class="col-xl-3 col-12 active">
+                                <div class="step-bg">
+                                    <div class="row align-items-center no-gutters justify-content-center">
+                                        <div class="col-3 text-center">
+                                            <img src="https://www.epinkasa.com/images/shop-3.svg" alt="">
+                                        </div>
+                                        <div class="col-7">
+                                            <span class="number">1</span>
+                                            <div class="step-title fs-18 font-weight-bold">Kategori</div>
+                                            <div class="step-text mt-1 fs-11">
+                                                Bu alandan ilanınızı ekleyeceğiniz kategoriyi seçiniz.
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="col-xl-3 col-12 active">
+                                <div id="ileri1_1" class="step-bg">
+                                    <div class="row align-items-center no-gutters justify-content-center">
+                                        <div class="col-3 text-center">
+                                            <img src="https://www.epinkasa.com/images/online-shop.svg" alt="">
+                                        </div>
+                                        <div class="col-7">
+                                            <span class="number">2</span>
+                                            <div class="step-title fs-18 font-weight-bold">İlan Detayları</div>
+                                            <div class="step-text mt-1 fs-11">
+                                                Buradan ilanınızı başlık, açıklama vb ayarlarını ayarlayabilirsiniz.
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="col-xl-3 col-12 active">
+                                <div id="ileri2_2" class="step-bg">
+                                    <div class="row align-items-center no-gutters justify-content-center">
+                                        <div class="col-3 text-center">
+                                            <img src="https://www.epinkasa.com/images/add-to-basket.svg" alt="">
+                                        </div>
+                                        <div class="col-7">
+                                            <span class="number">3</span>
+                                            <div class="step-title fs-18 font-weight-bold">Doping</div>
+                                            <div class="step-text mt-1 fs-11">
+                                                Bu alandan ilanınızı öne çıkarabilir yada vitrine ekleyebilirsiniz.
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="col-xl-3 col-12">
+                                <div id="ileri3_3" class="step-bg">
+                                    <div class="row align-items-center no-gutters justify-content-center">
+                                        <div class="col-3 text-center">
+                                            <img src="https://www.epinkasa.com/images/contract.svg" alt="">
+                                        </div>
+                                        <div class="col-7">
+                                            <span class="number">4</span>
+                                            <div class="step-title fs-18 font-weight-bold">Sözleşme</div>
+                                            <div class="step-text mt-1 fs-11">
+                                                Bu alandan site sözleşmemizi kabul etmeniz gerekmektedir.
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="myContainer">
+                </div>
+            </div>
+            <div class="form-container animated active flipInX">
+                <div class="mt-xl-4 mt-3 bg-white p-3">
+                    <div class="row gutters-small">
+                        <div class="col-xl-6 col-12">
+                            <div class="step3-vitrin-ilani">
+                                <div class="fs-20 font-weight-bold mb-3">Vitrin İlanı</div>
+                                <select name="vitrin_tarih" id="" class="form-control mb-3 w-75">
+                                    <option value="0">Seçim yapmazsanız işlem yapılmaz.</option>
+                                    <option value="1">1 Gün - 1TL</option>
+                                    <option value="3">3 Gün - 3TL</option>
+                                    <option value="5">5 Gün - 5TL</option>
+                                    <option value="7">7 Gün - 7TL</option>
+                                </select>
+                                <p class="m-0 p-0 fs-11">
+                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                                    Lorem Ipsum has been the industry's standard dummy text ever since the
+                                    1500s, when an unknown printer took a galley of type
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-xl-6 col-12 mt-xl-0 mt-3">
+                            <div class="step3-ilani-one-cikar">
+                                <div class="fs-20 font-weight-bold mb-3">İlanı Öne Çıkar</div>
+                                <select name="one_cikar_tarih" id="" class="form-control mb-3 w-75">
+                                    <option value="0">Seçim yapmazsanız işlem yapılmaz.</option>
+                                    <option value="1">1 Gün - 1TL</option>
+                                    <option value="3">3 Gün - 3TL</option>
+                                    <option value="5">5 Gün - 5TL</option>
+                                    <option value="7">7 Gün - 7TL</option>
+                                </select>
+                                <p class="m-0 p-0 fs-11">
+                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                                    Lorem Ipsum has been the industry's standard dummy text ever since the
+                                    1500s, when an unknown printer took a galley of type
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    @*<div class="step-buttons border-top mt-3 pt-3">
+                        <div class="row gutters-xsmall justify-content-xl-between">
+                            <div class="col-xl-auto col-6 mb-xl-0 mb-2">
+                                <a class="back btn btn-primary"><i class="icon-left-open"></i> ÖNCEKİ ADIM</a>
+                            </div>
+                            <div class="col-xl-auto col-6 mb-xl-0 mb-2">
+                                <button id="ileri3" type="submit" class="next btn btn-primary">SONRAKİ ADIM <i class="icon-right-open"></i></button>
+
+                            </div>
+                        </div>
+                    </div>*@
+                </div>
+            </div>
+            <div class="form-container animated active flipInX">
+                <div class="mt-xl-4 mt-3 bg-white p-3">
+                    <div class="bg-grey step4-scroll mb-3 p-3">
+                        <h2>İlan Sözleşmesi</h2><p style="text-align:justify"></p><p style="text-align:justify"><strong>Oyun içi hizmet :</strong> Account , karakter , char , item , gold bar ( altın, külçe/oyunparası ) vb. oyun içi materyallerin tümü bundan böyle bu sözleşmede Oyun içi Hizmet olarak anılacaktır .<br> <br> <strong>TARAFLAR</strong><br> 1 ) SİTE : Alıcı ve satıcı arasında köprü kurarak Oyun içi Hizmet ; Account , karakter , char , item , goldbar (altın,külçe/oyun parası ) vb. oyun içi materyallerin tümünü aracılık hizmetlerini yürüten www.epinkasa.com domaini üzerinde bulunan şirket bundan böyle bu sözleşmede EPİNKASA olarak anılacaktır.</p><p>2 ) SATICI : Sitede Oyun içi Hizmet ; Account , karakter , char , item , gold bar (altın,külçe/oyun parası )vb. materyallerin tümüyle ilgili bilgileri ,resimlerin tanıtım sayfalarını yaratarak , onları müşterilerine/müşterilerimize ulaştıran her nevi 3. şahıs veya şahıslar bundan böyle bu sözleşmede Satıcı olarak anılacaktır.</p><p>3 ) ALICI : Sitede Oyun içi Hizmet ; Account , karakter , char , item , gold bar (altın,külçe/oyun parası ) vb. oyun içi materyallerin tümünü teslim alacak her nevi şahıs veya şahıslar bundan böyle bu sözleşmede Alıcı olarak anılacaktır.<br> <br> <strong>SATICI</strong><br> Madde-1 SATICI satışını yaptığı herhangi bir oyundaki account - karakter veya hesabını oyun destek servisi ile yazışarak geri almayacağını taahhür eder.Aldığı taktirde 5000 € ( Beşbin Euro ) tazminat ödemekle yükümlüdür. (TCK MADDE 157- Hileli davranışlarla bir kimseyi aldatıp , onun veya başkasının zararına olarak , kendisine veya başkasına bir yarar sağlayan kişiye bir yıldan beş yıla kadar hapis ve beşbin güne kadar adli para cezası verilir.)</p><p>Madde-2 SATICI doğabilecek her türlü sorunda alıcıya yardımcı olmakla yükümlüdür. Satış tamamlandıktan sonra telefon ve ad soyad bilgileriniz alıcı ile paylaşılır.</p><p>Madde-3 SATICI ilan içerisinde kişisel bilgilerini (TC, Ad Soyad, Telefon, Mail vs.) ve ilana ait hesap bilgilerini kesinlikle paylaşmayacaktır. Satıcının bu bilgileri paylaşması sonuçunda oluşacak sorunlarda epinkasa.com &nbsp;sorumlu değildir.</p><p>Madde-4 SATICI satış yaptığı karakter veya accountun kendisinden önceki satıcısından da sorumludur.Herhangi geri alınma durumunda bunu mazeret olarak gösteremez.</p><p>Madde-5 SATICI EPİNKASA ilanlarına eklediği ilanın tüm bilgilerinin doğruluğunu , bilgilerin eksikliğinde satışın iptalini ve oluşabilecek hukuki yaptırımların sorumluluğunu kabul eder. Eklediği ilanın oyun içinde veya farklı bir sağlayıcıdan satmayacağını, aksi durumda ilanı EPİNKASA sağlayıcısından kaldırmalıdır . Bundan dolayı oluşabilecek ALICI mağduriyetindeki tüm hukuki yaptırımları kabul eder.</p><p>Madde-6 SATICI EPİNKASA sattığı account (karakter) ilanlarından alacağı bakiyenin 24 saat süre ile güvenlik amacıyla bekletilmesini kabul eder. EPİNKASA yönetimi SATICI ' dan doğrulama yapmak için kimlik bilgilerini ister, EPİNKASA hesabını geçici bir süre bloke eder , satıştan gelen ödemeyi kimlik doğrulaması sonuna kadar bekletir.</p><p><strong>ALICI</strong><br> Madde-6 ALICI EPİNKASA üzerinden satın aldığı ilanın EPİNKASA' un sadece aracı olduğunu ve satıştan sonraki sorumluluğun kendisine ait olduğunu kabul eder. Satış tamamlandıktan sonra ALICI , SATICI ' nın ad soyad ve telefon bilgilerini görebilir, satış sonrasında oluşabilecek sorunlarda SATICI ile direkt irtibata geçebilir. Satıcının hesabı geri alması sonucunda oluşabilecek sorunlarda alıcı EPİNKASA'ı sorumlu tutamaz, internet sitesi, forum ve sosyal medya hesaplarında EPİNKASA hakkında kötü paylaşımlar yapamaz.</p><p>Madde-7 ALICI EPİNKASA üzerinden satın aldığı ilanın teslimat süresi bitimine kadar teslimatın yapılması için beklemekle yükümlüdür. İlan bilgilerinde hata olmadığı sürece satın alma iptal edilemez.</p><p>Madde-8 ALICI EPİNKASA üzerinden satın aldığı ilanın teslimatında çıkabilecek itilaflar sonucu MARKET yönetimi alıcıdan doğrulama yapmak için kimlik bilgilerini isteyebilir. EPİNKASA hesabını geçici bir süre bloke edebilir , ALICI ' nın yaptığı ödemeyi kimlik doğrulaması ve sorunu çözene kadar &nbsp;bekletebilir.</p><p><strong>WEBSİTESİ</strong><br> Madde-9 Yukarıdaki şartlara uyulmaması halinde doğabilecek ihtilaflarda AFYON Mahkemeleri MARKET adına yetkilidir.</p><p>Madde-10 Doğabilecek itilaflarda MARKET ALICI’nın adına dava açma hakkını saklı tutar.</p><p>Madde-11 epinkasa.com ilan pazarında listelenen ürün ve/veya hizmetlerin sahibi veya satıcısı değildir. epinkasa.com, kullanıcılar tarafından sağlanan içeriklerin ve satışa sunulan ürün ve hizmetlerin doğruluğu, kalitesi, güvenliği veya bu ürün ve/veya hizmetlerin yasal olup olmadığı hususunda herhangi bir beyan, garanti veya taahhütte bulunmamaktadır. Doğabilecek itilaflarda MARKET ALICI’nın adına dava açma hakkını saklı tutar.</p><p>Madde-12 epinkasa.com sitesi müşterisi konumunda olan hem alıcı hem de satıcının internet ortamında alışveriş yapmalarını sağlayan, bu aşamada satıcı tarafından ürünün alıcıya teslimi; alıcı tarafından da ürün bedelinin satıcıya aktarılması ilişkilerine aracılık hizmetini veren bir kuruluştur. epinkasa.com’un sorumluluğu, satışa konu ürünün internet ortamında sorunsuz bir şekilde tesliminden ve alıcının onayı üzerine bedelin satıcıya aktarılmasından ibaret olup; onay sonrası teslimden sonra ürünün herhangi bir sebeple satıcı tarafından internet ortamı kullanılmak suretiyle tekrar ele geçirilmesinden epinkasa.com’un herhangi bir sorumluluğu olmayacağı gibi; bunu engellemek adına alabileceği hiçbir önlem de bulunmamaktadır.Böyle bir ihtilaf gerçekleşmesi halinde tarafların aralarındaki hukuki meseleyi hukuk mahkemeleri ya da şartları var ise cumhuriyet savcılıkları yolu ile gidermeleri gerekli olup; epinkasa.com’un sorumluluğu, resmi bir talep olması halinde alıcı ve satıcının kimliklerinin ve işlem detaylarının ilgili kurumlar ile paylaşılmasından ibarettir.</p><p>Madde-13 EPİNKASA, 18 yaşını doldurmamış kullanıcılardan ebeveyn kimlik ve iletişim bilgilerini talep etme hakkını saklı tutar. İşbu sözleşme; 13 Maddeden oluşmaktadır. ALICI ve SATICI yukarıdaki 13 maddenin tüm şartlarını kabul etmiş sayılır.</p><p><span style="color:red">TCK MADDE 157- Hileli davranışlarda bir kimseyi aldatıp,onun veya başkasının zararına olarak, kendisine veya başkasına bir yarar sağlayan kişiye bir yıldan beş yıla kadar hapis ve beşbin güne kadar adli para cezası verilir.</span></p>
+                    </div>
+                    <div>
+                        <label class="form-label">
+                            <input required="" id="sozlesme" type="checkbox">
+                            <span></span>
+                            Sözleşme Yazısı
+                        </label>
+                    </div>
+                    <div class="step-buttons border-top mt-3 pt-3">
+                        <div class="row gutters-xsmall justify-content-xl-between">
+                            <div class="col-xl-auto col-6 mb-xl-0 mb-2">
+                                <a class="btn btn-primary back"><i class="icon-left-open"></i> ÖNCEKİ ADIM</a>
+                            </div>
+                            <div class="col-xl-auto col-6 mb-xl-0 mb-2">
+                                <input type="hidden" name="category_id" value="407" id="category_id">
+                                <input type="hidden" name="category_comission" value="5" id="category_comission">
+                                <button onclick="if (document.getElementById('sozlesme').checked == true) {document.getElementById('ilanform').submit()} else {Swal.fire({icon: 'error',title: 'Oops...',text: 'Sözleşmeyi onaylamadan ilan oluşturamazsınız.'})}" type="submit" class="btn btn-primary">İLAN OLUŞTUR <i class="icon-right-open"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</main>

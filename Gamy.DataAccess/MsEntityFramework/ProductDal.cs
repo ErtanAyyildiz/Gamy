@@ -4,11 +4,6 @@ using Gamy.DataAccess.Database;
 using Gamy.DataAccess.Repositories;
 using Gamy.Entity.Modals;
 using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Gamy.DataAccess.MsEntityFramework
 {
@@ -32,12 +27,12 @@ namespace Gamy.DataAccess.MsEntityFramework
                 .ToList();
         }
 
-        public Product GetProductIsSponsered()
-        {
-            return _db.Products
-                .Where(p => p.Sponsor == true)
-                .First();
-        }
+        //public Product GetProductIsSponsered()
+        //{
+        //    return _db.Products
+        //        .Where(p => p.Sponsor == true)
+        //        .First();
+        //}
 
         public List<Product> GetProductsOrderByCreationDate(PaginationFilter filter)
         {
@@ -62,7 +57,16 @@ namespace Gamy.DataAccess.MsEntityFramework
                 .ToList();
         }
 
-        public List<Product> GetProductsWithSubCategory(int userId)
+        public List<Product> GetProductsWithSubCategory(int subCategoryId)
+        {
+            return _db.Products
+                .Include(s => s.SubCategory)
+                .ThenInclude(c => c.Category)
+                .Where(p => p.SubCategoryId == subCategoryId)
+                .ToList();
+        }
+
+        public List<Product> GetProductsWithSubCategoryByUserId(int userId)
         {
             return _db.Products
                 .Include(s => s.SubCategory)
@@ -76,6 +80,7 @@ namespace Gamy.DataAccess.MsEntityFramework
             return _db.Products
                 .Include(u => u.User)
                 .Include(c => c.Comments)
+                .Include(d=>d.Deliveries)
                 .Include(s => s.SubCategory)
                 .ThenInclude(c => c.Category)
                 .Where(p => p.Id == productId)

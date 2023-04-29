@@ -1,0 +1,132 @@
+﻿@model Gamy.DTO.IlanDTOs.IlanProductCategoriesDTO
+
+<div class="myContainer">
+    <div class="mt-xl-4 mt-3 bg-white p-3 form-container active">
+        <div class="row gutters-small">
+            <div class="col-xl-4">
+                <div class="cat-selector p-3">
+                    <div class="cs-input">
+                        <input type="text" onkeyup="var value = $(this).val().toLowerCase();
+                               $(&quot;.button2&quot;).filter(function() {
+                               $(this).toggle($(this).text().toLowerCase().indexOf(value)> -1)
+                        });" placeholder="Arama Yapın...">
+                    </div>
+
+
+                    <ul id="kategori_1" class="cs-content">
+                        @foreach (var item in Model.Categories)
+                        {
+                            <li class="button2 @((Model.Product.SubCategory.CategoryId==item.Id)? "selected" : "")" onclick="selectItem(this)" value="@item.Id">
+                                <div class="row no-gutters align-items-center">
+                                    <div class="col-2">
+                                        <img src="/GamyEpin/uploads/category/38-kapak-10819350729268.png" alt="">
+                                    </div>
+                                    <div class="col-10 pl-2">
+                                        @item.Name
+                                    </div>
+                                </div>
+                            </li>
+
+                        }
+
+                    </ul>
+                </div>
+            </div>
+
+
+
+            @*@await Component.InvokeAsync("SubKategorySelector", Model.Product.SubCategory.CategoryId)
+            *@<div id="kategori_2_2" class="col-xl-4" style="display: block;">
+
+                <div class="cat-selector p-3">
+                    <div class="cs-input">
+                        <input type="text" onkeyup="var value = $(this).val().toLowerCase();
+                               $(&quot;.button3&quot;).filter(function() {
+                               $(this).toggle($(this).text().toLowerCase().indexOf(value)> -1)
+                        });" placeholder="Arama Yapın...">
+                    </div>
+
+                    <div id="subCategoryId" class="cs-content">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="step-buttons border-top mt-3 pt-3">
+        <div class="row gutters-xsmall justify-content-xl-between">
+            <div class="col-xl-auto col-6 mb-xl-0 mb-2">
+            </div>
+            <div class="col-xl-auto col-6 mb-xl-0 mb-2">
+                <a id="ileri1" class="btn btn-primary next" onclick="selectSubCategory(this)">SONRAKİ ADIM <i class="icon-right-open"></i></a>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    function selectSubCategory(item) {
+        var selectedCategoryId = $('.button3.selected').attr('value');
+        if (selectedCategoryId == undefined) {
+            const url = "/ilan/productedit/" + @Model.Product.SubCategoryId + "/" + @Model.Product.Id;
+            window.location.href = url;
+        } else {
+            const url = "/ilan/productedit/" + selectedCategoryId + "/" + @Model.Product.Id;
+            window.location.href = url;
+        }
+    }
+</script>
+
+<script>
+
+    function selectItemSubCategory(item) {
+        // Tüm elemanlardan "selected" sınıfını kaldır
+        const items = document.querySelectorAll("li");
+        items.forEach(function (element) {
+            element.classList.remove("selected");
+        });
+
+        // Tıklanan elemana "selected" sınıfını ekle
+        item.classList.add("selected");
+
+        const categoryId = item.getAttribute("value");
+    }
+</script>
+
+
+<script>
+
+    function selectItem(item) {
+        // Tüm elemanlardan "selected" sınıfını kaldır
+        const items = document.querySelectorAll("li");
+        items.forEach(function (element) {
+            element.classList.remove("selected");
+        });
+
+        // Tıklanan elemana "selected" sınıfını ekle
+        item.classList.add("selected");
+
+        const categoryId = item.getAttribute("value");
+
+        $.ajax({
+            url: '@Url.Action("GetSubCategories", "Ilan")',
+            type: 'GET',
+            dataType: 'json',
+            data: { categoryId: categoryId },
+            success: function (data) {
+                var listItems = '';
+                for (var i = 0; i < data.length; i++) {
+                    listItems += '<li class="button3" onclick="selectItemSubCategory(this)" value="' + data[i].id + '" > <div class="row no-gutters align-items-center"> <div class="col-2"> <img src="/GamyEpin/uploads/category/45-kapak-45589298447391.jpg" alt=""> </div> <div class="col-10 pl-2"> ' + data[i].name + '</div> </div> </li>';
+                }
+                $('#subCategoryId').html(listItems);
+            }
+        });
+
+        //const url = "/Ilan/SubCategory/" + item.getAttribute("value");
+        //window.location.href = url;
+    }
+</script>
+
+<style>
+    .selected {
+        background-color: gray;
+    }
+</style>

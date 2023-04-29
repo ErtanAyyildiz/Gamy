@@ -20,7 +20,8 @@ namespace Gamy.Business.Concretes
 
         public void Add(AppUser entity)
         {
-            throw new NotImplementedException();
+            _unitOfWork.AppUser.Add(entity);
+            _unitOfWork.Save();
         }
 
         public AppUser GetByID(int id)
@@ -30,17 +31,19 @@ namespace Gamy.Business.Concretes
 
         public List<AppUser> GetList()
         {
-            throw new NotImplementedException();
+            return _unitOfWork.AppUser.GetList();
         }
 
         public void Remove(AppUser entity)
         {
-            throw new NotImplementedException();
+            _unitOfWork.AppUser.Remove(entity);
+            _unitOfWork.Save();
         }
 
         public void Update(AppUser entity)
         {
-            throw new NotImplementedException();
+            _unitOfWork.AppUser.Update(entity);
+            _unitOfWork.Save();
         }
     }
 }

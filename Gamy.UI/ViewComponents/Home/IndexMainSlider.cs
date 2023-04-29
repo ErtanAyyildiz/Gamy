@@ -16,11 +16,11 @@ namespace Gamy.UI.ViewComponents.Home
 
         public IViewComponentResult Invoke()
         {
-            var sponsorproduct = _productService.GetProductIsSponsered();
-            ViewBag.SponsorTitle = sponsorproduct.Name;
-            ViewBag.SponsorPrice = sponsorproduct.Price;
-            var user = _userService.GetByID(sponsorproduct.UserId);
-            ViewBag.UserName = user.UserName;
+            //var sponsorproduct = _productService.GetProductIsSponsered();
+            //ViewBag.SponsorTitle = sponsorproduct.Name;
+            //ViewBag.SponsorPrice = sponsorproduct.Price;
+            //var user = _userService.GetByID(sponsorproduct.UserId);
+            //ViewBag.UserName = user.UserName;
             return View();
         }
     }

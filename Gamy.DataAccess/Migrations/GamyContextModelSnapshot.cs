@@ -60,8 +60,14 @@ namespace Gamy.DataAccess.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
+                    b.Property<string>("AboutMe")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<int>("AccessFailedCount")
                         .HasColumnType("int");
+
+                    b.Property<decimal>("Balance")
+                        .HasColumnType("decimal(18,2)");
 
                     b.Property<DateTime>("BirthDateTime")
                         .HasColumnType("datetime2");
@@ -237,6 +243,28 @@ namespace Gamy.DataAccess.Migrations
                     b.ToTable("Comments");
                 });
 
+            modelBuilder.Entity("Gamy.Entity.Modals.Delivery", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<string>("DeliveryText")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("ProductId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ProductId");
+
+                    b.ToTable("Delivery");
+                });
+
             modelBuilder.Entity("Gamy.Entity.Modals.Order", b =>
                 {
                     b.Property<int>("Id")
@@ -310,7 +338,7 @@ namespace Gamy.DataAccess.Migrations
                     b.Property<bool>("Availability")
                         .HasColumnType("bit");
 
-                    b.Property<int>("CountClick")
+                    b.Property<int?>("CountClick")
                         .HasColumnType("int");
 
                     b.Property<DateTime>("CreateDate")
@@ -323,10 +351,10 @@ namespace Gamy.DataAccess.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<DateTime>("FinishDate")
+                    b.Property<DateTime?>("FinishDate")
                         .HasColumnType("datetime2");
 
-                    b.Property<bool>("Firsat")
+                    b.Property<bool?>("Firsat")
                         .HasColumnType("bit");
 
                     b.Property<string>("ImageUrl")
@@ -336,6 +364,9 @@ namespace Gamy.DataAccess.Migrations
                     b.Property<string>("Name")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("OneCikanDateTime")
+                        .HasColumnType("datetime2");
 
                     b.Property<bool>("OneCikanUrun")
                         .HasColumnType("bit");
@@ -350,10 +381,10 @@ namespace Gamy.DataAccess.Migrations
                     b.Property<int?>("SellerId")
                         .HasColumnType("int");
 
-                    b.Property<bool>("Sponsor")
+                    b.Property<bool?>("Sponsor")
                         .HasColumnType("bit");
 
-                    b.Property<int>("StockAmount")
+                    b.Property<int?>("StockAmount")
                         .HasColumnType("int");
 
                     b.Property<bool>("StokluUrun")
@@ -367,6 +398,9 @@ namespace Gamy.DataAccess.Migrations
 
                     b.Property<bool>("Vitrin")
                         .HasColumnType("bit");
+
+                    b.Property<DateTime?>("VitrinDateTime")
+                        .HasColumnType("datetime2");
 
                     b.Property<int>("WarrantyPeriod")
                         .HasColumnType("int");
@@ -590,6 +624,15 @@ namespace Gamy.DataAccess.Migrations
                     b.Navigation("User");
                 });
 
+            modelBuilder.Entity("Gamy.Entity.Modals.Delivery", b =>
+                {
+                    b.HasOne("Gamy.Entity.Modals.Product", null)
+                        .WithMany("Deliveries")
+                        .HasForeignKey("ProductId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
             modelBuilder.Entity("Gamy.Entity.Modals.Order", b =>
                 {
                     b.HasOne("Gamy.Entity.Modals.Seller", null)
@@ -742,6 +785,8 @@ namespace Gamy.DataAccess.Migrations
             modelBuilder.Entity("Gamy.Entity.Modals.Product", b =>
                 {
                     b.Navigation("Comments");
+
+                    b.Navigation("Deliveries");
                 });
 
             modelBuilder.Entity("Gamy.Entity.Modals.Seller", b =>

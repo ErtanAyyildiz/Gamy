@@ -28,6 +28,7 @@ namespace Gamy.DataAccess.Repositories
             Comment = new CommentDal(_db);
             AppUser = new AppUserDal(_db);
             SubCategory = new SubCategoryDal(_db);
+            Delivery = new DeliveryDal(_db);
         }
 
         public ICartDal Cart { get; private set; }
@@ -41,6 +42,7 @@ namespace Gamy.DataAccess.Repositories
         public ICommentDal Comment { get; private set; }
         public IAppUserDal AppUser { get; private set; }
         public ISubCategoryDal SubCategory { get; private set; }
+        public IDeliveryDal Delivery { get; private set; }
 
         public void Save()
         {

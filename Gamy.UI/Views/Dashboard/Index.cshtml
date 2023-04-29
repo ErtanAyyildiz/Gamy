@@ -192,41 +192,43 @@
                             </div>
                         </div>
                     </div>
-                    @foreach(var item in Model)
-                    {
+
                     <div class="mt-3">
                         <div class="title-style2">İlan Özeti</div>
                         <div class="bg-grey text-center mt-3 p-xl-5 pt-4 pb-4">
                             <ul class="product-lister row gutters-small">
-                                <li class="col-xl-2 col-lg-3 col-md-4 col-sm-6 col-12 mb-3 mobil-boyut">
-                                    <div class="product">
-                                        <div class="p-1">
-                                            <div class="product-img">
-                                                <figure>
-                                                    <a href="/product/@item.Name/@item.Id">
-                                                        <img class="lazy" data-original="/GamyEpin/uploads/advert/93062015503950-kapak-62983609935970.png" alt="" src="https://www.epinkasa.com/uploads/advert/93062015503950-kapak-62983609935970.png" style="">
-                                                    </a>
-                                                </figure>
-                                                <div class="user-wrapper">
-                                                    <div class="user-profile">
-                                                        <div class="user-infos">
-                                                            <span>@item.Name</span>
+                                @foreach (var item in Model)
+                                {
+                                    <li class="col-xl-2 col-lg-3 col-md-4 col-sm-6 col-12 mb-3 mobil-boyut">
+
+                                        <div class="product">
+                                            <div class="p-1">
+                                                <div class="product-img">
+                                                    <figure>
+                                                        <a href="/product/@item.Name/@item.Id">
+                                                            <img class="lazy" data-original="/GamyEpin/uploads/advert/93062015503950-kapak-62983609935970.png" alt="" src="https://www.epinkasa.com/uploads/advert/93062015503950-kapak-62983609935970.png" style="">
+                                                        </a>
+                                                    </figure>
+                                                    <div class="user-wrapper">
+                                                        <div class="user-profile">
+                                                            <div class="user-infos">
+                                                                <span>@item.Name</span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="user-other-game">
+                                                            <a href="/category/@item.SubCategory.Name/@item.SubCategory.CategoryId/@item.SubCategoryId"><img class="lazy" data-original="https://www.epinkasa.com/uploads/category/407-kapak-68266194950691.png" alt="" data-toggle="tooltip" data-placement="top" title="" src="https://www.epinkasa.com/uploads/category/407-kapak-68266194950691.png" data-original-title="Valorant Random Hesap" style=""></a>
                                                         </div>
                                                     </div>
-                                                    <div class="user-other-game">
-                                                        <a href="/category/@item.SubCategory.Name/@item.SubCategory.CategoryId/@item.SubCategoryId"><img class="lazy" data-original="https://www.epinkasa.com/uploads/category/407-kapak-68266194950691.png" alt="" data-toggle="tooltip" data-placement="top" title="" src="https://www.epinkasa.com/uploads/category/407-kapak-68266194950691.png" data-original-title="Valorant Random Hesap" style=""></a>
-                                                    </div>
                                                 </div>
-                                            </div>
-                                            <div class="product-infos">
-                                                <div class="row gutters-xxsmall align-items-center">
-                                                    <div class="col-auto">
-                                                        <a href="https://www.epinkasa.com/ilan/update/5392" data-toggle="tooltip" data-placement="top" title="" data-original-title="Düzenle"><img height="32px" class="lazy" data-original="https://www.epinkasa.com/images/editing.png" alt="" src="https://www.epinkasa.com/images/editing.png" style=""></a>
-                                                    </div>
-                                                    <div class="col-auto">
-                                                        <div onclick="doping('5392');" data-toggle="modal" data-target="#doping"><a onclick="doping('5392');" href="javascript:void(0);" data-toggle="tooltip" data-placement="top" title="" data-target="#doping" data-original-title="Doping Ekle"><img height="32px" onclick="doping('5392');" class="lazy" data-original="https://www.epinkasa.com/images/rocket.png" alt="" src="https://www.epinkasa.com/images/rocket.png" style=""></a></div>
-                                                    </div>
-                                                    <div onclick="
+                                                <div class="product-infos">
+                                                    <div class="row gutters-xxsmall align-items-center">
+                                                        <div class="col-auto">
+                                                            <a href="/ilan/update/@item.Id" data-toggle="tooltip" data-placement="top" title="" data-original-title="Düzenle"><img height="32px" class="lazy" data-original="https://www.epinkasa.com/images/editing.png" alt="" src="https://www.epinkasa.com/images/editing.png" style=""></a>
+                                                        </div>
+                                                        <div class="col-auto">
+                                                            <div onclick="doping('@item.Id');" data-toggle="modal" data-target="#doping"><a onclick="doping('@item.Id');" href="javascript:void(0);" data-toggle="tooltip" data-placement="top" title="" data-target="#doping" data-original-title="Doping Ekle"><img height="32px" onclick="doping('@item.Id');" class="lazy" data-original="https://www.epinkasa.com/images/rocket.png" alt="" src="https://www.epinkasa.com/images/rocket.png" style=""></a></div>
+                                                        </div>
+                                                        <div onclick="
                                                          Swal.fire({
                                                          title: 'Emin misin?' ,
                                                          text: 'İlanınızı silmek istediğinizden emin misiniz?' ,
@@ -243,23 +245,25 @@
                                                         }
                                                         })
                                                         " class="col-auto">
-                                                        <a data-toggle="tooltip" data-placement="top" title="" data-original-title="İlanı sil"><img height="32px" class="lazy" data-original="https://www.epinkasa.com/images/cancel4.png" alt="" src="https://www.epinkasa.com/images/cancel4.png" style=""></a>
+                                                            <a data-toggle="tooltip" data-placement="top" title="" data-original-title="İlanı sil"><img height="32px" class="lazy" data-original="https://www.epinkasa.com/images/cancel4.png" alt="" src="https://www.epinkasa.com/images/cancel4.png" style=""></a>
+                                                        </div>
                                                     </div>
                                                 </div>
-                                            </div>
-                                            <div class="product-price">
-                                                <div class="price">@item.Price₺</div>
-                                                <a href="https://www.epinkasa.com/ilan/test/5392" class="go"><i class="icon-right-open"></i></a>
+                                                <div class="product-price">
+                                                    <div class="price">@item.Price₺</div>
+                                                    <a href="https://www.epinkasa.com/ilan/test/5392" class="go"><i class="icon-right-open"></i></a>
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
-                                </li>
+
+                                    </li>
+                                }
+
                             </ul>
 
                         </div>
                     </div>
-                        
-                    }
+
                     <div class="mt-3">
                         <div class="title-style2">Rütbe Özeti</div>
                         <div class="row mt-xl4 mt-3">
@@ -343,8 +347,9 @@
                     </table>
                 </div>
                 <div class="tabs-content" id="hakkimda">
-                    <form method="post" id="hakkimdaform" action="https://www.epinkasa.com/dash/update/about">
-                        <input type="hidden" name="_token" value="qJ6A0SPERpWEqr94McIoCA7oIwA8Kf00mVv0YOzh"> <div class="mt-2">
+                    <form method="post" id="hakkimdaform" action="/Dashboard/HakkimdaGuncelle">
+                        @*                        <input type="hidden" name="_token" value="qJ6A0SPERpWEqr94McIoCA7oIwA8Kf00mVv0YOzh">
+                        *@                        <div class="mt-2">
                             <div class="title-style2">Hakkımda</div>
                             <div class="mt-2">
                                 <div class="alert alert-warning alert-dismissible fade show" role="alert">
@@ -356,11 +361,11 @@
                                 </div>
                             </div>
                             <div class="mt-2">
-<textarea class="form-control" name="about" id="about" cols="5" rows="5" placeholder="Buraya yazabilirsin..."></textarea>
+<textarea class="form-control" name="about" id="about" cols="10" rows="10" placeholder="Buraya yazabilirsin..."></textarea>
                             </div>
                         </div>
                         <div class="mt-2">
-                            <button type="button" onclick="hakkimdaguncelle()" class="btn btn-primary pt-3 pb-3 font-weight-bold fs-15 btn-block">
+                            <button type="submit" class="btn btn-primary pt-3 pb-3 font-weight-bold fs-15 btn-block">
                                 BİLGİLERİ GÜNCELLE
                             </button>
                         </div>
@@ -380,7 +385,7 @@
                             <form id="form1" style="margin:5px;" enctype="multipart/form-data" method="post" action="https://www.epinkasa.com/dash/update/avatar">
                                 <div style="float: left !important;" class="col-md-9 col-12 mb-xl-0 mb-md-3 mb-3">
                                     <div class="mt-2">
-                                        <input type="hidden" name="_token" value="qJ6A0SPERpWEqr94McIoCA7oIwA8Kf00mVv0YOzh"> <input type="hidden" id="selected_avatar" name="selected_avatar">
+                                        <input type="hidden" name="_token" value="JfzfiUzko7ajYE99ysNt8CQri0LnoQWzzwDuzHxr"> <input type="hidden" id="selected_avatar" name="selected_avatar">
                                         <img id="a" img="" src="https://www.epinkasa.com/images/avatar/001-gamer.png" alt="Avatar" class="selectable avatar">
                                         <img id="b" img="" src="https://www.epinkasa.com/images/avatar/002-character.png" alt="Avatar" class="selectable avatar">
                                         <img id="c" img="" src="https://www.epinkasa.com/images/avatar/003-knight.png" alt="Avatar" class="selectable avatar">
@@ -461,7 +466,7 @@
                     </div>
                     <div class="row">
                         <div class="col-md-6">
-                            <form id="sifreform" method="post" action="https://www.epinkasa.com/dash/update/password">
+                            <form id="sifreform" method="post" action="/Dashboard/SifreGuncelle">
                                 <input type="hidden" name="_token" value="qJ6A0SPERpWEqr94McIoCA7oIwA8Kf00mVv0YOzh"> <div class="mt-2">
                                     <div class="alert alert-info alert-dismissible fade show" role="alert">
                                         Şifre güncellemesi yaptığınızda mail onayınız alınacaktır.
@@ -471,24 +476,27 @@
                                     </div>
                                     <div class="mb-3">
                                         <div class="font-weight-semibold mb-2 fs-12">Eski Parolanız</div>
-                                        <input name="old_password" id="old_password" type="password" class="form-control">
+                                        <input name="OldPassword" id="OldPassword" type="password" class="form-control">
+
                                     </div>
                                     <div class="row gutters-small">
                                         <div class="col-xl-6 col-12">
                                             <div class="mb-3">
                                                 <div class="font-weight-semibold mb-2 fs-12">Yeni Parola</div>
-                                                <input name="new_password" id="new_password" type="password" class="form-control">
+                                                <input name="NewPassword" id="NewPassword" type="password" class="form-control">
+
                                             </div>
                                         </div>
                                         <div class="col-xl-6 col-12">
                                             <div class="mb-3">
                                                 <div class="font-weight-semibold mb-2 fs-12">Yeni Parola (Tekrar)</div>
-                                                <input name="new_password_repeat" id="new_password_repeat" type="password" class="form-control">
+                                                <input name="ConfirmPassword" id="ConfirmPassword" type="password" class="form-control">
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                                <button onclick="sifreguncelle()" type="button" class="btn btn-primary pt-3 pb-3 font-weight-bold fs-15 btn-block">
+
+                                <button type="submit" class="btn btn-primary pt-3 pb-3 font-weight-bold fs-15 btn-block">
                                     GÜNCELLE
                                 </button>
                             </form>
@@ -498,13 +506,14 @@
                         </div>
                     </div>
                 </div>
+
                 <div class="tabs-content" id="eposta">
                     <div class="mt-2">
                         <div class="title-style2">E-Posta Güncelle</div>
                     </div>
                     <div class="row">
                         <div class="col-md-6">
-                            <form id="emailform" method="post" action="https://www.epinkasa.com/dash/update/email">
+                            <form id="emailform" method="post" action="/Dashboard/EmailGuncelle">
                                 <input type="hidden" name="_token" value="qJ6A0SPERpWEqr94McIoCA7oIwA8Kf00mVv0YOzh"> <div class="mt-2">
                                     <div class="alert alert-info alert-dismissible fade show" role="alert">
                                         Eposta güncellemesi yaptığınızda mail onayınız alınacaktır.
@@ -514,24 +523,24 @@
                                     </div>
                                     <div class="mb-3">
                                         <div class="font-weight-semibold mb-2 fs-12">Eski E-Posta</div>
-                                        <input name="old_email" id="old_email" required="" type="email" class="form-control">
+                                        <input name="OldEmail" id="OldEmail" required="" type="email" class="form-control">
                                     </div>
                                     <div class="row gutters-small">
                                         <div class="col-xl-6 col-12">
                                             <div class="mb-3">
                                                 <div class="font-weight-semibold mb-2 fs-12">Yeni E-Posta</div>
-                                                <input name="new_email" id="new_email" required="" type="email" class="form-control">
+                                                <input name="NewEmail" id="NewEmail" required="" type="email" class="form-control">
                                             </div>
                                         </div>
                                         <div class="col-xl-6 col-12">
                                             <div class="mb-3">
                                                 <div class="font-weight-semibold mb-2 fs-12">Yeni E-Posta (Tekrar)</div>
-                                                <input name="new_email_repeat" required="" id="new_email_repeat" type="email" class="form-control">
+                                                <input name="ConfirmEmail" required="" id="ConfirmEmail" type="email" class="form-control">
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                                <button type="button" onclick="emailguncelle()" class="btn btn-primary pt-3 pb-3 font-weight-bold fs-15 btn-block">
+                                <button type="submit" class="btn btn-primary pt-3 pb-3 font-weight-bold fs-15 btn-block">
                                     GÜNCELLE
                                 </button>
                             </form>
@@ -825,3 +834,10 @@
         </div>
     </div>
 </main>
+
+<script>
+    var errorMessage = "@Html.Raw(TempData["ErrorMessage"] ?? "")";
+    if (errorMessage !== "") {
+        alert(errorMessage);
+    }
+</script>

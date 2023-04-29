@@ -1,6 +1,7 @@
 ﻿using FluentValidation;
 using Gamy.Business.Abstracts;
 using Gamy.Business.Concretes;
+using Gamy.Business.Services;
 using Gamy.Business.Validators;
 using Gamy.Entity.Modals;
 using Microsoft.Extensions.DependencyInjection;
@@ -18,6 +19,10 @@ namespace Gamy.Business.IoC
             services.AddScoped<IAppUserService, AppUserService>();
             services.AddScoped<ICategoryService, CategoryService>();
             services.AddScoped<ISubCategoryService, SubCategoryService>();
+            services.AddScoped<IDeliveryService, DeliveryService>();
+
+            services.AddScoped<IIsActiveService, IsActiveService>();
+
 
             services.AddScoped<IValidator<Order>, OrderValidator>();
             services.AddScoped<IValidator<Cart>, CartValidator>();

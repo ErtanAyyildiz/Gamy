@@ -13,6 +13,8 @@ namespace Gamy.Entity.Modals
         public string NameSurname { get; set; }
         public bool IsSeller { get; set; }
         public DateTime BirthDateTime { get; set; }
+        public string? AboutMe { get; set; }
+        public decimal Balance { get; set; }
 
         public List<Product> Products { get; set; }
         public List<Order> Orders { get; set; }

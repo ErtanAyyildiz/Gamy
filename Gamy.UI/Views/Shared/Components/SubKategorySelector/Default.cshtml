@@ -1,0 +1,29 @@
+﻿@model List<SubCategory>
+
+<div id="kategori_2_2" class="col-xl-4" style="display: block;">
+
+    <div class="cat-selector p-3">
+        <div class="cs-input">
+            <input type="text" onkeyup="var value = $(this).val().toLowerCase();
+                   $(&quot;.button3&quot;).filter(function() {
+                   $(this).toggle($(this).text().toLowerCase().indexOf(value)> -1)
+            });" placeholder="Arama Yapın...">
+        </div>
+        <div id="kategori_2">
+            @foreach (var item in Model)
+            {
+                <li class="button3" id="edit_category_45" this.style='background: url(../images/epinkasa-pattern-dark.png) #003b70; border-radius: 5px; border-radius: 5px; padding:3px;' style="padding:3px;">
+                    <div class="row no-gutters align-items-center">
+                        <div class="col-2">
+                            <img src="/GamyEpin/uploads/category/45-kapak-45589298447391.jpg" alt="">
+                        </div>
+                        <div id="45" class="col-10 pl-2">
+                            @item.Name
+                        </div>
+                    </div>
+                </li>
+            }
+        </div>
+    </div>
+
+</div>

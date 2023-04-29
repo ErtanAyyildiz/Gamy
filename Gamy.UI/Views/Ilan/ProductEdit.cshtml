@@ -1,0 +1,350 @@
+﻿@model Product
+
+@{
+    ViewData["Title"] = "ProductEdit";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<main class="main-content pt-xl-4 pt-3">
+    <form id="ilanform" action="/Ilan/ProductEdit" method="post" enctype="multipart/form-data">
+        <input type="hidden" name="Id" value="@Model.Id">
+        <div class="container">
+            <div class="row align-items-center no-gutters justify-content-between">
+                <div class="col-xl-auto col-12 mb-xl-0 mb-2">
+                    <h1 class="m-0 p-0 fs-20 font-weight-bold">İlan Ekle</h1>
+                </div>
+                <div class="col-xl-auto col-12">
+                    <a href="https://www.epinkasa.com/help/center" class="btn-grey"><i>+</i> YARDIM AL</a>
+                </div>
+            </div>
+            <div class="form-wizard">
+                <div class="mt-xl-4 mt-3 bg-white p-3">
+                    <div class="ilan-step-sys steps">
+                        <ul class="row no-gutters">
+                            <li class="col-xl-3 col-12 active">
+                                <div class="step-bg">
+                                    <div class="row align-items-center no-gutters justify-content-center">
+                                        <div class="col-3 text-center">
+                                            <img src="https://www.epinkasa.com/images/shop-3.svg" alt="">
+                                        </div>
+                                        <div class="col-7">
+                                            <span class="number">1</span>
+                                            <div class="step-title fs-18 font-weight-bold">Kategori</div>
+                                            <div class="step-text mt-1 fs-11">
+                                                Bu alandan ilanınızı ekleyeceğiniz kategoriyi seçiniz.
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="col-xl-3 col-12 active">
+                                <div id="ileri1_1" class="step-bg">
+                                    <div class="row align-items-center no-gutters justify-content-center">
+                                        <div class="col-3 text-center">
+                                            <img src="https://www.epinkasa.com/images/online-shop.svg" alt="">
+                                        </div>
+                                        <div class="col-7">
+                                            <span class="number">2</span>
+                                            <div class="step-title fs-18 font-weight-bold">İlan Detayları</div>
+                                            <div class="step-text mt-1 fs-11">
+                                                Buradan ilanınızı başlık, açıklama vb ayarlarını ayarlayabilirsiniz.
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="col-xl-3 col-12">
+                                <div id="ileri2_2" class="step-bg">
+                                    <div class="row align-items-center no-gutters justify-content-center">
+                                        <div class="col-3 text-center">
+                                            <img src="https://www.epinkasa.com/images/add-to-basket.svg" alt="">
+                                        </div>
+                                        <div class="col-7">
+                                            <span class="number">3</span>
+                                            <div class="step-title fs-18 font-weight-bold">Doping</div>
+                                            <div class="step-text mt-1 fs-11">
+                                                Bu alandan ilanınızı öne çıkarabilir yada vitrine ekleyebilirsiniz.
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="col-xl-3 col-12">
+                                <div id="ileri3_3" class="step-bg">
+                                    <div class="row align-items-center no-gutters justify-content-center">
+                                        <div class="col-3 text-center">
+                                            <img src="https://www.epinkasa.com/images/contract.svg" alt="">
+                                        </div>
+                                        <div class="col-7">
+                                            <span class="number">4</span>
+                                            <div class="step-title fs-18 font-weight-bold">Sözleşme</div>
+                                            <div class="step-text mt-1 fs-11">
+                                                Bu alandan site sözleşmemizi kabul etmeniz gerekmektedir.
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="myContainer">
+                    <div class="form-container animated active flipInX">
+                        <div class="mt-xl-4 mt-3 bg-white p-3">
+                            <div class="border-bottom pb-xl-4 pb-3 mb-3">
+                                <div class="fs-16 font-weight-bold mb-2">Kategori</div>
+                                <div class="row gutters-small">
+                                    <div class="col-xl-3">
+                                        <div class="btn-blank" id="selected_category">@Model.SubCategory.Category.Name</div>
+                                    </div>
+                                    <div class="col-xl-3">
+                                        <a href="#" class="btn-blank dark back">
+                                            <i class="icon-change"></i> Kategori
+                                            Değiştir
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="border-bottom pb-xl-4 pb-3 mb-3">
+                                <div class="fs-16 font-weight-bold mb-2">İlan Tipi</div>
+                                <div class="row gutters-small">
+                                    <div class="col-xl-3">
+                                        <label class="is-label tab-item" tab-id="sanal-urun">
+                                            <input type="radio" name="type" value="1" id="sanal">
+                                            <div class="is-cursor d-flex justify-content-center align-items-center">
+                                                <span></span>
+                                                <div>Sanal Ürün</div>
+                                            </div>
+                                        </label>
+                                    </div>
+                                    <div class="col-xl-3">
+                                        <label class="is-label tab-item active" tab-id="stoklu-urun">
+                                            <input type="radio" name="type" value="2" id="stoklu">
+                                            <div class="is-cursor d-flex justify-content-center align-items-center">
+                                                <span></span>
+                                                <div>Stoklu Ürün</div>
+                                            </div>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="border-bottom pb-xl-4 pb-3 mb-3">
+                                <div class="fs-16 font-weight-bold mb-2">İlan Başlık</div>
+                                <input required="" name="Name" value="@Model.Name" id="ilan_ad" class="form-control">
+                            </div>
+                            <div class="border-bottom pb-xl-4 pb-3 mb-3">
+                                <div class="fs-16 font-weight-bold mb-2">Açıklama</div>
+                                <textarea name="Description">@Model.Description </textarea>
+                            </div>
+                            <div class="border-bottom pb-xl-4 pb-3 mb-3">
+                                <div class="row gutters-small">
+                                    <div class="col-xl-3 col-6 mb-xl-0 mb-2">
+                                        <div class="fs-16 font-weight-bold mb-2">Teslimat Süresi</div>
+                                        <div class="rounded border p-3 fs-12 font-weight-bold">
+                                            <select id="ilan_teslim_suresi" required="" name="DeliveryTime">
+                                                <option value="1">
+                                                    1 saat
+                                                </option>
+                                                <option value="2">
+                                                    2 saat
+                                                </option>
+                                                <option value="3">
+                                                    3 saat
+                                                </option>
+                                                <option value="4">
+                                                    4 saat
+                                                </option>
+                                                <option value="5">
+                                                    5 saat
+                                                </option>
+                                                <option value="6">
+                                                    6 saat
+                                                </option>
+                                                <option value="7">
+                                                    7 saat
+                                                </option>
+                                                <option value="8">
+                                                    8 saat
+                                                </option>
+                                                <option value="9">
+                                                    9 saat
+                                                </option>
+                                                <option value="10">
+                                                    10 saat
+                                                </option>
+                                                <option value="11">
+                                                    11 saat
+                                                </option>
+                                                <option value="12">
+                                                    12 saat
+                                                </option>
+                                                <option value="13">
+                                                    13 saat
+                                                </option>
+                                                <option value="14">
+                                                    14 saat
+                                                </option>
+                                                <option value="15">
+                                                    15 saat
+                                                </option>
+                                                <option value="16">
+                                                    16 saat
+                                                </option>
+                                                <option value="17">
+                                                    17 saat
+                                                </option>
+                                                <option value="18">
+                                                    18 saat
+                                                </option>
+                                                <option value="19">
+                                                    19 saat
+                                                </option>
+                                                <option value="20">
+                                                    20 saat
+                                                </option>
+                                                <option value="21">
+                                                    21 saat
+                                                </option>
+                                                <option value="22">
+                                                    22 saat
+                                                </option>
+                                                <option value="23">
+                                                    23 saat
+                                                </option>
+                                                <option value="24">
+                                                    24 saat
+                                                </option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-3 col-6 mb-xl-0 mb-2">
+                                        <div class="fs-16 font-weight-bold mb-2">İlan Fiyatı</div>
+                                        <div class="rounded border p-3 fs-12 font-weight-bold">
+                                            <input required="" onchange="hesapla(this.value)" value="@Model.Price" id="ilan_fiyat" name="ilan_fiyat" class="ilanFiyat" placeholder="Fiyat giriniz..">
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-3 col-6">
+                                        <div class="fs-16 font-weight-bold mb-2">Alacağınız Net Ücret</div>
+                                        <div id="net_fiyat" class="rounded border p-3 fs-12 font-weight-bold">₺ @(Model.Price * 0.95m) TL</div>
+                                    </div>
+                                    <div class="col-xl-3 col-6">
+                                        <div class="fs-16 font-weight-bold mb-2">Site Komisyonu</div>
+                                        <div id="site_komisyon" class="rounded border p-3 fs-12 font-weight-bold">₺ @(Model.Price * 0.05m) TL</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-content active" id="stoklu-urun">
+                                <div class="border-bottom pb-xl-4 pb-3 mb-3">
+                                    <div class="row no-gutters align-items-center justify-content-between">
+                                        <div class="col-xl-auto col-12">
+                                            <div class="fs-16 font-weight-bold mb-2">Dijital Kod</div>
+                                        </div>
+                                        <div class="col-xl-auto col-12 text-xl-right text-center">
+                                            <a class="add-more btn btn-success font-weight-bold fs-15">+ Kod Ekle</a>
+
+                                        </div>
+                                    </div>
+                                    <ul class="code-list">
+                                        <div class="after-add-more">
+                                                @foreach (var item in Model.Deliveries)
+                                                {
+                                            <li class="mt-3 control-group">
+                                                <div class="row gutters-xsmall">
+                                                    <div class="col-xl-11 col-11">
+                                                        <input type="text" class="form-control h-55" name="addmore[]" placeholder="Dijital kodu buraya yazınız..." value="@item.DeliveryText">
+                                                    </div>
+                                                    <div class="col-xl-1 col-1">
+                                                        <button class="btn btn-danger remove btn-block h-55" type="button">
+                                                            -
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </li>
+
+                                                }
+                                </div>
+                                </ul>
+                            </div>
+                        </div>
+                                @*<div class="mb-3">
+                        <div class="fs-16 font-weight-bold mb-2">İlan Kapağı</div>
+                        <br><strong>Resim yükle</strong>
+                        <div class="input-images-2"><div class="image-uploader has-files"><div class="upload-text"><i class="ie-upload"></i><span></span></div><input type="file" id="kapakimages-1682182760350" name="kapakimages[]" multiple="multiple"><div class="uploaded"><div class="uploaded-image" data-preloaded="true"><img src="https://www.epinkasa.com/image/uploads/advert/93062015503950-kapak-62983609935970.png"><button class="delete-image"><i class="material-icons">x</i></button><input type="hidden" name="oldkapakimages[]" value="uploads/advert/93062015503950-kapak-62983609935970.png"></div></div></div></div>
+                        </div>
+                        <div class="mb-3">
+                        <div class="fs-16 font-weight-bold mb-2">İlan Görselleri</div>
+                        <br>veya <strong>Resim yükle</strong>
+                        <div class="input-images-1"><div class="image-uploader"><div class="upload-text"><i class="ie-upload"></i><span></span></div><input type="file" id="images-1682182760422" name="ProductImage" multiple="multiple"><div class="uploaded"></div></div></div>
+                        </div>*@
+                        <label>
+                            Resim Seçin:
+                            <input type="file" name="ProductImage">
+                        </label>
+                        <div class="step-buttons border-top mt-3 pt-3">
+                            <div class="row gutters-xsmall justify-content-xl-between">
+                                <div class="col-xl-auto col-6 mb-xl-0 mb-2">
+                                    <a class="back btn btn-primary"><i class="icon-left-open"></i> ÖNCEKİ ADIM</a>
+                                </div>
+                                <div class="col-xl-auto col-6 mb-xl-0 mb-2">
+                                    <button id="ileri2" type="submit" class="next btn btn-primary">SONRAKİ ADIM <i class="icon-right-open"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</main>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    $(document).ready(function () {
+        // Kod ekleme butonuna tıklandığında
+        $('.add-more').click(function () {
+            // Yeni kod öğesi oluştur
+            var newItem = '<li class="mt-3 control-group">' +
+                '<div class="row gutters-xsmall">' +
+                '<div class="col-xl-11 col-11">' +
+                '<input type="text" class="form-control h-55" name="addmore[]" placeholder="Dijital kodu buraya yazınız..." value="">' +
+                '</div>' +
+                '<div class="col-xl-1 col-1">' +
+                '<button class="btn btn-danger remove btn-block h-55" type="button">-</button>' +
+                '</div>' +
+                '</div>' +
+                '</li>';
+
+            // Yeni kod öğesini listeye ekle
+            $('.after-add-more').append(newItem);
+        });
+
+        // Kod silme butonuna tıklandığında
+        $(document).on('click', '.remove', function () {
+            // Kod öğesini sil
+            $(this).parents('li').remove();
+        });
+    });
+</script>
+
+<script>
+    tinymce.init({
+        selector: 'textarea',
+        plugins: 'anchor autolink charmap codesample emoticons image link lists media searchreplace table visualblocks wordcount',
+        toolbar: 'undo redo | blocks fontfamily fontsize | bold italic underline strikethrough | link image media table | align lineheight | numlist bullist indent outdent | emoticons charmap | removeformat',
+    });
+</script>
+
+<script>
+    const selectedValue = '@Model.DeliveryTime';
+
+    // Tüm <option> elementlerini alın.
+    const options = document.querySelectorAll('#ilan_teslim_suresi option');
+
+    // Her <option> elementinin 'value' özelliğini kontrol edin.
+    // Seçilen seçeneğin 'value' özelliğine sahip olanı 'selected' olarak işaretleyin.
+    options.forEach(option => {
+        if (option.value === selectedValue) {
+            option.selected = true;
+        }
+    });
+</script>

@@ -1,0 +1,268 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<main class="main-content tab-system">
+
+    <div class="blur" style="background-image:url('https://www.epinkasa.com/images/img37.jpg')"></div>
+    <div class="main-container-safe sproduct-cover profile-page-inner bcgr" style="background-image:url('https://www.epinkasa.com/images/img37.jpg')">
+        <div class="main-container-safe">
+            <div class="sproduct-cover__wrapper">
+                <div class="sproduct-cover__inner">
+                    <div class="row align-items-center justify-content-md-end no-gutters">
+                        <div class="col-xl-10 col-md-7 col-12">
+                            <ul class="tabses d-flex justify-content-md-end profile-tabses">
+                                <li data-id="ilanlar" class="active"><span><img src="https://epinkasa.com/images/advertisement.svg" alt=""></span><span>İlanlar(2)</span></li>
+                                <li data-id="degerlendirmeler"><span><img src="https://epinkasa.com/images/approved-1.svg" alt=""></span><span>Değerlendirmeler</span></li>
+                                <li data-id="rutbeler"><span><img src="https://epinkasa.com/images/rank.svg" alt=""></span><span>Rütbeler</span></li>
+                                <li data-id="takipci"><span><img src="https://epinkasa.com/images/follow.svg" alt=""></span><span>Takipçi(0)</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="main-container bggrey pt-3 pb-3">
+        <div class="row gutters-small">
+            <div class="col-xl-2 col-md-3 col-12">
+                <div class="sproduct-dealer profile-page-dealer" style="width: 90%;">
+                    <div class="dealer-img" style="margin-left: 20%; margin-right: 20%;">
+                        <img src="https://www.epinkasa.com/images/avatar/001-gamer.png" alt="">
+                        <div class="status online"></div>
+                    </div>
+                    <div class="dealer-nick mt-3" style="margin-left: -10px !important;">
+                        <a href="">onlinegamer</a>
+                        <div class="dealer-status online mt-2">Üye şu an aktif.</div>
+                    </div>
+                    <div class="dealer-ranked">
+                        <span class="mr-2">
+                            <img src="https://www.epinkasa.com/images/badge
+1.png" alt="">
+                        </span>
+                        <span class="value"><b>Acemi</b><br>Satıcı</span>
+                    </div>
+                    <div class="dealer-ranks mt-3">
+                        <span><img src="https://epinkasa.com/images/gamer.svg" alt=""></span>
+                    </div>
+                    <div class="dealer-buttons mt-3" style="width: 200%;">
+                        <form id="mesajform" action="https://www.epinkasa.com/dash/message/start" method="post">
+                            <input type="hidden" name="_token" value="dH3u4TpeQ1m3AuwuckJ4o0ohyPKiomCu3s9KNOae"> <input type="hidden" name="user" value="onlinegamer">
+                        </form>
+                        <a style="text-align: center;" href="#" data-toggle="modal"> Kendinize mesaj gönderemesiniz.</a>
+                        <a style="text-align: center;" onclick="takip('dH3u4TpeQ1m3AuwuckJ4o0ohyPKiomCu3s9KNOae','15534')">
+                            Kendinizi Takip Edemesiniz
+                        </a>
+                    </div>
+                    <div class="dealer-about mt-3 pt-3">
+                        <div class="title mb-2"><font color="white">Hakkında</font></div>
+                        <div class="row no-gutters justify-content-between align-items-center">
+                            <div class="col-auto">
+                                <svg width="11" height="12" viewBox="0 0 11 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M8.05197 0.361802C8.02447 0.157481 7.85068 0 7.64038 0C7.41097 0 7.225 0.187416 7.225 0.418605V0.881445H3.58155V0.418605L3.57776 0.361802C3.55025 0.157481 3.37646 0 3.16616 0C2.93675 0 2.75078 0.187416 2.75078 0.418605V0.891793C1.0482 1.00879 0 2.11176 0 3.89151V8.94247C0 10.8524 1.175 12 3.05775 12H7.74219C9.62718 12 10.8 10.8716 10.8 8.98469V3.89151C10.8054 2.11164 9.76115 1.0091 8.05577 0.891846V0.418605L8.05197 0.361802ZM7.225 1.7186V2.25532L7.22879 2.31212C7.2563 2.51644 7.43009 2.67392 7.64038 2.67392C7.86979 2.67392 8.05577 2.48651 8.05577 2.25532V1.73113C9.2957 1.835 9.9721 2.58229 9.96812 3.89017V4.13262H0.829688V3.89146C0.829688 2.58312 1.51111 1.83407 2.75078 1.73091V2.25532L2.75457 2.31212C2.78208 2.51644 2.95587 2.67392 3.16616 2.67392C3.39557 2.67392 3.58155 2.48651 3.58155 2.25532V1.7186H7.225ZM0.829688 4.96983V8.94242C0.829688 10.384 1.62703 11.1628 3.05667 11.1628H7.74111C9.17566 11.1628 9.96811 10.4003 9.96811 8.98464L9.96812 4.96983H0.829688ZM8.28121 6.73106C8.28121 6.49987 8.09524 6.31245 7.86583 6.31245L7.80433 6.31627C7.60158 6.34399 7.44531 6.51913 7.44531 6.73106C7.44531 6.96224 7.63129 7.14966 7.86583 7.14966L7.92219 7.14584C8.12494 7.11812 8.28121 6.94298 8.28121 6.73106ZM5.40958 6.31245C5.63899 6.31245 5.82496 6.49987 5.82496 6.73106C5.82496 6.94298 5.66869 7.11812 5.46594 7.14584L5.40958 7.14966C5.17504 7.14966 4.98906 6.96224 4.98906 6.73106C4.98906 6.51913 5.14533 6.34399 5.34808 6.31627L5.40958 6.31245ZM3.36168 6.73106C3.36168 6.49987 3.1757 6.31245 2.9463 6.31245L2.8848 6.31627C2.68205 6.34399 2.52578 6.51913 2.52578 6.73106C2.52578 6.96224 2.71175 7.14966 2.94116 7.14966L3.00266 7.14584C3.20541 7.11812 3.36168 6.94298 3.36168 6.73106ZM7.86583 8.48159C8.09524 8.48159 8.28121 8.66901 8.28121 8.9002C8.28121 9.11212 8.12494 9.28726 7.92219 9.31498L7.86583 9.3188C7.63129 9.3188 7.44531 9.13139 7.44531 8.9002C7.44531 8.68827 7.60158 8.51313 7.80433 8.48541L7.86583 8.48159ZM5.82496 8.9002C5.82496 8.66901 5.63899 8.48159 5.40958 8.48159L5.34808 8.48541C5.14533 8.51313 4.98906 8.68827 4.98906 8.9002C4.98906 9.13139 5.17504 9.3188 5.40958 9.3188L5.46594 9.31498C5.66869 9.28726 5.82496 9.11212 5.82496 8.9002ZM2.9463 8.48159C3.1757 8.48159 3.36168 8.66901 3.36168 8.9002C3.36168 9.11212 3.20541 9.28726 3.00266 9.31498L2.94116 9.3188C2.71175 9.3188 2.52578 9.13139 2.52578 8.9002C2.52578 8.68827 2.68205 8.51313 2.8848 8.48541L2.9463 8.48159Z" fill="#B8B8B8"></path>
+                                </svg>
+                                Üyelik Tarihi
+                            </div>
+                            <div class="col-auto">
+                                <div class="value">15/04/2023</div>
+                            </div>
+                        </div>
+                        <div class="row no-gutters justify-content-between align-items-center mt-1">
+                            <div class="col-auto">
+                                <svg width="11" height="12" viewBox="0 0 11 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M5.11728 2.99757e-05C2.35186 -0.00936494 0.0930578 2.19081 0.00277669 4.94481L0 5.11575C0.0459653 6.46564 0.505244 7.75241 1.31417 8.81258L1.50415 9.0605C2.27628 10.0423 3.19387 10.904 4.22416 11.6143L4.47223 11.7813L4.50843 11.8097C4.86156 12.0634 5.33835 12.0634 5.69149 11.8097L5.72162 11.7849C6.53914 11.2547 7.293 10.6318 7.96828 9.92837C9.34116 8.47512 10.1686 6.84675 10.1999 5.19299L10.1999 5.13159C10.2093 2.35915 8.0159 0.0934022 5.27038 0.00281425L5.11728 2.99757e-05ZM5.11357 0.910547C7.38069 0.918297 9.22138 2.72972 9.28973 4.98553L9.29167 5.18443C9.2654 6.57093 8.53945 7.99954 7.31134 9.29955C6.68514 9.95182 5.98302 10.5316 5.22152 11.0247L5.17076 11.0629C5.12975 11.0985 5.06892 11.0985 5.02791 11.0629L4.97858 11.0257C3.84416 10.285 2.84852 9.34989 2.0372 8.2631C1.38369 7.40658 0.996431 6.3825 0.918484 5.3142L0.907031 5.09999C0.914731 2.8274 2.72057 0.981056 4.96945 0.912496L5.11357 0.910547ZM5.09681 3.24092C4.02377 3.24092 3.15391 4.11347 3.15391 5.18982C3.15391 6.26617 4.02377 7.13872 5.09681 7.13872C6.16985 7.13872 7.03971 6.26617 7.03971 5.18982C7.03971 4.11347 6.16985 3.24092 5.09681 3.24092ZM5.09619 4.15132C5.66794 4.15132 6.13144 4.61625 6.13144 5.18976C6.13144 5.76328 5.66794 6.22821 5.09619 6.22821C4.52443 6.22821 4.06094 5.76328 4.06094 5.18976C4.06094 4.61625 4.52443 4.15132 5.09619 4.15132Z" fill="#B8B8B8"></path>
+                                </svg>
+                                Şehir
+                            </div>
+                            <div class="col-auto">
+                                <div class="value"> Belirtilmemiş </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row gutters-xxsmall mt-1">
+                    <div class="col-6">
+                        <div class="selling-rate denied">
+                            <span class="value">0</span>
+                            <span class="icon">
+                                <svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M16.3636 11.4V0H20V11.4H16.3636ZM12.7273 0C13.2095 0 13.6719 0.200178 14.0129 0.556497C14.3539 0.912816 14.5455 1.39609 14.5455 1.9V11.4C14.5455 11.9225 14.3455 12.3975 14.0091 12.7395L8.02727 19L7.06364 17.993C6.81818 17.7365 6.66364 17.385 6.66364 16.986L6.69091 16.6915L7.55455 12.35H1.81818C0.809091 12.35 0 11.495 0 10.45V8.55C0 8.303 0.0454545 8.075 0.127273 7.8565L2.87273 1.159C3.14545 0.475 3.79091 0 4.54545 0H12.7273ZM12.7273 1.9H4.51818L1.81818 8.55V10.45H9.8L8.77273 15.504L12.7273 11.3715V1.9Z" fill="#FF2E00"></path>
+                                </svg>
+                            </span>
+                            <span class="title">Başarısız<br>Satış</span>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="selling-rate access">
+                            <span class="value">0</span>
+                            <span class="icon">
+                                <svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M3.63636 7.6V19H0V7.6H3.63636ZM7.27273 19C6.79052 19 6.32805 18.7998 5.98708 18.4435C5.6461 18.0872 5.45455 17.6039 5.45455 17.1V7.6C5.45455 7.0775 5.65455 6.6025 5.99091 6.2605L11.9727 0L12.9364 1.007C13.1818 1.2635 13.3364 1.615 13.3364 2.0045L13.3091 2.3085L12.4455 6.65H18.1818C19.1909 6.65 20 7.505 20 8.55V10.45C20 10.697 19.9545 10.925 19.8727 11.1435L17.1273 17.841C16.8545 18.525 16.2091 19 15.4545 19H7.27273ZM7.27273 17.1H15.4818L18.1818 10.45V8.55H10.1909L11.2182 3.496L7.27273 7.6285V17.1Z" fill="#00CAB2"></path>
+                                </svg>
+                            </span>
+                            <span class="title">Başarılı<br>Satış</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-10 col-md-9 col-12">
+                <div class="tabs-content" id="degerlendirmeler">
+                    <div class="dealer-total-rating">
+                        <div class="row justify-content-md-between align-items-center">
+                            <div class="col-md-6 col-12">
+                                <div class="total-value d-flex align-items-center">
+                                    <div class="value mr-2">
+                                        0.00
+                                    </div>
+                                    <div class="stars">
+                                        <i class="icon-star"></i>
+                                        <i class="icon-star"></i>
+                                        <i class="icon-star"></i>
+                                        <i class="icon-star"></i>
+                                        <i class="icon-star"></i>
+                                    </div>
+                                </div>
+                                <div class="total-comment">0 Değerlendirme</div>
+                            </div>
+                            <div class="col-md-6 col-12 mt-md-0 mt-3 text-md-right text-center">
+                                <div class="font-weight-bold">Bilgilendirme</div>
+                                Bu kısım gerçek kişiler tarafından yapılan değerlendirme bölümüdür.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="dealer-rates">
+                    </div>
+                </div>
+                <div class="tabs-content" id="rutbeler">
+                    <div class="bg-white p-3 btl-r0">
+                        <div class="row gutters-xsmall">
+                            <div class="col-xl-4 col-12 mb-xl-0 mb-2">
+                                <div class="rutbe-bg p-xl-4 p-3">
+                                    <div class="row gutters-xsmall align-items-center">
+                                        <div class="col-4">
+                                            <div class="rb-icon">
+                                                <img src="https://www.epinkasa.com/images/gamer.svg" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="col-8">
+                                            <div class="fs-18 font-weight-bold">Yeni Üye</div>
+                                            <div class="mt-1 fs-11">
+                                                Üyelik süresi 1 ayı geçmemiş.
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tabs-content active" id="ilanlar">
+                    <div class="bg-white p-3 btl-r0">
+                        <div class="section--product">
+                            <div class="section--area--product row gutters-xsmall">
+                                <div class="col-xl-2 col-lg-3 col-md-4 mobil-boyut" style="flex: 0 0 20%; max-width: 20%;">
+                                    <div class="product light-effect">
+                                        <a href="                                                https://www.epinkasa.com/category/valorant-random-hesap/407/1">
+                                            <div class="product--head">
+                                                <div class="image">
+                                                    <img height="22px" width="22px" class="rad-cat lazy" data-original="https://www.epinkasa.com/uploads/category/407-kapak-68266194950691.png" src="https://www.epinkasa.com/uploads/category/407-kapak-68266194950691.png" style="">
+                                                </div>
+                                                <div data-toggle="tooltip" data-placement="top" title="" class="product--cate" data-original-title="Valorant Random Hesap">
+                                                    Valorant Random Hesap
+                                                </div>
+                                            </div>
+                                        </a>
+                                        <figure>
+                                            <a title="1+ Skin Garanti" href="https://www.epinkasa.com/ilan/1-skin-garanti/5689">
+                                                <img width="211" height="162" src="https://cloud.epinkasa.com/uploads/advert/minimum/50793096658410-kapak-80842575935866.png" class="lazy product--img" data-original="https://cloud.epinkasa.com/uploads/advert/minimum/50793096658410-kapak-80842575935866.png" style="">
+                                            </a>
+                                        </figure>
+                                        <a href="https://www.epinkasa.com/ilan/1-skin-garanti/5689">
+                                        </a><div class="caption">
+                                            <a href="https://www.epinkasa.com/ilan/1-skin-garanti/5689">
+                                            </a><a href="https://www.epinkasa.com/ilan/1-skin-garanti/5689" class="title" title="1+ Skin Garanti">
+                                                1+ Skin Garanti...
+                                                <p class="product--cate-name">
+                                                    1+ Skin Garanti...
+                                                </p>
+                                            </a>
+                                            <div class="bottom--price">
+                                                <div class="image">
+                                                    <a href="https://www.epinkasa.com/profile/onlinegamer" class="user" data-toggle="tooltip" data-placement="top" title="" data-original-title="onlinegamer">
+                                                        <span class="avatarnew">
+                                                            <img width="24" height="24" src="https://cloud.epinkasa.com/images/avatar/001-gamer.png" alt="">
+                                                        </span>
+                                                    </a>
+                                                </div>
+                                                <div class="bottom--area">
+                                                    <a href="https://www.epinkasa.com/ilan/1-skin-garanti/5689">10.00 ₺</a>
+                                                    <a href="https://www.epinkasa.com/profile/onlinegamer" class="user" data-toggle="tooltip" data-placement="top" title="" data-original-title="onlinegamer">
+                                                        <span>
+                                                        </span>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xl-2 col-lg-3 col-md-4 mobil-boyut" style="flex: 0 0 20%; max-width: 20%;">
+                                    <div class="product light-effect">
+                                        <a href="                                                https://www.epinkasa.com/category/cs-go-hesap-sat/42/1">
+                                            <div class="product--head">
+                                                <div class="image">
+                                                    <img height="22px" width="22px" class="rad-cat lazy" data-original="https://www.epinkasa.com/uploads/category/42-kapak-22639764890781.png" src="https://www.epinkasa.com/uploads/category/42-kapak-22639764890781.png" style="">
+                                                </div>
+                                                <div data-toggle="tooltip" data-placement="top" title="" class="product--cate" data-original-title="CS GO Hesap Satışı">
+                                                    CS GO Hesap Satışı
+                                                </div>
+                                            </div>
+                                        </a>
+                                        <figure>
+                                            <a title="test" href="https://www.epinkasa.com/ilan/test/5392">
+                                                <img width="211" height="162" src="https://cloud.epinkasa.com/uploads/advert/minimum/93062015503950-kapak-62983609935970.png" class="lazy product--img" data-original="https://cloud.epinkasa.com/uploads/advert/minimum/93062015503950-kapak-62983609935970.png" style="">
+                                            </a>
+                                        </figure>
+                                        <a href="https://www.epinkasa.com/ilan/test/5392">
+                                        </a><div class="caption">
+                                            <a href="https://www.epinkasa.com/ilan/test/5392">
+                                            </a><a href="https://www.epinkasa.com/ilan/test/5392" class="title" title="test">
+                                                test...
+                                                <p class="product--cate-name">
+                                                    test...
+                                                </p>
+                                            </a>
+                                            <div class="bottom--price">
+                                                <div class="image">
+                                                    <a href="https://www.epinkasa.com/profile/onlinegamer" class="user" data-toggle="tooltip" data-placement="top" title="" data-original-title="onlinegamer">
+                                                        <span class="avatarnew">
+                                                            <img width="24" height="24" src="https://cloud.epinkasa.com/images/avatar/001-gamer.png" alt="">
+                                                        </span>
+                                                    </a>
+                                                </div>
+                                                <div class="bottom--area">
+                                                    <a href="https://www.epinkasa.com/ilan/test/5392">10.00 ₺</a>
+                                                    <a href="https://www.epinkasa.com/profile/onlinegamer" class="user" data-toggle="tooltip" data-placement="top" title="" data-original-title="onlinegamer">
+                                                        <span>
+                                                        </span>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tabs-content" id="takipci">
+                    <div class="bg-white p-3 btl-r0">
+                        <div class="row gutters-xsmall">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>

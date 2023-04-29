@@ -18,6 +18,7 @@ namespace Gamy.UI.ViewComponents.Home
         public IViewComponentResult Invoke()
         {
             var validFiter = new PaginationFilter();
+            var product = _productService.GetList();
             var populardDataProduct = _productService.GetProductsOrderByNumberDescending(validFiter);
             if (populardDataProduct != null)
             {

@@ -22,4 +22,9 @@
     <ProjectReference Include="..\Gamy.DTO\Gamy.DTO.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="ViewComponents\Dashboard\" />
+    <Folder Include="wwwroot\images\" />
+  </ItemGroup>
+
 </Project>

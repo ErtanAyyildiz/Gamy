@@ -1,0 +1,225 @@
+﻿@model Gamy.DTO.IlanDTOs.CategoriesSubCategoriesDTO
+
+@{
+    ViewData["Title"] = "Insert";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<main class="main-content pt-xl-4 pt-3">
+    <form id="ilanform" enctype="multipart/form-data" method="post">
+        <input type="hidden" name="_token" value="pKl3MPGgafvZh4kMASMeKIu6kP1j6uzSZs0InU9H">
+        <div class="container">
+            <div class="row align-items-center no-gutters justify-content-between">
+                <div class="col-xl-auto col-12 mb-xl-0 mb-2">
+                    <h1 class="m-0 p-0 fs-20 font-weight-bold">İlan Ekle</h1>
+                </div>
+                <div class="col-xl-auto col-12">
+                    <a href="https://www.epinkasa.com/help/center" class="btn-grey"><i>+</i> YARDIM AL</a>
+                </div>
+            </div>
+
+            <div class="form-wizard">
+                <div class="mt-xl-4 mt-3 bg-white p-3">
+                    <div class="ilan-step-sys steps">
+                        <ul class="row no-gutters">
+                            <li class="col-xl-3 col-12 active">
+                                <div class="step-bg">
+                                    <div class="row align-items-center no-gutters justify-content-center">
+                                        <div class="col-3 text-center">
+                                            <img src="https://www.epinkasa.com/images/shop-3.svg" alt="">
+                                        </div>
+                                        <div class="col-7">
+                                            <span class="number">1</span>
+                                            <div class="step-title fs-18 font-weight-bold">Kategori</div>
+                                            <div class="step-text mt-1 fs-11">
+                                                Bu alandan ilanınızı ekleyeceğiniz kategoriyi seçiniz.
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="col-xl-3 col-12">
+                                <div id="ileri1_1" class="step-bg">
+                                    <div class="row align-items-center no-gutters justify-content-center">
+                                        <div class="col-3 text-center">
+                                            <img src="https://www.epinkasa.com/images/online-shop.svg" alt="">
+                                        </div>
+                                        <div class="col-7">
+                                            <span class="number">2</span>
+                                            <div class="step-title fs-18 font-weight-bold">İlan Detayları</div>
+                                            <div class="step-text mt-1 fs-11">
+                                                Buradan ilanınızı başlık, açıklama vb ayarlarını ayarlayabilirsiniz.
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="col-xl-3 col-12">
+                                <div id="ileri2_2" class="step-bg">
+                                    <div class="row align-items-center no-gutters justify-content-center">
+                                        <div class="col-3 text-center">
+                                            <img src="https://www.epinkasa.com/images/add-to-basket.svg" alt="">
+                                        </div>
+                                        <div class="col-7">
+                                            <span class="number">3</span>
+                                            <div class="step-title fs-18 font-weight-bold">Doping</div>
+                                            <div class="step-text mt-1 fs-11">
+                                                Bu alandan ilanınızı öne çıkarabilir yada vitrine ekleyebilirsiniz.
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="col-xl-3 col-12">
+                                <div id="ileri3_3" class="step-bg">
+                                    <div class="row align-items-center no-gutters justify-content-center">
+                                        <div class="col-3 text-center">
+                                            <img src="https://www.epinkasa.com/images/contract.svg" alt="">
+                                        </div>
+                                        <div class="col-7">
+                                            <span class="number">4</span>
+                                            <div class="step-title fs-18 font-weight-bold">Sözleşme</div>
+                                            <div class="step-text mt-1 fs-11">
+                                                Bu alandan site sözleşmemizi kabul etmeniz gerekmektedir.
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="myContainer">
+                    <div class="mt-xl-4 mt-3 bg-white p-3 form-container active">
+                        <div class="row gutters-small">
+                            <div class="col-xl-4">
+                                <div class="cat-selector p-3">
+                                    <div class="cs-input">
+                                        <input type="text" onkeyup="var value = $(this).val().toLowerCase();
+                                               $(&quot;.button2&quot;).filter(function() {
+                                               $(this).toggle($(this).text().toLowerCase().indexOf(value)> -1)
+                                        });" placeholder="Arama Yapın...">
+                                    </div>
+
+
+                                    <ul id="kategori_1" class="cs-content">
+                                        @foreach (var item in Model.Categories)
+                                        {
+                                            <li class="button2" onclick="selectItem(this)" value="@item.Id">
+                                                <div class="row no-gutters align-items-center">
+                                                    <div class="col-2">
+                                                        <img src="/GamyEpin/uploads/category/38-kapak-10819350729268.png" alt="">
+                                                    </div>
+                                                    <div class="col-10 pl-2">
+                                                        @item.Name
+                                                    </div>
+                                                </div>
+                                            </li>
+
+                                        }
+
+                                    </ul>
+                                </div>
+                            </div>
+
+
+                            @*@await Component.InvokeAsync("SubKategorySelector", Model.Product.SubCategory.CategoryId)
+                            *@<div id="kategori_2_2" class="col-xl-4" style="display: block;">
+
+                                <div class="cat-selector p-3">
+                                    <div class="cs-input">
+                                        <input type="text" onkeyup="var value = $(this).val().toLowerCase();
+                                               $(&quot;.button3&quot;).filter(function() {
+                                               $(this).toggle($(this).text().toLowerCase().indexOf(value)> -1)
+                                        });" placeholder="Arama Yapın...">
+                                    </div>
+
+                                    <div id="subCategoryId" class="cs-content">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="step-buttons border-top mt-3 pt-3">
+                        <div class="row gutters-xsmall justify-content-xl-between">
+                            <div class="col-xl-auto col-6 mb-xl-0 mb-2">
+                            </div>
+                            <div class="col-xl-auto col-6 mb-xl-0 mb-2">
+                                <a id="ileri1" class="btn btn-primary next" onclick="selectSubCategory(this)">SONRAKİ ADIM <i class="icon-right-open"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</main>
+<script>
+    function selectSubCategory(item) {
+        var selectedCategoryId = $('.button3.selected').attr('value');
+        if (selectedCategoryId == undefined) {
+            const url = "/ilan/productinsert/" + selectedCategoryId;
+            window.location.href = url;
+        } else {
+            const url = "/ilan/productinsert/" + selectedCategoryId;
+            window.location.href = url;
+        }
+    }
+</script>
+
+<script>
+
+    function selectItemSubCategory(item) {
+        // Tüm elemanlardan "selected" sınıfını kaldır
+        const items = document.querySelectorAll("li");
+        items.forEach(function (element) {
+            element.classList.remove("selected");
+        });
+
+        // Tıklanan elemana "selected" sınıfını ekle
+        item.classList.add("selected");
+
+        const categoryId = item.getAttribute("value");
+    }
+</script>
+
+
+<script>
+
+    function selectItem(item) {
+        // Tüm elemanlardan "selected" sınıfını kaldır
+        const items = document.querySelectorAll("li");
+        items.forEach(function (element) {
+            element.classList.remove("selected");
+        });
+
+        // Tıklanan elemana "selected" sınıfını ekle
+        item.classList.add("selected");
+
+        const categoryId = item.getAttribute("value");
+
+        $.ajax({
+            url: '@Url.Action("GetSubCategories", "Ilan")',
+            type: 'GET',
+            dataType: 'json',
+            data: { categoryId: categoryId },
+            success: function (data) {
+                var listItems = '';
+                for (var i = 0; i < data.length; i++) {
+                    listItems += '<li class="button3" onclick="selectItemSubCategory(this)" value="' + data[i].id + '" > <div class="row no-gutters align-items-center"> <div class="col-2"> <img src="/GamyEpin/uploads/category/45-kapak-45589298447391.jpg" alt=""> </div> <div class="col-10 pl-2"> ' + data[i].name + '</div> </div> </li>';
+                }
+                $('#subCategoryId').html(listItems);
+            }
+        });
+
+        //const url = "/Ilan/SubCategory/" + item.getAttribute("value");
+        //window.location.href = url;
+    }
+</script>
+
+<style>
+    .selected {
+        background-color: gray;
+    }
+</style>

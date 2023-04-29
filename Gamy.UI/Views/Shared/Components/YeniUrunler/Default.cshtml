@@ -9,8 +9,8 @@
                     <div class="p-0">
                         <div class="product-img">
                             <figure>
-                                <a title="@item.Name " href="/GamyEpin/ilan/random-hesap/4464.html">
-                                    <img src="images/lazy-epinkasa.webp" class="lazy" data-original="/GamyEpin/uploads/advert/minimum/44237592027245-kapak-35657470103571.jpg" />
+                                <a title="@item.Name " href="/product/@item.Name/@item.Id">
+                                    <img src="/GamyEpin/images/lazy-epinkasa.webp" class="lazy" data-original="/images/@item.ImageUrl" />
                                 </a>
                             </figure>
 
@@ -18,14 +18,14 @@
                             <div class="showcase" @(item.Vitrin == true ? "" : "hidden")>Vitrin İlanı</div>
                             <div class="user-wrapper">
                                 <div class="user-profile">
-                                    <a href="/GamyEpin/category/pubg-mobile-hesap-satisi/55/1.html">
+                                    <a href="/category/@item.SubCategory.Category.Name/@item.SubCategory.Category.Id/@item.SubCategoryId">
                                         <img class="lazy" data-original="/GamyEpin/uploads/category/55-kapak-62544063734589.png">
                                     </a>
-                                    <a data-toggle="tooltip" data-placement="top" title="@item.Name" class="kategoriyazi" href="/GamyEpin/category/pubg-mobile-hesap-satisi/55/1.html">@item.SubCategory.Name</a>
+                                    <a data-toggle="tooltip" data-placement="top" title="@item.Name" class="kategoriyazi" href="/category/@item.SubCategory.Category.Name/@item.SubCategory.Category.Id/@item.SubCategoryId">@item.SubCategory.Name</a>
                                 </div>
                             </div>
                         </div>
-                        <a title="@item.Name " href="/GamyEpin/ilan/random-hesap/4464.html">
+                        <a title="@item.Name " href="/product/@item.Name/@item.Id">
                             <div class="product-infos">
                                 <div class="text-truncate">@item.Name </div>
                                 <span>@item.Description</span>

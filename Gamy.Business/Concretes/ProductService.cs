@@ -46,11 +46,7 @@ namespace Gamy.Business.Concretes
             return _unitOfWork.Product.GetPageData(filter);
         }
 
-        public Product GetProductIsSponsered()
-        {
-            return _unitOfWork.Product.GetProductIsSponsered();
-        }
-
+     
         public List<Product> GetProductsOrderByCreationDate(PaginationFilter filter)
         {
             return _unitOfWork.Product.GetProductsOrderByCreationDate(filter);
@@ -61,9 +57,14 @@ namespace Gamy.Business.Concretes
             return _unitOfWork.Product.GetProductsOrderByNumberDescending(filter);
         }
 
-        public List<Product> GetProductsWithSubCategory(int userId)
+        public List<Product> GetProductsWithSubCategory(int subCategoryId)
         {
-            return _unitOfWork.Product.GetProductsWithSubCategory(userId);
+            return _unitOfWork.Product.GetProductsWithSubCategory(subCategoryId);
+        }
+
+        public List<Product> GetProductsWithSubCategoryByUserId(int userId)
+        {
+            return _unitOfWork.Product.GetProductsWithSubCategoryByUserId(userId);
         }
 
         public Product GetProductWithIlan(int productId)

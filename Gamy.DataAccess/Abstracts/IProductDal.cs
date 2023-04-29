@@ -11,11 +11,11 @@ namespace Gamy.DataAccess.Abstracts
 {
     public interface IProductDal:IRepository<Product>
     {
-        public Product GetProductIsSponsered();
         public List<Product> GetPageData(PaginationFilter filter);
         public List<Product> GetProductsOrderByNumberDescending(PaginationFilter filter);
         public List<Product> GetProductsOrderByCreationDate(PaginationFilter filter);
         public Product GetProductWithIlan(int productId);
-        public List<Product> GetProductsWithSubCategory(int userId);
+        public List<Product> GetProductsWithSubCategoryByUserId(int userId);
+        public List<Product> GetProductsWithSubCategory(int subCategoryId);
     }
 }

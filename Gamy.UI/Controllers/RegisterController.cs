@@ -37,14 +37,15 @@ namespace Gamy.UI.Controllers
                     UserName = p.UserName,
                     NameSurname= p.NameSurname,
                     PhoneNumber= p.Phone,
-                    BirthDateTime=p.BirthDateTime
+                    BirthDateTime=p.BirthDateTime,
+                    Balance=0
                 };
 
                 var result=await _userManager.CreateAsync(user, p.Password);
 
                 if (result.Succeeded)
                 {
-                    return RedirectToAction("Index", "Login");
+                    return RedirectToAction("Index", "Home");
                 }
                 else
                 {
