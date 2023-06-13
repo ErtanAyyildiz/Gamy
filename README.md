@@ -1,5 +1,5 @@
 Gamy
-This is a sample project showcasing the use of .NET Core 6.0, N-Tier Architecture, Unit Of Work, Repository Pattern, Identity Management, Web API, Data Transfer Object (DTO), Fluent Validation, Ajax, HTML, CSS, and JavaScript.
+This is showcasing the use of .NET Core 6.0, N-Tier Architecture, Unit Of Work, Repository Pattern, Identity Management, Web API, Data Transfer Object (DTO), Fluent Validation, Ajax, HTML, CSS, and JavaScript.
 
 Description
 The purpose of this project is to demonstrate the implementation of a web application using a combination of technologies and architectural patterns. It provides a foundation for building scalable, maintainable, and secure applications with robust identity management and API endpoints.
